@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Sitecore.Data.Items;
+﻿using Sitecore.Data.Items;
 using ASR.Reports.Scanners;
 using ASR.Interface;
 
@@ -33,7 +29,9 @@ namespace ASR.Reports.Viewers
             dElement.AddColumn("OldState", getStateName(wec.WorkflowEvent.OldState));
             dElement.AddColumn("NewState", getStateName(wec.WorkflowEvent.NewState));
             dElement.AddColumn("Text", wec.WorkflowEvent.Text);
-
+            dElement.AddColumn("Paths", wec.Item.Paths.Path);
+            dElement.AddColumn("Language", wec.Item.Language.GetDisplayName());
+            dElement.AddColumn("Version", wec.Item.Version.Number.ToString());
         }
         private string getStateName(string stateID)
         {

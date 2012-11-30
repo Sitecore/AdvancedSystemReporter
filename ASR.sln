@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASR", "ASR\ASR.csproj", "{4E189BA3-7E40-47F8-9552-08558E06A8AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASR.Reports", "Reports\ASR.Reports.csproj", "{8BAA2172-A290-4C64-AC0B-3D6AF78DA578}"

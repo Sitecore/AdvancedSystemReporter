@@ -1,8 +1,9 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using ASR.Reports.Items.Exceptions;
 using ASR.Reports.Scanners;
-using Sitecore.Data;
 using Sitecore.Data.Items;
+using Sitecore.Globalization;
 
 namespace ASR.Reports.Items
 {
@@ -42,8 +43,28 @@ namespace ASR.Reports.Items
 				}
 				results = rootItem.Axes.SelectItems(Query);
 			}
-		    return results ?? new Item[0];
+		    return AddAllLanguageVersions(results);
 		}
+
+        private Item[] AddAllLanguageVersions(IEnumerable<Item> items)
+        {
+            if (items == null)
+                return new Item[0];
+
+            var results = new List<Item>();
+            foreach (var item in items)
+            {
+                Language[] languages = item.Languages;
+                foreach (var language in languages)
+                {
+                    Item itemInLang = item.Database.GetItem(item.ID, language);
+                    if (itemInLang != null && itemInLang.Versions.Count > 0)
+                        results.Add(itemInLang);
+                }    
+            }
+            return results.ToArray();
+        }
+
 	}
 }
 

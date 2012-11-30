@@ -1,89 +1,103 @@
 ﻿using System;
+using System.Collections;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using ASR.Interface;
-using Sitecore.Workflows.Simple;
-using System.Data.SqlClient;
+using Sitecore.Configuration;
+using Sitecore.Data;
 using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using Sitecore.Globalization;
 using Sitecore.Workflows;
+using Sitecore.Workflows.Simple;
 
 namespace ASR.Reports.Scanners
 {
     public class WorkflowHistory : BaseScanner
     {
         public const string AGE_PARAMETER = "Age";
-
         private int _days = int.MinValue;
+        private Database _db;
+        private Item _root;
+
         public int Days
         {
             get
             {
-                if (_days == int.MinValue)
-                {
-                    if (!int.TryParse(getParameter(AGE_PARAMETER), out _days))
-                    {
-                        _days = 0;
-                    }
-                }
+                if (_days == int.MinValue && !int.TryParse(getParameter("Age"), out _days))
+                    _days = 0;
                 return _days;
             }
         }
 
-        public override System.Collections.ICollection Scan()
+        public Item RootItem
         {
-            System.Collections.ArrayList result = new System.Collections.ArrayList();
+            get { return _root ?? (_root = Db.GetItem(getParameter("root"))); }
+        }
 
-            DateTime dt = DateTime.Now.AddDays(-Days);
-
-
-            WorkflowProvider wProvider = Sitecore.Context.ContentDatabase.WorkflowProvider as WorkflowProvider;
-            if (wProvider == null)
+        protected Database Db
+        {
+            get
             {
-                return result;
+                if (_db == null)
+                    _db = Sitecore.Context.ContentDatabase ?? Factory.GetDatabase("master");
+                return _db;
             }
+        }
 
-            string stConnection =
-                Sitecore.Configuration.Settings.GetConnectionString(Sitecore.Context.ContentDatabase.Name);
-
-            SqlConnection conn = null;
-            SqlCommand command = null;
-            SqlDataReader reader = null;
+        public override ICollection Scan()
+        {
+            var arrayList = new ArrayList();
+            DateTime dt = DateTime.Now.AddDays(-Days);
+            var workflowProvider = Db.WorkflowProvider as WorkflowProvider;
+            if (workflowProvider == null)
+                return arrayList;
+            string connectionString = Sitecore.Configuration.Settings.GetConnectionString(Db.Name);
+            SqlConnection sqlConnection = null;
+            SqlDataReader sqlDataReader = null;
             try
             {
-                conn = new SqlConnection(stConnection);
-                command = conn.CreateCommand();
-                command.CommandText = "SELECT DISTINCT ItemID FROM WorkflowHistory WHERE Date > @date";
-                command.Parameters.Add(
-                    new SqlParameter("@date", System.Data.SqlDbType.DateTime)).Value = dt;
-
-                conn.Open();
-                reader = command.ExecuteReader();
-
-                while (reader.Read())
+                sqlConnection = new SqlConnection(connectionString);
+                SqlCommand command = sqlConnection.CreateCommand();
+                command.CommandText = "SELECT DISTINCT ItemID, Language FROM WorkflowHistory WHERE Date > @date";
+                command.Parameters.Add(new SqlParameter("@date", SqlDbType.DateTime)).Value = dt;
+                sqlConnection.Open();
+                sqlDataReader = command.ExecuteReader();
+                while (sqlDataReader.Read())
                 {
-                    Guid gId = reader.GetGuid(0);
+                    Item obj = Db.GetItem(new ID(sqlDataReader.GetGuid(0)), Language.Parse(sqlDataReader.GetString(1)));
+                    if (!obj.Paths.Path.StartsWith(RootItem.Paths.Path))
+                        continue;
 
-                    Item item = Sitecore.Context.ContentDatabase.GetItem(new Sitecore.Data.ID(gId));
-
-                    foreach (var wEvent in wProvider.HistoryStore.GetHistory(item).Where(hi => hi.Date > dt && hi.NewState != hi.OldState))
+                    foreach (WorkflowEvent wEvent in (workflowProvider.HistoryStore.GetHistory(obj)).Where((hi =>
                     {
-                        WorkflowEventCustom wec = new WorkflowEventCustom(item, wEvent);
-                        result.Add(wec);
+                        if (hi.Date > dt)
+                            return hi.NewState != hi.OldState;
+                        return
+                            false;
+                    })))
+                    {
+                        var workflowEventCustom = new WorkflowEventCustom(obj, wEvent);
+                        arrayList.Add(workflowEventCustom);
                     }
                 }
             }
             catch (Exception ex)
             {
-                Sitecore.Diagnostics.Log.Error(ex.Message, this);
+                Log.Error(ex.Message, this);
             }
             finally
             {
-                if (reader != null) reader.Close();
-                if (conn != null) conn.Close();
+                if (sqlDataReader != null)
+                    sqlDataReader.Close();
+                if (sqlConnection != null)
+                    sqlConnection.Close();
             }
-
-            return result;
+            return arrayList;
         }
     }
+
     public class WorkflowEventCustom
     {
         public WorkflowEvent WorkflowEvent { get; private set; }

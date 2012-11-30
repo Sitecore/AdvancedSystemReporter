@@ -77,6 +77,7 @@
     <Compile Include="DisplayItems\ItemWorkflowEvent.cs" />
     <Compile Include="DisplayItems\MediaUsageItem.cs" />
     <Compile Include="Filters\ContainsBrokenLinks.cs" />
+    <Compile Include="Filters\AnyFieldContainsToken.cs" />
     <Compile Include="Filters\CreatedBetween.cs" />
     <Compile Include="Filters\ExcludeFolders.cs" />
     <Compile Include="Filters\HasSecurity.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Scanners\OwnedItemsScanner.cs" />
     <Compile Include="Scanners\PublishableItems.cs" />
     <Compile Include="Scanners\QueryScannerID.cs" />
+    <Compile Include="Scanners\AllRolesScanner.cs" />
     <Compile Include="Scanners\WorkflowHistory.cs" />
     <Compile Include="Viewers\AliasViewer.cs" />
     <Compile Include="Viewers\ItemViewer.cs" />
@@ -130,8 +132,11 @@
     <Compile Include="Scanners\WorkflowEventScanner.cs" />
     <Compile Include="Commands\Kick.cs" />
     <Compile Include="Scanners\SessionsScanner.cs" />
+    <Compile Include="Viewers\RoleViewer.cs" />
     <Compile Include="Viewers\SessionsViewer.cs" />
     <Compile Include="Scanners\AllUsersScanner.cs" />
+    <Compile Include="Viewers\UserProfileViewer.cs" />
+    <Compile Include="Viewers\UserRolesViewer.cs" />
     <Compile Include="Viewers\UserViewer.cs" />
     <Compile Include="Viewers\WorkflowEventViewer.cs" />
   </ItemGroup>
