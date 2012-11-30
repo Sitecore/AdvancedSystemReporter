@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {E09317B2-5AEE-438B-B451-FCCFFFCB98F8}
+database: master
+path: /sitecore/system/Modules/ASR/Reports/Items with Security for an account
+parent: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+name: Items with Security for an account
+master: {00000000-0000-0000-0000-000000000000}
+template: {55ECC766-BF85-4E85-92CB-53AE306F0414}
+templatekey: Report
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 41
+
+Applications/32x32/document_forbidden.png
+----version----
+language: en
+version: 1
+revision: d72ff585-cd45-4a61-a0bb-660d46692912
+
+----field----
+field: {F4033239-E21D-488D-990D-78E45760FCE3}
+name: Scanners
+key: scanners
+content-length: 38
+
+{BB8F9120-3DF0-45D3-82E0-68B7CA2785F8}
+----field----
+field: {9DE630AE-6A85-4821-9842-E90D900769B0}
+name: Viewers
+key: viewers
+content-length: 38
+
+{965F8E6F-9002-46EA-99A3-801E95F12BF1}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20100208T132310
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d72ff585-cd45-4a61-a0bb-660d46692912
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100208T171607:634012461675622140
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

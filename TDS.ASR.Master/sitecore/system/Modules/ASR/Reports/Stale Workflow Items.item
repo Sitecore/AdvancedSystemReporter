@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {18E9AADC-A889-4758-8F11-EA77D1571727}
+database: master
+path: /sitecore/system/Modules/ASR/Reports/Stale Workflow Items
+parent: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+name: Stale Workflow Items
+master: {00000000-0000-0000-0000-000000000000}
+template: {55ECC766-BF85-4E85-92CB-53AE306F0414}
+templatekey: Report
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 30
+
+Applications/32x32/history.png
+----version----
+language: en
+version: 1
+revision: a918a58d-6121-4196-8c7f-cf802d424db3
+
+----field----
+field: {F4033239-E21D-488D-990D-78E45760FCE3}
+name: Scanners
+key: scanners
+content-length: 38
+
+{ADC1E4E4-541B-45B8-BF65-57D4B02008F4}
+----field----
+field: {9DE630AE-6A85-4821-9842-E90D900769B0}
+name: Viewers
+key: viewers
+content-length: 77
+
+{965F8E6F-9002-46EA-99A3-801E95F12BF1}|{E3E76543-6FDA-40D7-8C21-4FF98A2B11D9}
+----field----
+field: {B5EBDC93-C3AB-4438-89FB-A8D7F5552110}
+name: Filters
+key: filters
+content-length: 38
+
+{4110F081-45FC-4C9A-91D6-3C72F8059491}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20100208T135515
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a918a58d-6121-4196-8c7f-cf802d424db3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100726T160228:634157569481554840
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

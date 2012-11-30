@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {B113EDF2-20D3-4868-97A2-8466C28EFCF5}
+database: master
+path: /sitecore/system/Modules/ASR/Configuration/Parameters/AgeISO/Last year
+parent: {F01E0EA9-FC8B-4854-996E-3D37F0E1BC2C}
+name: Last year
+master: {00000000-0000-0000-0000-000000000000}
+template: {107DE518-349B-4EC6-9967-C8EDE31910DF}
+templatekey: Value
+
+----version----
+language: en
+version: 1
+revision: 6fcac4e5-b8ca-4b6b-8db5-a27d181aefc7
+
+----field----
+field: {1AC5871D-8232-4DF5-8EE1-F2D038DEE591}
+name: Value
+key: value
+content-length: 12
+
+$sc_lastyear
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090714T113214
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6fcac4e5-b8ca-4b6b-8db5-a27d181aefc7
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20090714T113219:633831679395956056
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

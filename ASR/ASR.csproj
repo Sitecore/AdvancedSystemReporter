@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E189BA3-7E40-47F8-9552-08558E06A8AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASR</RootNamespace>
+    <AssemblyName>ASR</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CorePoint.DomainObjects">
+      <HintPath>..\lib\CorePoint.DomainObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CreateLink.cs" />
+    <Compile Include="Commands\Email.cs" />
+    <Compile Include="Commands\ExportBaseCommand.cs" />
+    <Compile Include="Commands\ExportCSV.cs" />
+    <Compile Include="Commands\ExportExcel.cs" />
+    <Compile Include="Commands\ExportXML.cs" />
+    <Compile Include="Commands\Open.cs" />
+    <Compile Include="Commands\Refresh.cs" />
+    <Compile Include="Commands\ReportEmailTask.cs" />
+    <Compile Include="Commands\Run.cs" />
+    <Compile Include="Commands\Save.cs" />
+    <Compile Include="Commands\ScheduledExecution.cs" />
+    <Compile Include="Commands\SetOwner.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="Controls\ASRComboEdit.cs" />
+    <Compile Include="Controls\ColumnEditorForm.cs" />
+    <Compile Include="Controls\ColumnsField.cs" />
+    <Compile Include="Controls\DateTimePicker.cs" />
+    <Compile Include="Controls\ItemSelector.cs" />
+    <Compile Include="Controls\ItemSelectorDialog.cs" />
+    <Compile Include="Controls\LinkButton.cs" />
+    <Compile Include="Controls\ASRListview.cs" />
+    <Compile Include="Controls\ToolButton.cs" />
+    <Compile Include="Controls\Toolmenu.cs" />
+    <Compile Include="Controls\ToolMenuButton.cs" />
+    <Compile Include="Controls\UserSelector.cs" />
+    <Compile Include="Current.cs" />
+    <Compile Include="DomainObjects\Column.cs" />
+    <Compile Include="DomainObjects\ParameterItem.cs" />
+    <Compile Include="DomainObjects\ParameterTypeItem.cs" />
+    <Compile Include="DomainObjects\ScannerItem.cs" />
+    <Compile Include="DomainObjects\ViewerItem.cs" />
+    <Compile Include="Export\CsvExport.cs" />
+    <Compile Include="Export\HtmlExport.cs" />
+    <Compile Include="Export\XMLExport.cs" />
+    <Compile Include="Interface\BaseFilter.cs" />
+    <Compile Include="Interface\BaseReportObject.cs" />
+    <Compile Include="Interface\BaseScanner.cs" />
+    <Compile Include="Interface\BaseViewer.cs" />
+    <Compile Include="Interface\DisplayElement.cs" />
+    <Compile Include="Interface\Report.cs" />
+    <Compile Include="ReportRunner.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="sitecore\shell\download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="DomainObjects\CommandItem.cs" />
+    <Compile Include="DomainObjects\FilterItem.cs" />
+    <Compile Include="DomainObjects\ReportItem.cs" />
+    <Compile Include="ASR.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DomainObjects\ReferenceItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ASR.xml" />
+    <Content Include="Controls\Column.xml" />
+    <Content Include="Controls\ColumnEditor.xml" />
+    <Content Include="Controls\ItemSelectorDialog.xml" />
+    <Content Include="sitecore\shell\download.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ASR.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y /s "$(ProjectDir)ASR.config" "$(SitecoreWebRoot)\App_Config\Include\"
+xcopy /y /s "$(ProjectDir)sitecore\shell\*.aspx" "$(SitecoreWebRoot)\sitecore\shell\"
+xcopy /y /s "$(ProjectDir)*.xml" "$(SitecoreWebRoot)\sitecore modules\Shell\ASR\"
+xcopy /y /s "$(TargetPath)" "$(SitecoreWebRoot)\bin\"
+xcopy /y/s "$(SolutionDir)data\packages\Advanced System Reporter.xml" "$(SitecoreWebRoot)"\..\data\packages</PostBuildEvent>
+  </PropertyGroup>
+</Project>

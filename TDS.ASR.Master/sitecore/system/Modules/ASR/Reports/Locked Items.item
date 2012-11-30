@@ -1,0 +1,99 @@
+----item----
+version: 1
+id: {216DE2A0-4849-44F2-BF1E-85F593AB2B02}
+database: master
+path: /sitecore/system/Modules/ASR/Reports/Locked Items
+parent: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+name: Locked Items
+master: {00000000-0000-0000-0000-000000000000}
+template: {55ECC766-BF85-4E85-92CB-53AE306F0414}
+templatekey: Report
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 36
+
+Applications/32x32/document_lock.png
+----version----
+language: en
+version: 1
+revision: 15970864-6a85-4194-92d6-3edb1086add9
+
+----field----
+field: {F4033239-E21D-488D-990D-78E45760FCE3}
+name: Scanners
+key: scanners
+content-length: 38
+
+{A9D22899-C137-4B62-86FA-3400E0AD3861}
+----field----
+field: {9DE630AE-6A85-4821-9842-E90D900769B0}
+name: Viewers
+key: viewers
+content-length: 116
+
+{849E583C-C8AD-41CF-BDE9-8D68598623F3}|{F28FC608-581E-41F5-BA49-14D4151A854C}|{3AB1FBD3-B6CE-4E8D-B3DF-5BEC8EECF259}
+----field----
+field: {B5EBDC93-C3AB-4438-89FB-A8D7F5552110}
+name: Filters
+key: filters
+content-length: 38
+
+{9A5A46A8-F652-47DE-B712-BA43B244BEF1}
+----field----
+field: {E6B9CD5F-58E8-407D-9D45-4FE36544EA86}
+name: Commands
+key: commands
+content-length: 116
+
+{586CB36D-FDCB-4FBB-8766-B5C4B810191B}|{4B7ED53C-6966-4D62-854E-BDD8EC913409}|{3DDCB4A3-415F-4726-8262-4854A599878A}
+----field----
+field: {BA6571E9-4D3E-4381-B9C2-5C5DA3095CD6}
+name: Email Text
+key: email text
+content-length: 83
+
+Hi $sc_user, please unlock the item
+$sc_item
+
+
+Best regards,
+
+$sc_currentuser
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20080708T180600
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+15970864-6a85-4194-92d6-3edb1086add9
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100714T210743:634147384633072768
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

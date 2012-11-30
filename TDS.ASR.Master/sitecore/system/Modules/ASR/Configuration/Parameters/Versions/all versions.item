@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {95652D2F-04A7-4952-9EC8-ACDE41686C3C}
+database: master
+path: /sitecore/system/Modules/ASR/Configuration/Parameters/Versions/all versions
+parent: {26AFDE8E-9B9B-4589-B1FD-AB62A068BE33}
+name: all versions
+master: {00000000-0000-0000-0000-000000000000}
+template: {107DE518-349B-4EC6-9967-C8EDE31910DF}
+templatekey: Value
+
+----version----
+language: en
+version: 1
+revision: be6b80ad-bc83-492d-ae56-91c27f997d30
+
+----field----
+field: {1AC5871D-8232-4DF5-8EE1-F2D038DEE591}
+name: Value
+key: value
+content-length: 1
+
+1
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090623T114032
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+be6b80ad-bc83-492d-ae56-91c27f997d30
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20090623T114113:633813540738447266
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

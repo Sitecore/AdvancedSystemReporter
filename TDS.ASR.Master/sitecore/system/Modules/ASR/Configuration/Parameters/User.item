@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {6312A2A7-FEA2-4A93-90D7-391CAC9307A4}
+database: master
+path: /sitecore/system/Modules/ASR/Configuration/Parameters/User
+parent: {1726DD7E-2E74-42A6-BAB5-D20DD0C2F8FF}
+name: User
+master: {00000000-0000-0000-0000-000000000000}
+template: {94CCFDAB-0F13-4DD3-895B-831A3A52AAC0}
+templatekey: Parameter
+
+----version----
+language: en
+version: 1
+revision: 8f3df0e7-a583-46a2-9c2d-5b68fe43df35
+
+----field----
+field: {6331C506-8590-48A9-B346-3B394A0F6135}
+name: Title
+key: title
+content-length: 4
+
+User
+----field----
+field: {68030A84-F6F1-473F-BB09-6168AC9409A4}
+name: Type
+key: type
+content-length: 13
+
+User Selector
+----field----
+field: {C4A7166D-A7C1-473C-B0AB-DF1A27175FE8}
+name: Parameters
+key: parameters
+content-length: 12
+
+filter=users
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090506T110929
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+8f3df0e7-a583-46a2-9c2d-5b68fe43df35
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20091202T152003:633953640035624620
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

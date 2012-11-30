@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {6D6D4AC1-31D6-407E-9039-7A7709ACAFC1}
+database: master
+path: /sitecore/system/Modules/ASR/Configuration/Viewer/Number Of Versions
+parent: {63E5565E-7399-4BC8-82FC-C0FAF8C9E84F}
+name: Number Of Versions
+master: {00000000-0000-0000-0000-000000000000}
+template: {FF9D70EB-44CB-4777-B9EE-3308041928CE}
+templatekey: Viewer
+
+----version----
+language: en
+version: 1
+revision: 1a97d6b8-5339-4d26-bf56-688aa06ce3ee
+
+----field----
+field: {6FB5BEBA-ECD8-4B56-B20A-BF292193D491}
+name: Assembly
+key: assembly
+content-length: 11
+
+ASR.Reports
+----field----
+field: {49EB5881-0AEA-4D84-9850-1F8A9A2183FE}
+name: Class
+key: class
+content-length: 28
+
+ASR.Reports.Items.ItemViewer
+----field----
+field: {2FE97449-F425-4789-AB93-C246BFA1749B}
+name: Columns
+key: columns
+content-length: 60
+
+<Columns><Column name="versions">Versions</Column></Columns>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20110224T105812
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1a97d6b8-5339-4d26-bf56-688aa06ce3ee
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20110224T112012:634341432122160745
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

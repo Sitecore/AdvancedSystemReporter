@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {D0171559-7E78-4D8F-8D9F-7765AAB58D4C}
+database: master
+path: /sitecore/system/Modules/ASR/Configuration/Filters/Contains Broken Links
+parent: {4503299D-8B00-4E21-B5B4-8A71E5507199}
+name: Contains Broken Links
+master: {00000000-0000-0000-0000-000000000000}
+template: {1383EBC6-BCC4-451D-8E33-7F74921F6664}
+templatekey: Filter
+
+----version----
+language: en
+version: 1
+revision: 2e4d774d-4321-4fd5-8c19-4fe4b7da2a18
+
+----field----
+field: {6FB5BEBA-ECD8-4B56-B20A-BF292193D491}
+name: Assembly
+key: assembly
+content-length: 34
+
+Sitecore.Custom.ExternalLinksCheck
+----field----
+field: {49EB5881-0AEA-4D84-9850-1F8A9A2183FE}
+name: Class
+key: class
+content-length: 52
+
+Sitecore.Custom.ExternalLinksCheck.BrokenLinksFilter
+----field----
+field: {60ACFB3B-D34D-43D8-8B57-86D26B30DD5A}
+name: Attributes
+key: attributes
+content-length: 36
+
+allversions=false|CheckExternal=true
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090511T134616
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2e4d774d-4321-4fd5-8c19-4fe4b7da2a18
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20111118T142737:634572232574078569
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

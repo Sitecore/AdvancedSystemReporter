@@ -1,0 +1,136 @@
+----item----
+version: 1
+id: {34DFE48A-8B58-4E27-9199-E72A855D8237}
+database: master
+path: /sitecore/system/Tasks/Commands/Email Reports
+parent: {3EBEC263-B57E-4A3C-A232-7C70519F9908}
+name: Email Reports
+master: {00000000-0000-0000-0000-000000000000}
+template: {93E0E6C6-D8AD-4CE1-95EE-D8C07C2F596D}
+templatekey: Report Email Task
+
+----field----
+field: {752579A7-EF2F-45B7-B9D1-9B682308B7A5}
+name: Type
+key: type
+content-length: 35
+
+ASR.Commands.ScheduledExecution,ASR
+----field----
+field: {4BC75539-D5C4-487B-AF35-FF13D62BD286}
+name: Method
+key: method
+content-length: 12
+
+EmailReports
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+100
+----version----
+language: en
+version: 1
+revision: 825b1287-e7e7-4412-a531-dedda89134ed
+
+----field----
+field: {CEA5F89D-99A7-4ED2-BE12-5D879AEC5698}
+name: Active
+key: active
+content-length: 0
+
+
+----field----
+field: {DF6402D0-D2C4-48FA-A01D-9DF6D12ACED8}
+name: From
+key: from
+content-length: 22
+
+sitecore@localhost.com
+----field----
+field: {03F9AF45-FDCA-4496-BC3D-7E80D919A53D}
+name: To
+key: to
+content-length: 20
+
+myname@localhost.com
+----field----
+field: {7829DE7C-9234-45BE-931D-F8C0D925F29D}
+name: Subject
+key: subject
+content-length: 27
+
+Media items about to expire
+----field----
+field: {0F4D0401-1140-446E-B605-7462783C601A}
+name: Text
+key: text
+content-length: 85
+
+<p>Please find attached the latest reports from your local install of Sitecore.</p>
+
+----field----
+field: {65C03AD1-FA58-4E3F-9BFA-662E0CCED2CB}
+name: SendEmpty
+key: sendempty
+content-length: 0
+
+
+----field----
+field: {D1492B7B-0912-4C49-9F47-1A6824936CCE}
+name: Reports
+key: reports
+content-length: 0
+
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 16
+
+sitecore\azcaser
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090818T110814
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 16
+
+sitecore\azcaser
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+825b1287-e7e7-4412-a531-dedda89134ed
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20120121T040253:634627153730873118
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--=============================================================
+    File: ASR.xml                                                   
+    Created by: sitecore\admin                                       
+    Created: 04/07/2008 15:01:03                                               
+==============================================================-->
+
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+	<ASR>
+		<FormPage Height="250px">
+
+			<CodeBeside Type="ASR.App.MainForm,ASR"/>
+
+			<GridPanel class="scBackground" ID="MainPanel" vAlign="top" Height="100%" Width="100%" Cellpadding="0">
+
+				<Toolbar ID="MyToolbar">
+				</Toolbar>
+
+
+				<Section Width="100%" ID="ConfigSection" Header="Configure Report">
+				</Section>
+
+				<GridPanel Width="100%" Height="100%" Columns="3" GridPanel.Height="100%" Style="table-layout:fixed">
+
+					<Scrollbox Height="100%" Width="100%" Padding="0">
+						<ASRListview ID="ItemList" Background="white" Multiselect="true">
+						</ASRListview>
+					</Scrollbox>
+
+				</GridPanel>
+				<Border Background="white">
+					<Space/>
+				</Border>
+				<Border Height="22" GridPanel.Height="22" Background="#e9e9e9">
+					<GridPanel Columns="2" Width="100%" Height="100%" CellPadding="2">
+						<Border Border="1px inset" Padding="2" Height="100%">
+							<Literal ID="Status"/>
+						</Border>
+
+					</GridPanel>
+				</Border>
+			</GridPanel>
+		</FormPage>
+	</ASR>
+</control>

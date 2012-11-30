@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {0F3231A5-AE4E-4E02-A435-6B17C7E00A03}
+database: master
+path: /sitecore/system/Modules/ASR/Reports/Recent Workflow History
+parent: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+name: Recent Workflow History
+master: {00000000-0000-0000-0000-000000000000}
+template: {55ECC766-BF85-4E85-92CB-53AE306F0414}
+templatekey: Report
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 41
+
+Applications/32x32/scroll_information.png
+----version----
+language: en
+version: 1
+revision: da745c53-d9ba-4e11-9da3-9b731123f5e1
+
+----field----
+field: {F4033239-E21D-488D-990D-78E45760FCE3}
+name: Scanners
+key: scanners
+content-length: 38
+
+{81842BAC-476B-479C-9119-9D3F4991AB3B}
+----field----
+field: {9DE630AE-6A85-4821-9842-E90D900769B0}
+name: Viewers
+key: viewers
+content-length: 38
+
+{175E396A-72E1-48EA-9AA6-CC3CF45A7419}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20100208T141021
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+da745c53-d9ba-4e11-9da3-9b731123f5e1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100208T170958:634012457988423457
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

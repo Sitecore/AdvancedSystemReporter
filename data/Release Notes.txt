@@ -1,0 +1,38 @@
+Advanced System Reporter
+------------------------
+
+
+v.1.4.2
+
+- removed Email Reports - ASR item, which was not used
+
+- ItemViewer now displays dates according to the current culture and can be overriden with attribute DateFormat (using a standard .NET formatting string as the value).
+
+v.1.4.1
+
+- Fixed error in WorkflowStateScanner
+
+- Fix the default sorting options for viewers. You can add sort=[name of column],[ASC|DESC][DateTime] to viewers (thanks to Marko Tsoi for this fix)
+
+v 1.4
+
+- Greatly improved performance
+
+- New Trim Versions command added to the Multiple Versions report. Allows to remove all but x versions from the selected items. The number of versions to leave is configurable in the command definition (/sitecore/system/Modules/ASR/Configuration/Commands/TrimVersions)
+
+- New Alias Viewer (as showcased in the Alias Report) that can display aliases configured for items.
+
+- New: parameters to scanners, viewers, filters, are assigned directly by reflection, so developers simply create a property with getter and setter corresponding to the parameter. Casting to common types (string, int, DateTime) is done automatically.
+
+- New: Commands can now also be defined as a standard type string (fully qualified name, assembly).
+
+- New: Commands can have parameters. Simply add them in parenthesis after the command name, with the same format as a query string, and they will get assigned automatically to properties by reflection.
+
+- Fixed: the standard ItemViewer would not show data from fields with the same name as the keywords used to retrieve item properties (name, version, language, etc.). You can now prepend @ to indicate that it should retrieve a field. (e.g. @name will try to show a field called 'name', whereas name will display the name of the item).
+
+- Fixed: $sc_currentuser replacement now works properly.
+
+- Fixed: Owned items, My Owned items, ignore case sensitivity in the user name (to avoid a known issue where items have as owner sitecore\admin even though the user is sitecore\Admin).
+
+- Improved: Eliminated need for proxies.
+

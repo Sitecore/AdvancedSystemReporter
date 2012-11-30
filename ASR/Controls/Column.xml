@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+	<Column>
+		<Border ID="$ID" Click="$Click" DblClick="$DblClick" Background='${MainUtil.GetString($Background, "transparent")}' Padding="0px 0px 0px 10px">
+			<Border GridPanel.Width="100%" GridPanel.Style="padding:0px 0px 0px 0px">
+				<b>
+					<Literal Text="$Header"/>
+				</b>
+				-
+				<Literal Text="$Name"/>
+			</Border>
+		</Border>
+
+	</Column>
+</control>

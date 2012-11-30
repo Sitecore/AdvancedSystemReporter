@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {24A7C0AE-A199-4FB1-B8C7-233D0DB4C654}
+database: master
+path: /sitecore/system/Modules/ASR/Configuration/Parameters/Rendering
+parent: {1726DD7E-2E74-42A6-BAB5-D20DD0C2F8FF}
+name: Rendering
+master: {00000000-0000-0000-0000-000000000000}
+template: {94CCFDAB-0F13-4DD3-895B-831A3A52AAC0}
+templatekey: Parameter
+
+----version----
+language: en
+version: 1
+revision: 19fda400-ba2a-4e44-9e9b-a1b907d41c87
+
+----field----
+field: {6331C506-8590-48A9-B346-3B394A0F6135}
+name: Title
+key: title
+content-length: 9
+
+Rendering
+----field----
+field: {68030A84-F6F1-473F-BB09-6168AC9409A4}
+name: Type
+key: type
+content-length: 13
+
+Item Selector
+----field----
+field: {6588527A-BDB0-4474-8912-C1872A294BDE}
+name: Default value
+key: default value
+content-length: 28
+
+/sitecore/layouts/renderings
+----field----
+field: {C4A7166D-A7C1-473C-B0AB-DF1A27175FE8}
+name: Parameters
+key: parameters
+content-length: 278
+
+displayresult=Name|root={EB2E4FFD-2761-4653-B052-26A64D385227}|folder={EB443C0B-F923-409E-85F3-E7893C8C30C2}|filter=@@key='sublayouts' or @@key='renderings' or @@templatename='Webcontrol' or @@templatename='Folder' or @@templatename='Xsl Rendering' or @@templatename='Sublayout'
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090606T121318
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+19fda400-ba2a-4e44-9e9b-a1b907d41c87
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20091202T100641:633953452018153662
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

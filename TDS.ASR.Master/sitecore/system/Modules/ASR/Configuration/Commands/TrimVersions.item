@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {6A3F1258-AD76-4FC7-80C9-D2903E46BF11}
+database: master
+path: /sitecore/system/Modules/ASR/Configuration/Commands/TrimVersions
+parent: {F7BFC9AF-BCB8-4DA2-8BF1-1186177B1B9C}
+name: TrimVersions
+master: {00000000-0000-0000-0000-000000000000}
+template: {A2F37FA0-B644-4FA1-8DBE-6DD346F48ABB}
+templatekey: Command
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 23
+
+People/32x32/eraser.png
+----version----
+language: en
+version: 1
+revision: 7d8d0d2b-b1a8-47c5-863f-563329ab0125
+
+----field----
+field: {4754B397-F055-4D4A-AC74-FD09390BC8F3}
+name: Title
+key: title
+content-length: 13
+
+Trim versions
+----field----
+field: {F48567F6-CC4C-4AA9-B722-EBA7B878B40C}
+name: Icon
+key: icon
+content-length: 23
+
+People/32x32/eraser.png
+----field----
+field: {B026DCD1-C3E9-4061-9F7A-7A61F200D383}
+name: Command
+key: command
+content-length: 34
+
+asr:TrimVersions(VersionsToKeep=5)
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20110223T124817
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+7d8d0d2b-b1a8-47c5-863f-563329ab0125
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20110224T114524:634341447241365514
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {E3A0C929-8BDB-462E-ABF1-8052F76CBAB0}
+database: master
+path: /sitecore/system/Modules/ASR/Reports/Not recently modified
+parent: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+name: Not recently modified
+master: {00000000-0000-0000-0000-000000000000}
+template: {55ECC766-BF85-4E85-92CB-53AE306F0414}
+templatekey: Report
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 36
+
+Applications/32x32/document_time.png
+----version----
+language: en
+version: 1
+revision: a12a99f6-0c88-4e6e-9852-c1e4d1d74e4a
+
+----field----
+field: {F4033239-E21D-488D-990D-78E45760FCE3}
+name: Scanners
+key: scanners
+content-length: 38
+
+{F879FDE0-45EB-45B6-BF92-BDFE8D3D3732}
+----field----
+field: {9DE630AE-6A85-4821-9842-E90D900769B0}
+name: Viewers
+key: viewers
+content-length: 38
+
+{F28FC608-581E-41F5-BA49-14D4151A854C}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090714T105300
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a12a99f6-0c88-4e6e-9852-c1e4d1d74e4a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100208T171201:634012459213035906
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

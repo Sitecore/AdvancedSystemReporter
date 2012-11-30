@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8BAA2172-A290-4C64-AC0B-3D6AF78DA578}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASR.Reports</RootNamespace>
+    <AssemblyName>ASR.Reports</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\TrimVersions.cs" />
+    <Compile Include="DisplayItems\ItemWorkflowEvent.cs" />
+    <Compile Include="DisplayItems\MediaUsageItem.cs" />
+    <Compile Include="Filters\ContainsBrokenLinks.cs" />
+    <Compile Include="Filters\CreatedBetween.cs" />
+    <Compile Include="Filters\ExcludeFolders.cs" />
+    <Compile Include="Filters\HasSecurity.cs" />
+    <Compile Include="Filters\InvalidName.cs" />
+    <Compile Include="Filters\ItemsOfType.cs" />
+    <Compile Include="Filters\ItemsWithResettableVersions.cs" />
+    <Compile Include="Filters\NoPublishableVersions.cs" />
+    <Compile Include="Filters\NoReferrers.cs" />
+    <Compile Include="Filters\NoWorkflow.cs" />
+    <Compile Include="Filters\PublishedBetween.cs" />
+    <Compile Include="Filters\RegexFieldFilter.cs" />
+    <Compile Include="Filters\RegexFilter.cs" />
+    <Compile Include="Filters\StaleWorkflowItems.cs" />
+    <Compile Include="Filters\ValidationErrors.cs" />
+    <Compile Include="Filters\WorkflowEventDateFilter.cs" />
+    <Compile Include="Filters\WorkflowEventsFilter.cs" />
+    <Compile Include="DisplayItems\AuditPerItem.cs" />
+    <Compile Include="Exceptions\DatabaseNotFoundException.cs" />
+    <Compile Include="Exceptions\ParameterException.cs" />
+    <Compile Include="Exceptions\RootItemNotFoundException.cs" />
+    <Compile Include="Filters\FieldContainsValue.cs" />
+    <Compile Include="Filters\FieldDoesNotContainValue.cs" />
+    <Compile Include="Scanners\DatabaseScanner.cs" />
+    <Compile Include="Scanners\LinkedItemsScanner.cs" />
+    <Compile Include="Scanners\OwnedItemsScanner.cs" />
+    <Compile Include="Scanners\PublishableItems.cs" />
+    <Compile Include="Scanners\QueryScannerID.cs" />
+    <Compile Include="Scanners\WorkflowHistory.cs" />
+    <Compile Include="Viewers\AliasViewer.cs" />
+    <Compile Include="Viewers\ItemViewer.cs" />
+    <Compile Include="Filters\LockFilter.cs" />
+    <Compile Include="Filters\MultipleVersions.cs" />
+    <Compile Include="Filters\NameLengthFilter.cs" />
+    <Compile Include="Filters\NumberChildrenFilter.cs" />
+    <Compile Include="Filters\NumberFilter.cs" />
+    <Compile Include="Scanners\QueryScanner.cs" />
+    <Compile Include="Filters\UnpublishedBetween.cs" />
+    <Compile Include="Filters\AuditFilter.cs" />
+    <Compile Include="DisplayItems\AuditItem.cs" />
+    <Compile Include="Filters\LogFilter.cs" />
+    <Compile Include="DisplayItems\LogItem.cs" />
+    <Compile Include="Scanners\LogScanner.cs" />
+    <Compile Include="Viewers\ItemViewerEscaped.cs" />
+    <Compile Include="Viewers\LogViewer.cs" />
+    <Compile Include="Filters\TypeFilter.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Scanners\FileScanner.cs" />
+    <Compile Include="Scanners\PresentationScanner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scanners\MediaUsageScanner.cs" />
+    <Compile Include="Scanners\WorkflowEventScanner.cs" />
+    <Compile Include="Commands\Kick.cs" />
+    <Compile Include="Scanners\SessionsScanner.cs" />
+    <Compile Include="Viewers\SessionsViewer.cs" />
+    <Compile Include="Scanners\AllUsersScanner.cs" />
+    <Compile Include="Viewers\UserViewer.cs" />
+    <Compile Include="Viewers\WorkflowEventViewer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASR\ASR.csproj">
+      <Project>{4E189BA3-7E40-47F8-9552-08558E06A8AA}</Project>
+      <Name>ASR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y /s "$(TargetPath)" "$(SitecoreWebRoot)\bin\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

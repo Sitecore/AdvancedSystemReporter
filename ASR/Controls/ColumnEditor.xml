@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">  
+	<ColumnEditor>
+		<FormDialog Icon="Software/32x32/element.png" Header="Edit report columns" Text="Edit report columns.">
+      <Script Src="/sitecore modules/Shell/ASR/editablecombo.js" Type="text/javascript" Language="Javascript"/>
+			<CodeBeside Type="ASR.Controls.ColumnEditorForm, ASR"/>
+
+			<GridPanel Width="100%" Height="100%" Cellpadding="0" Fixed="true">
+				<GridPanel Columns="2" Width="100%" Height="100%">
+					<!--List of columns-->
+					<Scrollbox ID="Columns" Width="100%" Height="100%" Padding="0px" GridPanel.Width="100%" GridPanel.Height="100%" GridPanel.VAlign="top"/>
+
+					<GridPanel Columns="1">
+						<Button ID="Up" Header="Move Up" Click="MoveUp" Margin="0px 0px 0px 4px"/>
+						<Button ID="Down" Header="Move Down" Click="MoveDown" Margin="0px 0px 0px 4px"/>
+						<Button ID="Remove" Header="Remove" Click="Remove" Margin="0px 0px 0px 4px"/>
+					</GridPanel>
+				</GridPanel>
+				<GridPanel Columns="2" CellPadding="4" GridPanel.Height="64px">
+
+					<GridPanel Columns="2">
+						<Literal Text="Column name:" GridPanel.NoWrap="true" />
+            <ASRComboEdit ID="ColumnName" >
+              <ListItem>--enter field name--</ListItem>
+              <ListItem value="children count">Children Count</ListItem>
+              <ListItem value="created">Created</ListItem>
+              <ListItem value="created by">Created by</ListItem>
+              <ListItem value="display name">Display Name</ListItem>
+              <ListItem value="language">Language</ListItem>
+              <ListItem value="locked by">Locked by</ListItem>
+              <ListItem value="name">Name</ListItem>
+              <ListItem value="owner">Owner</ListItem>
+              <ListItem value="path">Path</ListItem>
+              <ListItem value="template">Template</ListItem>              
+              <ListItem value="updated">Updated</ListItem>
+              <ListItem value="updated by">Updated by</ListItem>
+              <ListItem value="version">Version</ListItem>
+                <ListItem value="versions">Number of Versions</ListItem>
+              <ListItem value="workflow">Workflow</ListItem>              
+            </ASRComboEdit>
+
+						<Literal Text="Column header:" GridPanel.NoWrap="true" />
+						<Edit ID="ColumnHeader" />
+					</GridPanel>
+
+					<Button ID="Add" Header="Add" Click="Add" GridPanel.VAlign="bottom" Margin="0px 0px 0px 4px" />
+
+				</GridPanel>
+			</GridPanel>
+
+		</FormDialog>
+	</ColumnEditor>
+</control>

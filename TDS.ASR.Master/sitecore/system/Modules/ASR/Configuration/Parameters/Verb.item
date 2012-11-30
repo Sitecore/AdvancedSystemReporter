@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {E17D33CF-5464-4A5D-8523-50ADC3C35089}
+database: master
+path: /sitecore/system/Modules/ASR/Configuration/Parameters/Verb
+parent: {1726DD7E-2E74-42A6-BAB5-D20DD0C2F8FF}
+name: Verb
+master: {00000000-0000-0000-0000-000000000000}
+template: {94CCFDAB-0F13-4DD3-895B-831A3A52AAC0}
+templatekey: Parameter
+
+----version----
+language: en
+version: 1
+revision: 5e7b74da-f7ac-4ae3-a04a-b10632c39cdf
+
+----field----
+field: {6331C506-8590-48A9-B346-3B394A0F6135}
+name: Title
+key: title
+content-length: 4
+
+Verb
+----field----
+field: {68030A84-F6F1-473F-BB09-6168AC9409A4}
+name: Type
+key: type
+content-length: 8
+
+Dropdown
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090511T134542
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+5e7b74da-f7ac-4ae3-a04a-b10632c39cdf
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20090511T134553:633776463535673828
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

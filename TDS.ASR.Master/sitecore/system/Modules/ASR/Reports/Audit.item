@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {C463282D-332D-4E65-AA05-5F85E3EA6B7C}
+database: master
+path: /sitecore/system/Modules/ASR/Reports/Audit
+parent: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+name: Audit
+master: {00000000-0000-0000-0000-000000000000}
+template: {55ECC766-BF85-4E85-92CB-53AE306F0414}
+templatekey: Report
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 34
+
+Applications/32x32/window_time.png
+----version----
+language: en
+version: 1
+revision: 9404dd76-e163-476f-a04e-f862df04c198
+
+----field----
+field: {F4033239-E21D-488D-990D-78E45760FCE3}
+name: Scanners
+key: scanners
+content-length: 38
+
+{DBF19A29-D85B-4FE2-8EA9-97533AB5EB2A}
+----field----
+field: {9DE630AE-6A85-4821-9842-E90D900769B0}
+name: Viewers
+key: viewers
+content-length: 38
+
+{AF561ED2-A768-40D4-8517-1A8368368F0F}
+----field----
+field: {B5EBDC93-C3AB-4438-89FB-A8D7F5552110}
+name: Filters
+key: filters
+content-length: 38
+
+{871EA049-506C-4B4B-9CC2-B22A4EEA5B75}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090511T100935
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9404dd76-e163-476f-a04e-f862df04c198
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100208T171747:634012462679442512
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

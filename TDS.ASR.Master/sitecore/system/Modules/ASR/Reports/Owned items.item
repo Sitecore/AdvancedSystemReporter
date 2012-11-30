@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {6CEDACCE-2EAB-437B-B9FD-C7EA936EEA83}
+database: master
+path: /sitecore/system/Modules/ASR/Reports/Owned items
+parent: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+name: Owned items
+master: {00000000-0000-0000-0000-000000000000}
+template: {55ECC766-BF85-4E85-92CB-53AE306F0414}
+templatekey: Report
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 43
+
+Applications/32x32/document_certificate.png
+----version----
+language: en
+version: 1
+revision: 29a732ea-a111-4e1e-848f-a02d4bd0eb97
+
+----field----
+field: {F4033239-E21D-488D-990D-78E45760FCE3}
+name: Scanners
+key: scanners
+content-length: 38
+
+{A95C18FD-0F15-486A-8C87-A02D06F151E2}
+----field----
+field: {9DE630AE-6A85-4821-9842-E90D900769B0}
+name: Viewers
+key: viewers
+content-length: 38
+
+{F28FC608-581E-41F5-BA49-14D4151A854C}
+----field----
+field: {E6B9CD5F-58E8-407D-9D45-4FE36544EA86}
+name: Commands
+key: commands
+content-length: 155
+
+{4B7ED53C-6966-4D62-854E-BDD8EC913409}|{586CB36D-FDCB-4FBB-8766-B5C4B810191B}|{3DDCB4A3-415F-4726-8262-4854A599878A}|{754D0673-D682-434C-9CB8-E81CB09ADFC9}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090514T114553
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+29a732ea-a111-4e1e-848f-a02d4bd0eb97
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100208T171759:634012462793423909
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

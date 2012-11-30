@@ -1,0 +1,47 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Advanced System Reporter-Download</PackageName>
+      <Author>Raul Jimenez</Author>
+      <Version>1.0</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme>This package enables download of reports by non-admin users by replacing the /sitecore/shell/download.aspx page
+The original one is saved as download_original.aspx in case you need to revert back to it.
+In addition it also creates a new config file in the include folder which can turn on/off the download for non-admin users.
+This modified download page could be considered a potential security risk.</Readme>
+      <Publisher />
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/ASR.Download.config</x-item>
+        <x-item>/sitecore/shell/download.aspx</x-item>
+        <x-item>/sitecore/shell/download_original.aspx</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms />
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

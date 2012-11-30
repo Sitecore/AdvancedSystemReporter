@@ -1,0 +1,93 @@
+----item----
+version: 1
+id: {33263393-FBD0-4948-A6E3-AF8A3C3A7D94}
+database: core
+path: /sitecore/content/Applications/Advanced System Reporter/Links/sitecore_admin/Recently Modified
+parent: {3396EEBA-0450-4A93-B031-A8FCD104066B}
+name: Recently Modified
+master: {00000000-0000-0000-0000-000000000000}
+template: {72450C9C-98C4-4117-88B7-573110C7E0C0}
+templatekey: Application shortcut
+
+----field----
+field: {8A1AC797-0304-4C50-AAAC-4D9DBBFF435F}
+name: Application
+key: application
+content-length: 142
+
+<link linktype="internal" url="/Applications/Advanced System Reporter" querystring="" id="{605C3AD5-4D6E-4297-98C9-7638BE5A82EA}" target="" />
+----field----
+field: {238A40DA-15F2-4412-B720-8F192FFA7491}
+name: Icon
+key: icon
+content-length: 39
+
+Applications/32x32/document_refresh.png
+----field----
+field: {90A4607C-71B4-4D46-A921-25EF798193D8}
+name: Parameters
+key: parameters
+content-length: 160
+
+id={FE9ABA7F-0649-4072-B7A1-8DE5E84CAEB3}&4601152c-b68d-4a27-af0b-938f97194746^Root=/sitecore/system&4601152c-b68d-4a27-af0b-938f97194746^AgeISO=20100422T000000
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 39
+
+Applications/32x32/document_refresh.png
+----version----
+language: en
+version: 1
+revision: 1b7972cb-76c6-4427-b208-dd7126a6450e
+
+----field----
+field: {C032DB76-CC34-4F8F-BE2D-D2FB35237AAB}
+name: Display name
+key: display name
+content-length: 17
+
+Recently Modified
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20100427T120000
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1b7972cb-76c6-4427-b208-dd7126a6450e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100427T120000:634079664007854065
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
