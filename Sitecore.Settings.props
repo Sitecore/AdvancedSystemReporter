@@ -1,0 +1,6 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+	    <SitecoreWebRoot>D:\Websites\asrtest\website</SitecoreWebRoot>
+		<SitecoreURL>http://asrtest</SitecoreURL>
+    </PropertyGroup>
+</Project>

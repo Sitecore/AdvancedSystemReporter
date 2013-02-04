@@ -1,5 +1,6 @@
 ﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
+    <Import Project="..\Sitecore.Settings.props" Condition="Exists('..\Sitecore.Settings.props')" />
+    <PropertyGroup>    
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
@@ -28,7 +29,7 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreDeployFolder>D:\Websites\ASR\Website</SitecoreDeployFolder>
+      <SitecoreDeployFolder>$(SitecoreWebRoot)</SitecoreDeployFolder>
     <SitecoreWebUrl>http://asr</SitecoreWebUrl>
     <SitecoreAccessGuid>73fd56e6-2f46-48c0-82b3-18a1433fa33a</SitecoreAccessGuid>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
@@ -37,8 +38,8 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>.\Release\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreDeployFolder>D:\Websites\ASR\Website</SitecoreDeployFolder>
-    <SitecoreWebUrl>http://asr</SitecoreWebUrl>
+    <SitecoreDeployFolder>$(SitecoreWebRoot)</SitecoreDeployFolder>
+    <SitecoreWebUrl>$(SitecoreURL)</SitecoreWebUrl>
     <SitecoreAccessGuid>73fd56e6-2f46-48c0-82b3-18a1433fa33a</SitecoreAccessGuid>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
   </PropertyGroup>
