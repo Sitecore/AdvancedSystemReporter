@@ -1,47 +1,33 @@
 ----item----
 version: 1
-id: {D24802BA-3FEC-4A16-8ABB-6DCC7DFADDBE}
+id: {D7DC927B-755A-4BCA-ADB1-71771792F042}
 database: core
-path: /sitecore/content/Applications/Advanced System Reporter/Menu/Export/CSV
+path: /sitecore/content/Applications/Advanced System Reporter/Menu/Home/Export/Export/XML
 parent: {B4D22B19-98F6-4C96-AA47-7C41892FA280}
-name: CSV
+name: XML
 master: {00000000-0000-0000-0000-000000000000}
-template: {721C20B6-6E85-4702-8C5E-678A8FC4FA94}
-templatekey: Toolmenubutton
+template: {998B965E-6AB8-4568-810F-8101D60D0CC3}
+templatekey: Menu item
 
 ----field----
-field: {9FEA3476-38AC-4433-B77A-1175C91EE5D7}
-name: Click
-key: click
-content-length: 13
-
-asr:exportcsv
-----field----
-field: {44375FDD-6386-4664-B76D-8DA7F9E094C4}
+field: {335C6760-6C0E-4C6C-814C-A53D203F553E}
 name: Icon
 key: icon
-content-length: 32
+content-length: 38
 
-WordProcessing/32x32/columns.png
+WordProcessing/32x32/imp_exp_xml_h.png
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 32
+content-length: 38
 
-WordProcessing/32x32/columns.png
+WordProcessing/32x32/imp_exp_xml_h.png
 ----version----
 language: en
 version: 1
-revision: 41f28dc0-2363-42b9-93d1-3b6622fed0cd
+revision: 8b67197e-9d19-4733-be07-7a9586f60a62
 
-----field----
-field: {BBEBD348-F08B-45C6-A4C8-08AAF60F2EAA}
-name: Header
-key: header
-content-length: 3
-
-CSV
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -69,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-41f28dc0-2363-42b9-93d1-3b6622fed0cd
+8b67197e-9d19-4733-be07-7a9586f60a62
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20090601T115636:633794541966787110
+20121201T234716:634900024362112115
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

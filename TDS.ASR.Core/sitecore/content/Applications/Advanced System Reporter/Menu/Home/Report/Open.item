@@ -1,35 +1,35 @@
 ----item----
 version: 1
-id: {740D5C14-345A-4E3E-8763-F820081E7C16}
+id: {9EE4703A-083C-48F3-A1BE-9A41B6B995D5}
 database: core
-path: /sitecore/content/Applications/Advanced System Reporter/Menu/Save
-parent: {EE1860D8-09CB-49FE-9AB5-2F01D2D2D796}
-name: Save
+path: /sitecore/content/Applications/Advanced System Reporter/Menu/Home/Report/Open
+parent: {D06530E0-9FD9-4E83-8722-C5A51B83D5F2}
+name: Open
 master: {00000000-0000-0000-0000-000000000000}
-template: {79E55CB1-FDB0-460A-AB97-B629069F15DA}
-templatekey: Toolbutton
+template: {1DB34C92-03B0-4475-9A39-DA14E4D9D8FC}
+templatekey: Large Button
 
 ----field----
-field: {95DCE7F7-107B-4E53-BE87-F16E707A5D3F}
+field: {D47ED548-84D5-4622-9886-5CC164727507}
+name: Icon
+key: icon
+content-length: 33
+
+Applications/32x32/folder_out.png
+----field----
+field: {DBBF9EE3-C30E-4456-A81F-ED8C2E8DF91B}
 name: Click
 key: click
 content-length: 8
 
-asr:save
-----field----
-field: {0A9EC22E-C3C1-42E4-875D-C31AEAF28216}
-name: Icon
-key: icon
-content-length: 32
-
-Applications/32x32/disk_blue.png
+asr:open
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 32
+content-length: 33
 
-Applications/32x32/disk_blue.png
+Applications/32x32/folder_out.png
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -40,15 +40,15 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 7dfaacb7-d3c4-4b69-b1fc-292c0a4d5998
+revision: 686462ab-f360-4638-94b3-6b99fee85b12
 
 ----field----
-field: {0243B5CA-1A92-4093-9EAD-B4F7B8AD2594}
+field: {4DF6DA21-E745-444C-956E-1D4A96AB8821}
 name: Header
 key: header
 content-length: 4
 
-Save
+Open
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7dfaacb7-d3c4-4b69-b1fc-292c0a4d5998
+686462ab-f360-4638-94b3-6b99fee85b12
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20091203T113035:633954366359013799
+20121201T232801:634900012813886100
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

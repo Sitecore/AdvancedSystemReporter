@@ -12,7 +12,7 @@ templatekey: Scanner
 ----version----
 language: en
 version: 1
-revision: 2599f92b-91a9-40d9-b9e0-08e107ab5435
+revision: d9c8a993-2646-4171-8865-92e1f87cc284
 
 ----field----
 field: {6FB5BEBA-ECD8-4B56-B20A-BF292193D491}
@@ -34,7 +34,7 @@ name: Attributes
 key: attributes
 content-length: 19
 
-Query=.|root={Root}
+Query=.|Root={Root}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2599f92b-91a9-40d9-b9e0-08e107ab5435
+d9c8a993-2646-4171-8865-92e1f87cc284
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20111121T091556:634574637564566734
+20121130T220435:634899098750442693
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

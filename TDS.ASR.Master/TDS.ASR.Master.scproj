@@ -29,7 +29,7 @@
     <OutputPath>.\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
     <SitecoreDeployFolder>$(SitecoreWebRoot)</SitecoreDeployFolder>
-    <SitecoreWebUrl>http://asr</SitecoreWebUrl>
+    <SitecoreWebUrl>$(SitecoreURL)</SitecoreWebUrl>
     <SitecoreAccessGuid>73fd56e6-2f46-48c0-82b3-18a1433fa33a</SitecoreAccessGuid>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
   </PropertyGroup>

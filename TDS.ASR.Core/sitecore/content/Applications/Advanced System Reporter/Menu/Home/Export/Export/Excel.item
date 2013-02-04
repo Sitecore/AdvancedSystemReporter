@@ -1,54 +1,33 @@
 ----item----
 version: 1
-id: {74F4120D-C271-462D-9CC9-45F7CC435AD1}
+id: {E8641FF5-C86F-43DB-B312-CF2273B2F5BB}
 database: core
-path: /sitecore/content/Applications/Advanced System Reporter/Menu/Save to Desktop
-parent: {EE1860D8-09CB-49FE-9AB5-2F01D2D2D796}
-name: Save to Desktop
+path: /sitecore/content/Applications/Advanced System Reporter/Menu/Home/Export/Export/Excel
+parent: {B4D22B19-98F6-4C96-AA47-7C41892FA280}
+name: Excel
 master: {00000000-0000-0000-0000-000000000000}
-template: {79E55CB1-FDB0-460A-AB97-B629069F15DA}
-templatekey: Toolbutton
+template: {998B965E-6AB8-4568-810F-8101D60D0CC3}
+templatekey: Menu item
 
 ----field----
-field: {95DCE7F7-107B-4E53-BE87-F16E707A5D3F}
-name: Click
-key: click
-content-length: 10
-
-asr:linkit
-----field----
-field: {0A9EC22E-C3C1-42E4-875D-C31AEAF28216}
+field: {335C6760-6C0E-4C6C-814C-A53D203F553E}
 name: Icon
 key: icon
-content-length: 33
+content-length: 38
 
-Applications/32x32/magic-wand.png
+WordProcessing/32x32/imp_exp_excel.png
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 33
+content-length: 38
 
-Applications/32x32/magic-wand.png
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-150
+WordProcessing/32x32/imp_exp_excel.png
 ----version----
 language: en
 version: 1
-revision: c06e571b-90b8-4cd5-abc1-8f83bd17d2bc
+revision: e300fa0f-0cfe-4635-81d3-3d0584ddeae5
 
-----field----
-field: {0243B5CA-1A92-4093-9EAD-B4F7B8AD2594}
-name: Header
-key: header
-content-length: 19
-
-Create Desktop Link
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,7 +41,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20090424T171106
+20090424T171958
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -76,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c06e571b-90b8-4cd5-abc1-8f83bd17d2bc
+e300fa0f-0cfe-4635-81d3-3d0584ddeae5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20091203T113201:633954367215372780
+20121201T234701:634900024214713685
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

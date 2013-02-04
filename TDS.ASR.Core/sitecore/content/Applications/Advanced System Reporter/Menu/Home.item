@@ -1,26 +1,19 @@
 ----item----
 version: 1
-id: {55B93D43-A047-4ADB-BA16-71C931282B90}
-database: master
-path: /sitecore/system/Modules/ASR/Configuration/Parameter Types/Dropdown
-parent: {13DEF994-4473-41D2-81A7-89BAA670D019}
-name: Dropdown
+id: {55119D6B-A37D-4DAD-BA4E-CCA35A45DAC3}
+database: core
+path: /sitecore/content/Applications/Advanced System Reporter/Menu/Home
+parent: {EE1860D8-09CB-49FE-9AB5-2F01D2D2D796}
+name: Home
 master: {00000000-0000-0000-0000-000000000000}
-template: {107DE518-349B-4EC6-9967-C8EDE31910DF}
-templatekey: Value
+template: {EC6D62A5-5D00-4329-8958-8AC1AD100EBB}
+templatekey: Strip
 
 ----version----
 language: en
 version: 1
-revision: 9c6affa8-eebb-4c90-bfc9-c75de723db0a
+revision: 6c560cf7-cf17-4495-b571-1e569f61b62e
 
-----field----
-field: {1AC5871D-8232-4DF5-8EE1-F2D038DEE591}
-name: Value
-key: value
-content-length: 67
-
-Sitecore.Shell.Web.UI.WebControls.SmallDropDownBox, Sitecore.Kernel
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -34,7 +27,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20090423T162435
+20121201T232528
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9c6affa8-eebb-4c90-bfc9-c75de723db0a
+6c560cf7-cf17-4495-b571-1e569f61b62e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20121206T125545:634903953458960693
+20121201T232528:634900011289908934
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

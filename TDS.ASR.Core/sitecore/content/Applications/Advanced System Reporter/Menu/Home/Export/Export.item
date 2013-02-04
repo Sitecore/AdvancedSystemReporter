@@ -2,20 +2,34 @@
 version: 1
 id: {B4D22B19-98F6-4C96-AA47-7C41892FA280}
 database: core
-path: /sitecore/content/Applications/Advanced System Reporter/Menu/Export
-parent: {EE1860D8-09CB-49FE-9AB5-2F01D2D2D796}
+path: /sitecore/content/Applications/Advanced System Reporter/Menu/Home/Export/Export
+parent: {11552CE0-0FD8-4013-A8DB-734C09350380}
 name: Export
 master: {00000000-0000-0000-0000-000000000000}
-template: {B40EE369-172F-4A95-BCF5-2A740DEA8F06}
-templatekey: Toolmenu
+template: {19054D88-FED7-48AD-87CD-CF458590C303}
+templatekey: Large Gallery Button
 
 ----field----
-field: {02EE1EED-3F23-4C2D-A13B-E651AA163184}
+field: {E792E033-3264-4F34-BEBF-B2BD82B0FC5A}
 name: Icon
 key: icon
-content-length: 32
+content-length: 26
 
-Applications/32x32/transform.png
+Imaging/16x16/shapes_h.png
+----field----
+field: {0A734AF1-CBD3-4896-8615-6374D2D5DCEE}
+name: Gallery Width
+key: gallery width
+content-length: 3
+
+250
+----field----
+field: {C13FE317-1F69-42D1-B8EF-EE783D372926}
+name: Gallery Height
+key: gallery height
+content-length: 3
+
+400
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
@@ -40,10 +54,10 @@ content-length: 116
 ----version----
 language: en
 version: 1
-revision: b0e1013e-6fb1-430f-96e0-8c981f59caf5
+revision: f051ef64-a5ab-4740-8962-1a7a9cd161c7
 
 ----field----
-field: {72A56DA7-0F41-4789-B585-473206D4D407}
+field: {2AC65C2F-127B-43BC-8687-5689E1FB3D78}
 name: Header
 key: header
 content-length: 6
@@ -76,14 +90,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b0e1013e-6fb1-430f-96e0-8c981f59caf5
+f051ef64-a5ab-4740-8962-1a7a9cd161c7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20090601T112815:633794524951328125
+20121201T234808:634900024882281867
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
