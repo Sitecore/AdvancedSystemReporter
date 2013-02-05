@@ -1,4 +1,5 @@
 ﻿using System;
+using Sitecore;
 using Sitecore.Diagnostics;
 using ASR.Interface;
 using Sitecore.Collections;
@@ -15,6 +16,13 @@ namespace ASR.Interface
 		public abstract void Display(DisplayElement dElement);
 
 		#endregion
+
+        public string DateFormat { get; set; }
+
+        public string GetDateFormat(string defaultFormat)
+        {
+            return StringUtil.GetString(DateFormat,defaultFormat, "dd/MM/yyyy HH:mm:ss");
+        }
 
 		private static BaseViewer Create(string type)
 		{
@@ -89,5 +97,13 @@ namespace ASR.Interface
 		/// </summary>
 		/// <value>The columns.</value>
 		public List<Column> Columns { get; protected set; }
-	}
+
+        public virtual string[] AvailableColumns
+        {
+            get
+            {
+                return new string[] { };
+            }
+        }
+    }
 }

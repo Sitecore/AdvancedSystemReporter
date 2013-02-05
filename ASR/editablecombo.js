@@ -231,7 +231,10 @@ function fnChangeHandler_A(getdropdown) {
         // Indicates that the Change in dropdown selected
         // option was due to a Manual Click
     }
+    var header = document.getElementById("ColumnHeader");
+    header.value = getdropdown.options[getdropdown.selectedIndex].text.replace(/(.)([A-Z])/g, "$1 $2");
 }
+
 
 function fnKeyPressHandler_A(getdropdown, e) {
     fnSanityCheck(getdropdown);

@@ -1,4 +1,6 @@
 ﻿using System;
+using Sitecore.Data;
+using Sitecore.Globalization;
 using Sitecore.Shell.Applications.ContentEditor;
 using Sitecore.Diagnostics;
 using Sitecore.Web.UI.WebControls;
@@ -13,23 +15,54 @@ using Sitecore.Web;
 using Sitecore.Web.UI.XmlControls;
 using Sitecore.Resources;
 using Sitecore.Web.UI.HtmlControls;
+using Version = Sitecore.Data.Version;
 
 namespace ASR.Controls
 {
 	public class ColumnsField : Sitecore.Web.UI.HtmlControls.Control, IContentField, IMessageHandler
 	{
-		public override string Value
-		{
-			get
-			{
-				return StringUtil.GetString(ViewState["Value"]);
-			}
-			set
-			{
-				Assert.ArgumentNotNull(value, "value");
-				ViewState["Value"] = value;
-			}
-		}
+        #region properties
+
+        public string ItemID
+        {
+            get { return StringUtil.GetString(ViewState["ItemID"]); }
+            set
+            {
+                Assert.ArgumentNotNull(value, "value");
+                ViewState["ItemID"] = value;
+            }
+        }
+        public string ItemVersion
+        {
+            get { return StringUtil.GetString(ViewState["ItemVersion"]); }
+            set
+            {
+                Assert.ArgumentNotNull(value, "value");
+                ViewState["ItemVersion"] = value;
+            }
+        }
+        public string ItemLanguage
+        {
+            get { return StringUtil.GetString(ViewState["ItemLanguage"]); }
+            set
+            {
+                Assert.ArgumentNotNull(value, "value");
+                ViewState["ItemLanguage"] = value;
+            }
+        }
+        public override string Value
+        {
+            get
+            {
+                return StringUtil.GetString(ViewState["Value"]);
+            }
+            set
+            {
+                Assert.ArgumentNotNull(value, "value");
+                ViewState["Value"] = value;
+            }
+        } 
+        #endregion
 
 		protected override void OnLoad(EventArgs e)
 		{
@@ -138,6 +171,9 @@ namespace ASR.Controls
 						value = string.Empty;
 					}                    
 					handle["value"] = value;
+				    handle["id"] =
+				        new ItemUri(Sitecore.Data.ID.Parse(ItemID), Language.Parse(ItemLanguage), new Version(ItemVersion),
+				                    Sitecore.Context.ContentDatabase).ToString(ItemUriFormat.Uri);
 					handle.Add(urlString);                    
                     SheerResponse.ShowModalDialog(urlString.ToString(), "800px", "500px", string.Empty, true);
 					args.WaitForPostBack();

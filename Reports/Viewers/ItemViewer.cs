@@ -4,6 +4,8 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using ASR.Interface;
+using ASR.Reports.Logs;
+using ASR.Reports.Scanners;
 using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
@@ -41,41 +43,74 @@ namespace ASR.Reports.Items
             }
         }
 
-        public string DateFormat { get; set; }
+        public override string[] AvailableColumns
+        {
+            get
+            {
+                return new string[]
+                    {
+                        "ChildrenCount",
+                        "Created",
+                        "CreatedBy",
+                         "DisplayName",
+                        "Name",
+                        "Language",
+                        "LockedBy",
+                        "Owner",
+                        "Path",
+                        "Template",
+                        "Unlocked",
+                        "Updated",
+                        "UpdatedBy",
+                        "Version",
+                        "Versions",
+                        "Workflow"
+                    };
+            }
+        }
 
         #endregion
 
         #region Public methods
 
-        public override void Display(DisplayElement d_element)
+        public override void Display(DisplayElement dElement)
         {
-            Item itemElement = null;
-            if (d_element.Element is Item)
+            var itemElement = dElement.Element as Item;
+
+            if (itemElement == null)
             {
-                itemElement = (Item)d_element.Element;
+                if (dElement.Element is ID)
+                {
+                    itemElement = Sitecore.Context.ContentDatabase.GetItem((ID)dElement.Element);
+                }
+                else if (dElement.Element is WorkflowEventCustom)
+                {
+                    itemElement = ((WorkflowEventCustom)dElement.Element).Item;
+                }
+                else if (dElement.Element is AuditItem)
+                {
+                    itemElement = Database.GetItem(((AuditItem)dElement.Element).ItemUri);
+                }
             }
-            else if (d_element.Element is ID)
-            {
-                itemElement = Sitecore.Context.ContentDatabase.GetItem(d_element.Element as ID);
-            }
+
 
             if (itemElement == null)
             {
                 return;
             }
-            d_element.Value = itemElement.Uri.ToString();
+            dElement.Value = itemElement.Uri.ToString();
 
-            d_element.Header = itemElement.Name;
+            dElement.Header = itemElement.Name;
 
             foreach (var column in Columns)
             {
-                if (!d_element.HasColumn(column.Header))
+                if (!dElement.HasColumn(column.Header))
                 {
                     var text = getColumnText(column.Name, itemElement);
-                    d_element.AddColumn(column.Header, string.IsNullOrEmpty(text) ? itemElement[column.Name] : text);
+                    dElement.AddColumn(column.Header, string.IsNullOrEmpty(text) ? itemElement[column.Name] : text);
                 }
             }
-            d_element.Icon = itemElement.Appearance.Icon;
+            dElement.Icon = itemElement.Appearance.Icon;
         }
 
         #endregion
@@ -89,9 +124,8 @@ namespace ASR.Reports.Items
             {
                 var dateTimeFormatInfo = CultureInfo.CurrentUICulture.DateTimeFormat;
 
-                var format = string.IsNullOrEmpty(DateFormat)
-                                   ? dateTimeFormatInfo.ShortDatePattern
-                                   : DateFormat;
+                var format = GetDateFormat(dateTimeFormatInfo.ShortDatePattern);
+
                 if (field.InnerField.TypeKey == "datetime")
                     return field.DateTime.ToString(string.Concat(format, " ", dateTimeFormatInfo.ShortTimePattern));
                 else
@@ -107,22 +141,22 @@ namespace ASR.Reports.Items
                 case "name":
                     return itemElement.Name;
 
-                case "display name":
+                case "displayname":
                     return itemElement.DisplayName;
 
-                case "created by":
+                case "createdby":
                     return itemElement[FieldIDs.CreatedBy];
 
                 case "updated":
                     return formatDateField(itemElement, FieldIDs.Updated);
 
-                case "updated by":
+                case "updatedby":
                     return itemElement[FieldIDs.UpdatedBy];
 
                 case "created":
                     return formatDateField(itemElement, FieldIDs.Created);
 
-                case "locked by":
+                case "lockedby":
                     LockField lf = itemElement.Fields["__lock"];
                     var text = "unlocked";
                     if (lf != null)
@@ -143,7 +177,7 @@ namespace ASR.Reports.Items
                 case "workflow":
                     return getWorkflowInfo(itemElement);
 
-                case "children count":
+                case "childrencount":
                     return itemElement.Children.Count.ToString();
 
                 case "version":

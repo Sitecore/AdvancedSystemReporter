@@ -12,7 +12,7 @@ templatekey: Viewer
 ----version----
 language: en
 version: 1
-revision: 84fa5bca-cbad-4488-89d5-8247818513fd
+revision: 43f7aa2e-1348-4da7-8a9e-f2abaaf33d63
 
 ----field----
 field: {6FB5BEBA-ECD8-4B56-B20A-BF292193D491}
@@ -32,9 +32,9 @@ ASR.Reports.Viewers.WorkflowEventViewer
 field: {2FE97449-F425-4789-AB93-C246BFA1749B}
 name: Columns
 key: columns
-content-length: 11
+content-length: 249
 
-<Columns />
+<Columns><Column name="name">Name</Column><Column name="date">Date</Column><Column name="oldstate">Old state</Column><Column name="newstate">New state</Column><Column name="language">Language</Column><Column name="version">Version</Column></Columns>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-84fa5bca-cbad-4488-89d5-8247818513fd
+43f7aa2e-1348-4da7-8a9e-f2abaaf33d63
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20120905T162247:634824589677551574
+20130205T134003:634956684036685654
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

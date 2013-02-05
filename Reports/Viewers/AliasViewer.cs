@@ -4,6 +4,7 @@ using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Data.Fields;
+using Sitecore.SecurityModel;
 
 namespace ASR.Reports.Viewers
 {
@@ -35,17 +36,20 @@ namespace ASR.Reports.Viewers
             _alias = new Dictionary<ID, string>();
             var aliasparent = db.GetItem("/sitecore/system/aliases");
             Error.AssertNotNull(aliasparent,"can't find aliases");
-            foreach (Item child in aliasparent.Children)
+            using (new SecurityDisabler())
             {
-                LinkField lf = child.Fields["linked item"];
-                if (_alias.ContainsKey(lf.TargetID))
+                foreach (Item child in aliasparent.Children)
                 {
-                    _alias[lf.TargetID] += string.Concat(", ", child.Name);
-                }
-                else
-                {
-                    _alias.Add(lf.TargetID, child.Name);                    
-                }
+                    LinkField lf = child.Fields["linked item"];
+                    if (_alias.ContainsKey(lf.TargetID))
+                    {
+                        _alias[lf.TargetID] += string.Concat(", ", child.Name);
+                    }
+                    else
+                    {
+                        _alias.Add(lf.TargetID, child.Name);
+                    }
+                } 
             }
         }
     }

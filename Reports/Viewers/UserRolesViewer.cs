@@ -1,5 +1,7 @@
-﻿using ASR.Interface;
+﻿using System;
+using ASR.Interface;
 using Sitecore.Security.Accounts;
+using System.Linq;
 
 namespace ASR.Reports.Users
 {
@@ -7,14 +9,18 @@ namespace ASR.Reports.Users
     {
         public override void Display(DisplayElement dElement)
         {
-            User user = dElement.Element as User;
+            var user = dElement.Element as User;
             if ((Account)user == (Account)null)
                 return;
 
             foreach (var userRole in user.Roles)
             {
-                dElement.AddColumn(userRole.Name, "yes");    
-            }            
+                if (Columns == null ||
+                    Columns.Any(c => c.Name.Equals(userRole.Name, StringComparison.InvariantCultureIgnoreCase)))
+                {
+                    dElement.AddColumn(userRole.Name, "yes");
+                }
+            }
         }
     }
 }

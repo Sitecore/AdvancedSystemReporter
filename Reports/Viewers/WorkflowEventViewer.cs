@@ -1,4 +1,5 @@
-﻿using Sitecore.Data.Items;
+﻿using System.Globalization;
+using Sitecore.Data.Items;
 using ASR.Reports.Scanners;
 using ASR.Interface;
 
@@ -6,6 +7,7 @@ namespace ASR.Reports.Viewers
 {
     public class WorkflowEventViewer : BaseViewer
     {
+        #region properties
         public Sitecore.Data.Database Database
         {
             get
@@ -13,6 +15,26 @@ namespace ASR.Reports.Viewers
                 return Sitecore.Context.ContentDatabase;
             }
         }
+
+        public override string[] AvailableColumns
+        {
+            get
+            {
+                return new string[]
+                    {
+                        "Name",
+                        "Date",
+                        "User",
+                        "OldState",
+                        "NewState",
+                        "Text",
+                        "Paths",
+                        "Language",
+                        "Version"                    
+                    };
+            }
+        } 
+        #endregion
         public override void Display(DisplayElement dElement)
         {
 
@@ -23,16 +45,43 @@ namespace ASR.Reports.Viewers
 
             dElement.Value = wec.Item.Uri.ToString();
             dElement.Icon = wec.Item.Appearance.Icon;
-            dElement.AddColumn("Name", wec.Item.DisplayName);
-            dElement.AddColumn("Date", wec.WorkflowEvent.Date.ToString("dd/MM/yyyy HH:mm:ss"));
-            dElement.AddColumn("User", wec.WorkflowEvent.User);
-            dElement.AddColumn("OldState", getStateName(wec.WorkflowEvent.OldState));
-            dElement.AddColumn("NewState", getStateName(wec.WorkflowEvent.NewState));
-            dElement.AddColumn("Text", wec.WorkflowEvent.Text);
-            dElement.AddColumn("Paths", wec.Item.Paths.Path);
-            dElement.AddColumn("Language", wec.Item.Language.GetDisplayName());
-            dElement.AddColumn("Version", wec.Item.Version.Number.ToString());
+            foreach (var column in Columns)
+            {
+                switch (column.Name)
+                {
+                    case "name":
+                        dElement.AddColumn(column.Header, wec.Item.DisplayName);
+                        break;
+                    case "date":
+                        dElement.AddColumn(column.Header, wec.WorkflowEvent.Date.ToString(GetDateFormat(null)));
+                        break;
+                    case "user":
+                        dElement.AddColumn(column.Header, wec.WorkflowEvent.User);
+                        break;
+                    case "oldstate":
+                        dElement.AddColumn(column.Header, getStateName(wec.WorkflowEvent.OldState));
+                        break;
+                    case "newstate":
+                        dElement.AddColumn(column.Header, getStateName(wec.WorkflowEvent.NewState));
+                        break;
+                    case "text":
+                        dElement.AddColumn(column.Header, wec.WorkflowEvent.Text);
+                        break;
+                    case "paths":
+                        dElement.AddColumn(column.Header, wec.Item.Paths.Path);
+                        break;
+                    case "language":
+                        dElement.AddColumn(column.Header, wec.Item.Language.GetDisplayName());
+                        break;
+                    case "version":
+                        dElement.AddColumn(column.Header, wec.Item.Version.Number.ToString(CultureInfo.InvariantCulture));
+                        break;
+                      
+                }
+            }
+            
         }
+
         private string getStateName(string stateID)
         {
             Item state = Database.GetItem(stateID);

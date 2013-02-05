@@ -1,4 +1,5 @@
-﻿using ASR.Interface;
+﻿using ASR.DomainObjects;
+using ASR.Interface;
 using Sitecore.Diagnostics;
 
 namespace ASR.Reports.Logs
@@ -10,37 +11,61 @@ namespace ASR.Reports.Logs
 		private readonly string ICON_INFO = "Applications/32x32/information2.png";
 		private readonly string ICON_AUDIT = "Applications/32x32/scroll_view.png";
 
-		public override void Display(DisplayElement _dElement)
-		{
-			Debug.ArgumentNotNull(_dElement, "element");
 
-			LogItem logElement = _dElement.Element as LogItem;
+        public override string[] AvailableColumns
+        {
+            get { return new string[] {"Type", "Date", "Message", "User", "Verb"}; }
+        }
+
+		public override void Display(DisplayElement dElement)
+		{
+			Debug.ArgumentNotNull(dElement, "element");
+
+			var logElement = dElement.Element as LogItem;
 
 			if (logElement == null)
 			{
 				return;
 			}
 
-			_dElement.Value = _dElement.Element.ToString();
-			_dElement.Icon = getIcon(logElement);
-
-			_dElement.AddColumn("Type", logElement.Type.ToString());
-			_dElement.AddColumn("Date", logElement.DateTime.ToShortDateString());
-			_dElement.AddColumn("Time", logElement.DateTime.ToShortTimeString());
-
-			AuditItem ai = logElement as AuditItem;
+			dElement.Value = dElement.Element.ToString();
+			dElement.Icon = GetIcon(logElement);
+            var ai = logElement as AuditItem;
+		    foreach (var column in Columns)
+		    {
+		        switch (column.Name)
+		        {
+                    case "type":
+                        dElement.AddColumn(column.Header, logElement.Type.ToString());
+		                break;
+                    case "date":
+                        dElement.AddColumn(column.Header, logElement.DateTime.ToString(GetDateFormat(null)));
+		                break;
+                    case "message":
+                        dElement.AddColumn(column.Header, logElement.Message);
+		                break;
+                    case "user":
+                        if (ai != null)
+                        {
+                            dElement.AddColumn(column.Header, ai.User);
+                        }
+		                break;
+                    case "verb":
+                        if (ai != null)
+                        {
+                            dElement.AddColumn(column.Header, ai.Verb);
+                        }
+		                break;
+		        }
+		    }
+			
 			if (ai != null)
-			{
-				_dElement.AddColumn("User", ai.User);
-				_dElement.AddColumn("Verb", ai.Verb);
-
-				_dElement.Value = ai.ItemUri == null ? "" : ai.ItemUri.ToString();
-			}
-
-			_dElement.AddColumn("Message", logElement.Message);
+			{		
+				dElement.Value = ai.ItemUri == null ? "" : ai.ItemUri.ToString();
+			}			
 		}
 
-		private string getIcon(LogItem logElement)
+		private string GetIcon(LogItem logElement)
 		{
 			switch (logElement.Type)
 			{

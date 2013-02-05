@@ -1,6 +1,12 @@
 Advanced System Reporter
 ------------------------
+v.1.4.4
 
+- added support for the columns field in all viewers. When using a custom viewer you can override the AllowableColumns property to populate the dropdown in the column editor.
+
+v.1.4.3
+
+- fixed various issues with casing of properties in scanners and filters which threw exceptions
 
 v.1.4.2
 

@@ -12,7 +12,7 @@ templatekey: Viewer
 ----version----
 language: en
 version: 1
-revision: 191025d8-801a-4129-92ab-398da4c5590c
+revision: f5bea22a-dc87-42b8-999c-67352b144272
 
 ----field----
 field: {6FB5BEBA-ECD8-4B56-B20A-BF292193D491}
@@ -32,9 +32,9 @@ ASR.Reports.Sessions.SessionsViewer
 field: {2FE97449-F425-4789-AB93-C246BFA1749B}
 name: Columns
 key: columns
-content-length: 19
+content-length: 168
 
-<Columns></Columns>
+<Columns><Column name="user">User</Column><Column name="created">Created</Column><Column name="lastrequest">Last Request</Column><Column name="id">ID</Column></Columns>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-191025d8-801a-4129-92ab-398da4c5590c
+f5bea22a-dc87-42b8-999c-67352b144272
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20091118T105741:633941386617519890
+20130205T222937:634957001772057556
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

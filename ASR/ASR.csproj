@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="..\Sitecore.Settings.props" Condition="Exists('..\Sitecore.Settings.props')" />
+  <Import Project="..\Sitecore.Settings.props" Condition="Exists('..\Sitecore.Settings.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -139,14 +139,18 @@
   <ItemGroup>
     <Content Include="ASR.xml" />
     <Content Include="Controls\Column.xml" />
-    <Content Include="Controls\ColumnEditor.xml" />
+    <Content Include="Controls\ColumnEditor.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Controls\ItemSelectorDialog.xml" />
+    <Content Include="editablecombo.js" />
     <Content Include="sitecore\shell\download.aspx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ASR.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ASR.Download.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -178,6 +182,7 @@
 xcopy /y /s "$(ProjectDir)sitecore\shell\*.aspx" "$(SitecoreWebRoot)\sitecore\shell\"
 xcopy /y /s "$(ProjectDir)*.xml" "$(SitecoreWebRoot)\sitecore modules\Shell\ASR\"
 xcopy /y /s "$(TargetPath)" "$(SitecoreWebRoot)\bin\"
-xcopy /y/s "$(SolutionDir)data\packages\Advanced System Reporter.xml" "$(SitecoreWebRoot)"\..\data\packages</PostBuildEvent>
+xcopy /y/s "$(SolutionDir)data\packages\Advanced System Reporter.xml" "$(SitecoreWebRoot)"\..\data\packages
+xcopy /y/s "$(ProjectDir)*.js" "$(SitecoreWebRoot)\sitecore modules\Shell\ASR\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using ASR.DomainObjects;
+using ASR.Interface;
+using CorePoint.DomainObjects.SC;
+using Sitecore.Data;
 using Sitecore.Web.UI.Pages;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web;
@@ -28,11 +33,8 @@ namespace ASR.Controls
 		/// <value>The index of the selected column.</value>
 		public int SelectedIndex
 		{
-			get
-			{
-				return MainUtil.GetInt(Sitecore.Context.ClientPage.ServerProperties["SelectedIndex"], -1);
-			}
-			set
+		    get { return MainUtil.GetInt(Sitecore.Context.ClientPage.ServerProperties["SelectedIndex"], -1); }
+		    set
 			{
 				Sitecore.Context.ClientPage.ServerProperties["SelectedIndex"] = value;
 			}
@@ -43,15 +45,49 @@ namespace ASR.Controls
 			base.OnLoad(e);
 			if (!Sitecore.Context.ClientPage.IsEvent)
 			{
-				Refresh();
+			    PopulateAvailableColumns();
+
+			    Refresh();
 				SelectedIndex = -1;
                 ColumnHeader.Value =
                     Sitecore.Context.Request.QueryString["itemtype"] ?? "<no name>";
 			}
 		}
 
+	    private void PopulateAvailableColumns()
+	    {
+	        var handle = UrlHandle.Get();
 
-		protected override void OnOK(object sender, EventArgs args)
+	        var itemUri = ItemUri.Parse(handle["id"]);
+
+	        var item = Sitecore.Data.Database.GetItem(itemUri);
+	        if (item == null) return;
+	        var director = new SCDirector();
+            try
+            {
+
+                var referenceItem = director.LoadObjectFromItem<ReferenceItem>(item);
+                var viewer = BaseViewer.Create(referenceItem.FullType, string.Empty);
+                if (viewer == null) return;
+
+                
+                foreach (var availableColumn in viewer.AvailableColumns)
+                {
+                    ColumnName.Controls.Add(new ListItem { Header = availableColumn, Value = availableColumn.ToLowerInvariant()});
+                }
+            }
+            catch (FileNotFoundException)
+            {
+
+                //todo
+                
+            }
+           
+	        
+	    }
+
+
+	    protected override void OnOK(object sender, EventArgs args)
 		{
 			Sitecore.Context.ClientPage.ClientResponse.SetDialogValue("yes");
 			base.OnOK(sender, args);

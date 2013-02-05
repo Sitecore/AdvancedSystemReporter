@@ -3,8 +3,15 @@ using Sitecore.Diagnostics;
 
 namespace ASR.Reports.Sessions
 {
-    public class SessionsViewer : ASR.Interface.BaseViewer
+    public class SessionsViewer : BaseViewer
     {
+        public override string[] AvailableColumns
+        {
+            get
+            {
+                return new string[]{"User","Created","LastRequest","ID"};
+            }
+        }
         public override void Display( DisplayElement dElement)
         {
             Assert.ArgumentNotNull(dElement, "element");
@@ -12,20 +19,30 @@ namespace ASR.Reports.Sessions
                 dElement.Element as Sitecore.Web.Authentication.DomainAccessGuard.Session;
             if (session != null)
             {
-                dElement.AddColumn("User", session.UserName);
-                dElement.AddColumn("Created", session.Created.ToString("dd/MM/yy HH:mm"));
-                dElement.AddColumn("Last request", session.LastRequest.ToString("dd/MM/yy HH:mm"));
-                dElement.AddColumn("ID", session.SessionID);
-
+                foreach (var column in Columns)
+                {
+                    switch (column.Name)
+                    {
+                        case "user":
+                            dElement.AddColumn("User", session.UserName);
+                            break;
+                        case "created":
+                            dElement.AddColumn("Created", session.Created.ToString(GetDateFormat(null)));
+                            break;
+                        case "lastrequest":
+                            dElement.AddColumn("Last request", session.LastRequest.ToString(GetDateFormat(null)));
+                            break;
+                        case "id":
+                                         dElement.AddColumn("ID", session.SessionID);
+                            break;
+                    }
+                }
                 dElement.Value = session.SessionID;
             }
 
-            //return dElement;
+        
         }
 
-        //public override IEnumerable<string> GetColumnNames()
-        //{
-        //    return new string[] {"User","Created","Last request","ID"};
-        //}
+
     }
 }

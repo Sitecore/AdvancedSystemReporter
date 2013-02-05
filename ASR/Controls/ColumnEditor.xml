@@ -21,22 +21,7 @@
 					<GridPanel Columns="2">
 						<Literal Text="Column name:" GridPanel.NoWrap="true" />
             <ASRComboEdit ID="ColumnName" >
-              <ListItem>--enter field name--</ListItem>
-              <ListItem value="children count">Children Count</ListItem>
-              <ListItem value="created">Created</ListItem>
-              <ListItem value="created by">Created by</ListItem>
-              <ListItem value="display name">Display Name</ListItem>
-              <ListItem value="language">Language</ListItem>
-              <ListItem value="locked by">Locked by</ListItem>
-              <ListItem value="name">Name</ListItem>
-              <ListItem value="owner">Owner</ListItem>
-              <ListItem value="path">Path</ListItem>
-              <ListItem value="template">Template</ListItem>              
-              <ListItem value="updated">Updated</ListItem>
-              <ListItem value="updated by">Updated by</ListItem>
-              <ListItem value="version">Version</ListItem>
-                <ListItem value="versions">Number of Versions</ListItem>
-              <ListItem value="workflow">Workflow</ListItem>              
+              <ListItem>--enter field name--</ListItem>                     
             </ASRComboEdit>
 
 						<Literal Text="Column header:" GridPanel.NoWrap="true" />

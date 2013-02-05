@@ -1,9 +1,24 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASR", "ASR\ASR.csproj", "{4E189BA3-7E40-47F8-9552-08558E06A8AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASR.Reports", "Reports\ASR.Reports.csproj", "{8BAA2172-A290-4C64-AC0B-3D6AF78DA578}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{1CA243E6-E64E-424D-9F6A-2FDFB8EA4F26}"
+	ProjectSection(SolutionItems) = preProject
+		data\packages\Advanced System Reporter.package = data\packages\Advanced System Reporter.package
+		data\Release Notes.txt = data\Release Notes.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "environment", "environment", "{1AF6B56B-2F85-466A-BBFC-29C97CED06CE}"
+	ProjectSection(SolutionItems) = preProject
+		Sitecore.Settings.props = Sitecore.Settings.props
+	EndProjectSection
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "TDS.ASR.Core", "TDS.ASR.Core\TDS.ASR.Core.scproj", "{D2C2BB46-4F6A-4950-955A-4F7F2E8A1BCE}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "TDS.ASR.Master", "TDS.ASR.Master\TDS.ASR.Master.scproj", "{2234E999-A149-4BEF-9B0B-964A27FD0BEE}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -23,6 +38,18 @@ Global
 		{8BAA2172-A290-4C64-AC0B-3D6AF78DA578}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BAA2172-A290-4C64-AC0B-3D6AF78DA578}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BAA2172-A290-4C64-AC0B-3D6AF78DA578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2C2BB46-4F6A-4950-955A-4F7F2E8A1BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C2BB46-4F6A-4950-955A-4F7F2E8A1BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C2BB46-4F6A-4950-955A-4F7F2E8A1BCE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D2C2BB46-4F6A-4950-955A-4F7F2E8A1BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C2BB46-4F6A-4950-955A-4F7F2E8A1BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2C2BB46-4F6A-4950-955A-4F7F2E8A1BCE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2234E999-A149-4BEF-9B0B-964A27FD0BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2234E999-A149-4BEF-9B0B-964A27FD0BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2234E999-A149-4BEF-9B0B-964A27FD0BEE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2234E999-A149-4BEF-9B0B-964A27FD0BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2234E999-A149-4BEF-9B0B-964A27FD0BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2234E999-A149-4BEF-9B0B-964A27FD0BEE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

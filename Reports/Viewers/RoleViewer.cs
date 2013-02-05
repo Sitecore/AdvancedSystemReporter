@@ -6,18 +6,43 @@ namespace ASR.Reports.Roles
 {
     public class RoleViewer : BaseViewer
     {
+        public override string[] AvailableColumns
+        {
+            get
+            {
+                return new string[]
+                {
+                    "Name","Description","Domain","Users"
+                }
+                ;
+            }
+        }
         public override void Display(DisplayElement dElement)
         {
-            Role role = dElement.Element as Role;
+            var role = dElement.Element as Role;
             if ((Account)role == (Account)null)
                 return;
 
-            dElement.AddColumn("Name", role.DisplayName);
-            dElement.AddColumn("Description", role.Description);
-            dElement.AddColumn("Domain", role.Domain.Name);
+            foreach (var column in Columns)
+            {
+                switch (column.Name)
+                {
+                    case "name":
+                        dElement.AddColumn(column.Header, role.DisplayName); 
+                        break;
+                    case "description":
+                        dElement.AddColumn(column.Header, role.Description);
+                        break;
+                    case "domain":
+                        dElement.AddColumn(column.Header, role.Domain.Name);
+                        break;
+                    case "users":
+                        string usersInRole = string.Join("|", RolesInRolesManager.GetUsersInRole(role, true).Select(u => u.DisplayName).ToArray());
+                        dElement.AddColumn(column.Header, usersInRole);
+                        break;
 
-            string usersInRole = string.Join("|", RolesInRolesManager.GetUsersInRole(role, true).Select( u => u.DisplayName ).ToArray());
-            dElement.AddColumn("Users", usersInRole);
+                }
+            }
         }
     }
 }
