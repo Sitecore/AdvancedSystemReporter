@@ -1,0 +1,112 @@
+----item----
+version: 1
+id: {FE24486B-F99D-465F-804D-ECCE22B6DB0F}
+database: core
+path: /sitecore/system/Field types/Reporter/Columns
+parent: {833E89D6-D0B4-4C4F-AFB2-671F28EAD9AF}
+name: Columns
+master: {00000000-0000-0000-0000-000000000000}
+template: {F8A17D6A-118E-4CD7-B5F5-88FF37A4F237}
+templatekey: Template field type
+
+----field----
+field: {6BF5ED07-BC70-42F4-BB77-C017D340950E}
+name: Assembly
+key: assembly
+content-length: 3
+
+ASR
+----field----
+field: {9FE6154A-A16E-4827-99F6-F51533C34EC8}
+name: Class
+key: class
+content-length: 25
+
+ASR.Controls.ColumnsField
+----field----
+field: {0F0A5388-0467-4A45-95C0-729B1D6DB9FD}
+name: Control
+key: control
+content-length: 0
+
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 37
+
+WordProcessing/32x32/insert_table.png
+----version----
+language: da
+version: 1
+revision: 485585f3-6962-4b0f-858b-50a366c0bdc3
+
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+485585f3-6962-4b0f-858b-50a366c0bdc3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 15
+
+20070416T123658
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 1
+revision: 713e6f91-1f1c-4fbd-9298-e1a9bcb84517
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20070416T123658
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+713e6f91-1f1c-4fbd-9298-e1a9bcb84517
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20091030T160148:633925153087968750
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 16
+
+sitecore\azcaser
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

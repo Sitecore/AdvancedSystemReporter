@@ -1,0 +1,315 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Advanced System Reporter</PackageName>
+      <Author>Alenka Caserman / Raul Jimenez</Author>
+      <Version>1.4.4</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme>
+                Installs Advanced System Reporter components. No further steps are required.
+
+                If you want to use the Email functionality make sure the default mail settings in the web.config are set correctly to access a mail server.
+            </Readme>
+      <Publisher />
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/layout/Layouts/Applications/ASR/{053EE0BD-DBEA-4CF1-B07B-68C3F0F7E599}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Documents and settings/All users/Start menu/Programs/Advanced System Reporter/{2D9047A7-1395-43C1-BD5E-CE0091330E09}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Tasks/Schedules/Email Reports schedule/{F7283EB0-515E-4CFC-B851-B398DFB9206C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Tasks/Commands/Email Reports/{34DFE48A-8B58-4E27-9199-E72A855D8237}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/{605C3AD5-4D6E-4297-98C9-7638BE5A82EA}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Links/{EAEFFD74-055E-453F-9860-47CD385B6580}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/{EE1860D8-09CB-49FE-9AB5-2F01D2D2D796}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Links/sitecore_admin/{3396EEBA-0450-4A93-B031-A8FCD104066B}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Links/sitecore_admin/Expired Media items/{79B92026-F6F4-4024-A14D-7D3005C35EB4}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Links/sitecore_admin/Logged errors/{2DE2990A-E8E1-4A41-A949-0FE2EF38D217}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Links/sitecore_admin/Recently Modified/{33263393-FBD0-4948-A6E3-AF8A3C3A7D94}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Open/{9EE4703A-083C-48F3-A1BE-9A41B6B995D5}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Save/{740D5C14-345A-4E3E-8763-F820081E7C16}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Save to Desktop/{74F4120D-C271-462D-9CC9-45F7CC435AD1}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Toolbar divider/{8661CF42-5566-432A-B734-2D915401992D}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Export/{B4D22B19-98F6-4C96-AA47-7C41892FA280}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Toolbar divider 2/{FFB963D9-AEF6-4D51-8641-FB5F07916C7A}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Run/{D9CA0A59-F2D9-4D47-B509-1B76271F9004}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Refresh/{67A29BFE-51C1-4D3E-9417-2BCAD0E47E8B}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Export/CSV/{D24802BA-3FEC-4A16-8ABB-6DCC7DFADDBE}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Export/Excel/{E8641FF5-C86F-43DB-B312-CF2273B2F5BB}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Menu/Export/XML/{D7DC927B-755A-4BCA-ADB1-71771792F042}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/{F8F58789-D28B-441C-9D46-AD57E01E7549}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/{5BA3F3F4-E6B7-4D8A-B3CB-2FA7790B82B4}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/{30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/{F7BFC9AF-BCB8-4DA2-8BF1-1186177B1B9C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/{4503299D-8B00-4E21-B5B4-8A71E5507199}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameter Types/{13DEF994-4473-41D2-81A7-89BAA670D019}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/{1726DD7E-2E74-42A6-BAB5-D20DD0C2F8FF}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/{46497BB3-6B24-4323-80D7-5E6BBAA173E3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/{63E5565E-7399-4BC8-82FC-C0FAF8C9E84F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Change Ownership/{3DDCB4A3-415F-4726-8262-4854A599878A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Copy To/{754D0673-D682-434C-9CB8-E81CB09ADFC9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Delete/{EF12F271-E82B-473B-A851-5A57C06C1FA1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Kick/{B24EFCF3-0291-4068-AABF-612050338CE6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Lock/{4B7ED53C-6966-4D62-854E-BDD8EC913409}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Rename/{6D45C5C2-6A37-462C-A021-2568EABA3FB9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/TrimVersions/{6A3F1258-AD76-4FC7-80C9-D2903E46BF11}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Unlock/{586CB36D-FDCB-4FBB-8766-B5C4B810191B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Audit/{871EA049-506C-4B4B-9CC2-B22A4EEA5B75}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Contains Broken Links/{D0171559-7E78-4D8F-8D9F-7765AAB58D4C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Created between/{27D07C2B-F354-46F7-88F9-BE30D4475300}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Exclude folders/{CF86F279-7C3D-43CD-BAE0-86FC15EFBF59}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Has invalid name/{2B45384D-AE0B-4FC9-869A-AE3FACC9BF9F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Has Referrers/{63336F54-5DA9-4566-AEB4-4932E2702D6C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Locking/{9A5A46A8-F652-47DE-B712-BA43B244BEF1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Log Filter/{E12D5FD8-1296-466F-AC59-B808E47BF1E7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Multiple versions/{0C159468-0D7E-436E-B526-BD3CE6437B43}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/No publishable versions/{13BE412A-1F8C-49C7-8011-F43F98842CB3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/No referrers/{3BE26B46-E7B0-4AF1-8BD1-9B164332B3E2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Published between/{32C9E318-503B-43C6-94FE-30ADBA342399}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Regex Field Filter/{8F6A456C-90AB-4A3C-94C2-33AFD97016FC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Regex filter/{14D4B262-EBAC-4DB4-8929-AC37AE69BE48}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Save item filter/{A4C78DF5-339C-4922-9F70-570826AABCF8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/StaleWorkflowItem/{4110F081-45FC-4C9A-91D6-3C72F8059491}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Unpublished between/{55D7E435-73BD-4492-B66E-FD42173055D5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Validation Errors/{75EC7F2F-DA04-4038-AB8C-CA02E6D4F701}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Workflow commands filter/{CCCEB504-F32A-4F40-A141-508FF865E114}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Workflow event date/{D0DD0EAE-7244-4552-8D90-7DEFA457BDDD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameter Types/Date picker/{A22BD79E-AFE5-4F0B-B9AC-DFB1572C7AAD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameter Types/Dropdown/{55B93D43-A047-4ADB-BA16-71C931282B90}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameter Types/Item Selector/{99D00BEF-E825-453B-8A27-42FD0B267040}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameter Types/Text/{7B7E58C0-2663-4198-B99A-C56A5FBAFE53}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameter Types/User Selector/{1171BE64-6ADC-4E55-B869-E0AF1A7AD7D9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Account/{B8F10815-8F85-4956-AF6A-FC2736B0EAB9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Age/{6B17B72E-D6AA-4271-840A-9CA2153A2E50}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/AgeInDays/{B17288BE-C99D-4337-B172-5559045C0C2E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/AgeISO/{F01E0EA9-FC8B-4854-996E-3D37F0E1BC2C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Database/{004A4780-339A-43E7-88A0-E422EB401E26}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Date/{0DAED923-E1EE-4F78-B66F-B036A1A03653}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Field/{5C52A04A-D5C0-4099-97DD-CCD5677FF21B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/FromDate/{CB5076CB-80CA-4B82-A17A-D64B0187ADA3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/MediaRoot/{5A5D9AD2-E53F-41AA-A6DF-608E34EF5092}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Mode/{613161BF-2BBD-4505-888B-D8C687035CA1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/NumOfVersions/{3C8B7F1F-6F23-47C5-9CD6-F1712CA12D57}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Regex/{CD376898-96E8-486E-B5D5-C2A8CAC81F76}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Rendering/{24A7C0AE-A199-4FB1-B8C7-233D0DB4C654}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Root/{44D75BD8-DAED-419C-9415-EA2A518F8551}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Search/{41EB70F2-4BD3-4D31-BCA4-79A5F9E99BF6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/ToDate/{C5572166-5938-4F8E-97B7-8E0E06FDEED8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/User/{6312A2A7-FEA2-4A93-90D7-391CAC9307A4}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/{E17D33CF-5464-4A5D-8523-50ADC3C35089}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Versions/{26AFDE8E-9B9B-4589-B1FD-AB62A068BE33}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/WorkNumber/{A37FE841-2498-47B8-861C-B7241889FCBE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Age/All/{B2A0BE8C-AE07-43D3-BDD9-5B6C2D5C7680}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Age/1 day/{CA6D5CD9-A9D3-497A-984C-65B60A26116C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Age/2 days/{EFCCED6B-F093-4713-BD7B-523C79539699}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Age/7 days/{D0B787C2-4F36-4A44-85C7-261528A396EA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/AgeISO/Today/{A7870A0A-20C5-401E-9A44-F78A7186CE4D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/AgeISO/Yesterday/{EB69ECEA-CB12-4E94-8856-679CF13106B3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/AgeISO/Last week/{33B2120F-EDDB-448D-BB79-242332EF1C9E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/AgeISO/Last month/{4087B7B4-7FDE-4246-9201-ED64F9940F4B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/AgeISO/Last year/{B113EDF2-20D3-4868-97A2-8466C28EFCF5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Mode/References/{8E2674BC-3B13-4F2E-A973-DEFF012CD00D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Mode/Referrers/{83B3C681-B850-46AF-B64D-3481EADDE6F0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Search/Children/{378C70AF-889D-425B-A625-FDE370A43FB8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Search/Descendants/{D24D087F-5B24-41FD-AE2A-A059F2B91144}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Search/Item/{2B9F40F0-B858-4A38-91FE-933943A2F38F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/All/{812691C0-97E7-43AB-9B09-C190CDDCA776}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Check in/{20CD3F3B-14F0-47DA-B491-BDA36F6657A6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Execute workflow command/{6FC1C4D5-BB1B-4D5B-B782-2E07D1FB89E2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Insert rules/{ED37A097-3D1C-4357-992F-1E69A5DCA017}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Log in and out/{5D859140-A545-456E-AF24-B8F1CE1BA1B8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Login/{3EA168F2-EB7F-4D1C-99A4-D2E433A6304E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Logout/{F59CFF2C-1877-491F-8D4C-567D0C80C83F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Recycle item/{34B28578-74D9-4451-8D69-60A1E5C2B6AC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Remove link/{627B9E26-95FA-446E-B203-03960C8BA66A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Save item/{D371E9C1-771A-4F28-8255-EBAF11FD2E20}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Templates/{B7886DD3-1DEC-41F9-A199-CDC547283AB6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Versions/all versions/{95652D2F-04A7-4952-9EC8-ACDE41686C3C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Versions/only current version/{B5E750A4-A70D-4719-81D8-C483DDCE8554}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All items/{ADC1E4E4-541B-45B8-BF65-57D4B02008F4}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All Publishable Items/{3D7FA1E3-847C-4604-8B61-E2134408F8FA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All Users/{2EF22969-80E8-4335-9E0C-17F5E49D2049}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Audit/{DBF19A29-D85B-4FE2-8EA9-97533AB5EB2A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/AuditPerItem/{9F07D197-CF56-4814-9345-C030DECE0FED}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Errors/{ABFEC922-86C4-4E6E-96E4-27FCCA6431BB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Expired Media items/{5F99E450-4192-4B48-B7BA-D2F6BD1A64BE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Info/{52834ADC-FF4D-4FDE-94F8-E2A6049B6078}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Items with security/{BB8F9120-3DF0-45D3-82E0-68B7CA2785F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Locked Items/{A9D22899-C137-4B62-86FA-3400E0AD3861}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Media items/{23A8D46E-FA4C-47A6-AE73-DCFA6AF0CCB7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Media usage scanner/{ED06A92F-2D9D-48BA-915C-B3B75469B16D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/My Owned Items/{A38B34F9-9E74-4640-BEC7-F7AB69387786}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Not Recently Modified/{F879FDE0-45EB-45B6-BF92-BDFE8D3D3732}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Owned Items/{A95C18FD-0F15-486A-8C87-A02D06F151E2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Recently Modified/{4601152C-B68D-4A27-AF0B-938F97194746}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/References/{8D3608A2-F386-40CD-81C4-A6490EA0C912}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Rendering/{2E782DB8-DBA5-48CC-83B6-317C79FE9BBD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Sessions/{FDD948C3-91B9-4CED-8A89-68DF094ACCF6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Single item/{C93CDD54-FCD6-42A0-B7C5-446ACA4155F2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Workflow event scanner/{959B804D-301A-4F99-9023-A55BF9E4E12E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Workflow event scanner for all versions of a single item/{569F052D-28A0-4BA4-87C4-481587AC4C88}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/WorkflowHistory/{81842BAC-476B-479C-9119-9D3F4991AB3B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Alias/{849E583C-C8AD-41CF-BDE9-8D68598623F3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Item Workflow Information/{E3E76543-6FDA-40D7-8C21-4FF98A2B11D9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemBasic/{965F8E6F-9002-46EA-99A3-801E95F12BF1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemSecurity/{3AB1FBD3-B6CE-4E8D-B3DF-5BEC8EECF259}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemViewer/{F28FC608-581E-41F5-BA49-14D4151A854C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LogViewer/{AF561ED2-A768-40D4-8517-1A8368368F0F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LogViewer no sorting/{D6530D08-599A-4D5D-B2AD-4437A8345EC9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Media Viewer/{2B820570-CB3F-4644-9C04-2709BF0686BE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Mediaitem expiry/{E65C8650-7305-4473-8369-61FAEE20D226}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Number Of Versions/{6D6D4AC1-31D6-407E-9039-7A7709ACAFC1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/SessionsViewer/{D1E7820D-8097-4561-B355-0B4498A02B80}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/User Viewer/{9B7B7673-0F9B-418A-BB05-535E5D6E959C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/WorkflowEventViewer/{175E396A-72E1-48EA-9AA6-CC3CF45A7419}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Aliases/{4F054B13-4156-4116-88C3-64FAF6D78AB0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Audit/{C463282D-332D-4E65-AA05-5F85E3EA6B7C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Broken Links/{339D3839-4805-4AF9-ACF9-DB6AE011B83F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Broken Links in publishable items/{ED67F1E0-54F7-4080-B23E-5F38599DB18A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Expired Media items/{9F0E2BCF-147F-4A1A-8FE0-9AD2A648C113}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Item History/{A4F223AA-E706-4AAE-AD0C-83E894E20A74}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Items with Invalid Names/{435277B2-CFC0-4D2F-8B73-ADECFF1C076D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Items with Security for an account/{E09317B2-5AEE-438B-B451-FCCFFFCB98F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Links/{D54D5F8B-4DBE-4D43-8D1E-405C138EC0CD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Locked Items/{216DE2A0-4849-44F2-BF1E-85F593AB2B02}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Logged errors/{05F200B8-27F0-4B11-8FDB-088BE6554782}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Logged in Users/{992EAAAC-3BF4-4DFF-A320-C7A9EA5DBC41}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Multiple versions/{E623EAFD-9ADD-4F72-91E3-49C78F286FCE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/My Owned Items/{41AAEA3D-D8B1-472D-AF8C-E5A83F6E2606}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Not recently modified/{E3A0C929-8BDB-462E-ABF1-8052F76CBAB0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Orphaned media assets report/{350D9F0B-051D-4C5E-BF50-A46BB1B4E221}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Owned items/{6CEDACCE-2EAB-437B-B9FD-C7EA936EEA83}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Recent Workflow History/{0F3231A5-AE4E-4E02-A435-6B17C7E00A03}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Recently Modified/{FE9ABA7F-0649-4072-B7A1-8DE5E84CAEB3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Regex Item Searcher/{873BC162-F4E0-4C7D-BF8D-7DF38AC975CE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Renderings/{E1F6E67B-BDAA-4331-8214-7939AFA045A3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Stale Workflow Items/{18E9AADC-A889-4758-8F11-EA77D1571727}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Validation Errors/{202B2692-83F1-4C98-8BB4-99A6453C8E43}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/{CBD787F8-6313-4224-B9E3-F52772806DF2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Command/{A2F37FA0-B644-4FA1-8DBE-6DD346F48ABB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Filter/{1383EBC6-BCC4-451D-8E33-7F74921F6664}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Parameter/{94CCFDAB-0F13-4DD3-895B-831A3A52AAC0}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Reference/{CB65CD27-96FB-4E9A-8610-73A9B0138B7A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/{55ECC766-BF85-4E85-92CB-53AE306F0414}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/{93E0E6C6-D8AD-4CE1-95EE-D8C07C2F596D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Saved Report/{7F01AAE6-90D8-4F48-A9DA-7B48E28A56B3}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Scanner/{68FB3BAF-DC35-4DD3-ADF7-FF2D3D35EC67}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Value/{107DE518-349B-4EC6-9967-C8EDE31910DF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Viewer/{FF9D70EB-44CB-4777-B9EE-3308041928CE}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Command/Command/{45EDB6F8-DC17-45AA-86B3-B8A29C9875BE}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Command/Command/Title/{4754B397-F055-4D4A-AC74-FD09390BC8F3}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Command/Command/Icon/{F48567F6-CC4C-4AA9-B722-EBA7B878B40C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Command/Command/Command/{B026DCD1-C3E9-4061-9F7A-7A61F200D383}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Command/Command/SingleItemContext/{A0C02C83-23E3-4A3D-95F4-037C79678314}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Parameter/Parameter/{84314F78-9B34-4127-84BB-FAF36A1CC5DD}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Parameter/__Standard Values/{8B757E9B-3728-4DB1-B3E7-28ECFA79E923}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Parameter/Parameter/Title/{6331C506-8590-48A9-B346-3B394A0F6135}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Parameter/Parameter/Type/{68030A84-F6F1-473F-BB09-6168AC9409A4}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Parameter/Parameter/Default value/{6588527A-BDB0-4474-8912-C1872A294BDE}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Parameter/Parameter/Parameters/{C4A7166D-A7C1-473C-B0AB-DF1A27175FE8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Reference/Reference/{4B98BC78-089B-4364-BFD7-93CDD121668E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Reference/Reference/Assembly/{6FB5BEBA-ECD8-4B56-B20A-BF292193D491}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Reference/Reference/Class/{49EB5881-0AEA-4D84-9850-1F8A9A2183FE}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Reference/Reference/Attributes/{60ACFB3B-D34D-43D8-8B57-86D26B30DD5A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Report/{74380BA9-B29D-4A03-A204-7346E4922893}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/__Standard Values/{6D0ADCA0-4491-4806-91F8-D1B51DAAF622}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Data/{AE881959-62F4-4F48-966A-0F35E0E2AC7C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Filters/{C259CB61-2F3B-42F4-9909-5F95A5C6E746}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Commands/{CBFD54AC-2EA9-49C0-A248-42663E3B1D58}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Email/{D624D4CB-A3EB-4DFF-A46F-8916B750E866}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Report/Description/{E9C5B093-0D53-4F39-9383-F5C839441562}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Data/Scanners/{F4033239-E21D-488D-990D-78E45760FCE3}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Data/Viewers/{9DE630AE-6A85-4821-9842-E90D900769B0}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Filters/Filters/{B5EBDC93-C3AB-4438-89FB-A8D7F5552110}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Commands/Commands/{E6B9CD5F-58E8-407D-9D45-4FE36544EA86}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report/Email/Email Text/{BA6571E9-4D3E-4381-B9C2-5C5DA3095CD6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/Report Email/{DA36F8B0-BE20-4C1C-AC8E-27E1CF3C419C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/__Standard Values/{C61E0074-2E8D-4197-BB31-5D5A950F8A92}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/Report Email/Active/{CEA5F89D-99A7-4ED2-BE12-5D879AEC5698}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/Report Email/From/{DF6402D0-D2C4-48FA-A01D-9DF6D12ACED8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/Report Email/To/{03F9AF45-FDCA-4496-BC3D-7E80D919A53D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/Report Email/Subject/{7829DE7C-9234-45BE-931D-F8C0D925F29D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/Report Email/Text/{0F4D0401-1140-446E-B605-7462783C601A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/Report Email/SendEmpty/{65C03AD1-FA58-4E3F-9BFA-662E0CCED2CB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Report Email Task/Report Email/Reports/{D1492B7B-0912-4C49-9F47-1A6824936CCE}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Saved Report/Data/{E35BBACB-945C-4CDC-9D00-5F04854130BF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Saved Report/Data/Parameters/{EB14C49D-B95C-4104-86F7-D5C96FA33952}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Value/Data/{C04A1944-FB93-43F2-84F1-53828233AA34}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Value/__Standard Values/{08FD3B86-844F-4F4C-906F-4B645BEC4746}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Value/Data/Value/{1AC5871D-8232-4DF5-8EE1-F2D038DEE591}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Viewer/Viewer/{51E339DA-D9DC-41AB-8011-195D374C3B7E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/ASR/Viewer/Viewer/Columns/{2FE97449-F425-4789-AB93-C246BFA1749B}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Reporter/{833E89D6-D0B4-4C4F-AFB2-671F28EAD9AF}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Reporter/Columns/{FE24486B-F99D-465F-804D-ECCE22B6DB0F}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Reporter/Columns/Menu/{031AC584-B1E6-480B-9891-D1DA869429A9}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Reporter/Columns/Menu/Edit/{C9F2BC73-F02D-402A-BF67-E98449DDF98A}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Items</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/bin/CorePoint.DomainObjects.dll</x-item>
+        <x-item>/App_Config/Include/ASR.config</x-item>
+        <x-item>/bin/ASR.dll</x-item>
+        <x-item>/bin/ASR.Reports.dll</x-item>
+        <x-item>/sitecore modules/Shell/ASR</x-item>
+        <x-item>/sitecore modules/Shell/ASR/Controls</x-item>
+        <x-item>/sitecore modules/Shell/ASR/Controls/Column.xml</x-item>
+        <x-item>/sitecore modules/Shell/ASR/Controls/ColumnEditor.xml</x-item>
+        <x-item>/sitecore modules/Shell/ASR/Controls/ItemSelectorDialog.xml</x-item>
+        <x-item>/sitecore modules/Shell/ASR/ASR.xml</x-item>
+        <x-item>/sitecore modules/Shell/ASR/editablecombo.js</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
