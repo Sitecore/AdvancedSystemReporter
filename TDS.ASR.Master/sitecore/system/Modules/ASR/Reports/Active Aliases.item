@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {4CD235C1-28AF-43D7-94A4-BD72789A9152}
+database: master
+path: /sitecore/system/Modules/ASR/Reports/Active Aliases
+parent: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+name: Active Aliases
+master: {00000000-0000-0000-0000-000000000000}
+template: {55ECC766-BF85-4E85-92CB-53AE306F0414}
+templatekey: Report
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 22
+
+People/32x32/dude5.png
+----version----
+language: en
+version: 1
+revision: 87aa9ab7-c72d-4c86-8891-97b39d057045
+
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 89
+
+<p>This report shows all active aliases and allows the user to delete or rename them.</p>
+----field----
+field: {F4033239-E21D-488D-990D-78E45760FCE3}
+name: Scanners
+key: scanners
+content-length: 38
+
+{0751B146-851C-4766-88D2-CE00AE26961A}
+----field----
+field: {9DE630AE-6A85-4821-9842-E90D900769B0}
+name: Viewers
+key: viewers
+content-length: 38
+
+{E680B66D-C4FE-4B08-A8F5-438BE8860841}
+----field----
+field: {E6B9CD5F-58E8-407D-9D45-4FE36544EA86}
+name: Commands
+key: commands
+content-length: 77
+
+{EF12F271-E82B-473B-A851-5A57C06C1FA1}|{6D45C5C2-6A37-462C-A021-2568EABA3FB9}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20100724T170157
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+87aa9ab7-c72d-4c86-8891-97b39d057045
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20130206T140843:634957565238528529
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
