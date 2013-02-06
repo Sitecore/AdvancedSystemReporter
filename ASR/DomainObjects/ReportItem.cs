@@ -113,7 +113,11 @@ namespace ASR.DomainObjects
       get;
       set;
     }
-    public void RunCommand(string commandname, StringList values)
+      [Field("description")]
+      public string Description { get; set; }
+      
+
+      public void RunCommand(string commandname, StringList values)
     {
       foreach (var item in Commands)
       {

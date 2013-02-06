@@ -117,7 +117,7 @@ namespace ASR.Reports.Items
 			}
             if (temp.Count > 0)
             {
-                results.Add(item);
+               // results.Add(item);
                 results.AddRange(temp);
             }
 		}

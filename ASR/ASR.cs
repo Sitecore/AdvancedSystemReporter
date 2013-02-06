@@ -31,6 +31,8 @@
 
     protected Section ConfigSection;
 
+    protected Section InformationSection;
+
     protected ASRListview ItemList;
 
     protected ListviewHeader LViewHeader;
@@ -40,6 +42,8 @@
     protected Toolbar MyToolbar;
 
     protected Literal Status;
+
+    protected Literal Description;
 
     #endregion
 
@@ -263,13 +267,15 @@
     {
       if (!referenceItem.HasParameters)
       {
+          ConfigSection.Visible = false;
         return;
       }
+        ConfigSection.Visible = true;
       var panel = new Panel();
       panel.Style.Add("border", "none");
       panel.Style.Add("margin-bottom", "10px");
 
-      var literal = new Literal { Text = string.Format("<strong>{0}</strong><br/>", referenceItem.Name) };
+      var literal = new Literal { Text = string.Format("<div style=\"margin-left:10px;margin-top:4px;font-weight:bold\">{0}</div><br/>", referenceItem.Name) };
       panel.ID =
         Control.GetUniqueID(
           string.Concat("params_", referenceItem.GetType().Name.ToLower(), "_", referenceItem.Name.ToLower(), "_"));
@@ -280,6 +286,7 @@
         var l = new Label { Header = pi.Title + ":" };
 
         l.Style.Add("font-weight", "bold");
+        l.Style.Add("padding-top","5px");
         l.Style.Add("margin-right", "10px");
         l.Style.Add("margin-left", "20px");
         l.Style.Add("width", "100px");
@@ -473,6 +480,8 @@
       this.createParameters();
       this.createActions();
       this.ConfigSection.Header = string.Concat("Configure report - ", Current.Context.ReportItem.Name);
+      this.Description.Text = Current.Context.ReportItem.Description;
+        this.InformationSection.Collapsed = true;
       Context.ClientPage.ClientResponse.Refresh(this.MainPanel);
       Context.ClientPage.ClientResponse.Refresh(this.Status);
     }

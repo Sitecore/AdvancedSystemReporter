@@ -12,7 +12,7 @@ templatekey: Viewer
 ----version----
 language: en
 version: 1
-revision: 3ce4dffd-a3d1-4df4-8e12-a8170d011978
+revision: 11630e18-9e0d-4bdc-84ad-53aa830a5fd7
 
 ----field----
 field: {6FB5BEBA-ECD8-4B56-B20A-BF292193D491}
@@ -39,9 +39,9 @@ content-length: 0
 field: {2FE97449-F425-4789-AB93-C246BFA1749B}
 name: Columns
 key: columns
-content-length: 190
+content-length: 157
 
-<Columns><Column name="type">Type</Column><Column name="date">Date</Column><Column name="user">User</Column><Column name="verb">Verb</Column><Column name="message">Message</Column></Columns>
+<Columns><Column name="date">Date</Column><Column name="user">User</Column><Column name="verb">Verb</Column><Column name="message">Message</Column></Columns>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -69,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3ce4dffd-a3d1-4df4-8e12-a8170d011978
+11630e18-9e0d-4bdc-84ad-53aa830a5fd7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20130205T222842:634957001225566298
+20130206T121317:634957495970796642
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

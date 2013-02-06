@@ -44,7 +44,10 @@ namespace ASR.Interface
         /// <param name="value"></param>
         public void AddColumn(string name, string value)
         {
-            columns.Add(name, value);
+            if (!HasColumn(name))
+            {
+                columns.Add(name, value);                
+            }
         }
 
         /// <summary>

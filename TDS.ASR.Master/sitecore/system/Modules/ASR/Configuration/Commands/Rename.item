@@ -12,7 +12,7 @@ templatekey: Command
 ----version----
 language: en
 version: 1
-revision: f6cfb319-7d26-4054-a70b-bb2b295b60fd
+revision: d79e1d29-173c-49a8-92da-52f38be35307
 
 ----field----
 field: {4754B397-F055-4D4A-AC74-FD09390BC8F3}
@@ -21,6 +21,13 @@ key: title
 content-length: 6
 
 Rename
+----field----
+field: {F48567F6-CC4C-4AA9-B722-EBA7B878B40C}
+name: Icon
+key: icon
+content-length: 21
+
+Core/16x16/rename.png
 ----field----
 field: {B026DCD1-C3E9-4061-9F7A-7A61F200D383}
 name: Command
@@ -62,21 +69,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f6cfb319-7d26-4054-a70b-bb2b295b60fd
+d79e1d29-173c-49a8-92da-52f38be35307
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20091002T093017:633900726179375000
+20130206T140748:634957564680606618
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 16
+content-length: 14
 
-sitecore\azcaser
+sitecore\admin
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock

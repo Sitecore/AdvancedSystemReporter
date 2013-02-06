@@ -28,7 +28,6 @@ namespace ASR.Reports.Logs
 				return;
 			}
 
-			dElement.Value = dElement.Element.ToString();
 			dElement.Icon = GetIcon(logElement);
             var ai = logElement as AuditItem;
 		    foreach (var column in Columns)
@@ -62,7 +61,12 @@ namespace ASR.Reports.Logs
 			if (ai != null)
 			{		
 				dElement.Value = ai.ItemUri == null ? "" : ai.ItemUri.ToString();
-			}			
+			}
+			else
+			{
+                dElement.Value = dElement.Element.ToString();
+			    
+			}
 		}
 
 		private string GetIcon(LogItem logElement)

@@ -16,9 +16,14 @@
 
 				<Toolbar ID="MyToolbar">
 				</Toolbar>
+                <Section Width="100%" ID="InformationSection" Header="About this Report">
+                    <div style="margin:10px">
+                        <Literal ID="Description"/>
+                    </div>
+                </Section>
 
 
-				<Section Width="100%" ID="ConfigSection" Header="Configure Report">
+                <Section Width="100%" ID="ConfigSection" Header="Configure Report">
 				</Section>
 
 				<GridPanel Width="100%" Height="100%" Columns="3" GridPanel.Height="100%" Style="table-layout:fixed">

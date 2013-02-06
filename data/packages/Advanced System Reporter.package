@@ -250,6 +250,7 @@
         <x-item>/core/sitecore/system/Field types/Reporter/Columns/{FE24486B-F99D-465F-804D-ECCE22B6DB0F}/invariant/0</x-item>
         <x-item>/core/sitecore/system/Field types/Reporter/Columns/Menu/{031AC584-B1E6-480B-9891-D1DA869429A9}/invariant/0</x-item>
         <x-item>/core/sitecore/system/Field types/Reporter/Columns/Menu/Edit/{C9F2BC73-F02D-402A-BF67-E98449DDF98A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemOwner/{0F5EE297-6E22-4AC4-BC71-57DBE4C32CA3}/invariant/0</x-item>
       </Entries>
       <SkipVersions>False</SkipVersions>
       <Converter>
