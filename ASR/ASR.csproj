@@ -97,11 +97,13 @@
     <Compile Include="Controls\ASRComboEdit.cs" />
     <Compile Include="Controls\ColumnEditorForm.cs" />
     <Compile Include="Controls\ColumnsField.cs" />
+    <Compile Include="Controls\CommandsPanel.cs" />
     <Compile Include="Controls\DateTimePicker.cs" />
     <Compile Include="Controls\ItemSelector.cs" />
     <Compile Include="Controls\ItemSelectorDialog.cs" />
     <Compile Include="Controls\LinkButton.cs" />
     <Compile Include="Controls\ASRListview.cs" />
+    <Compile Include="Controls\RibbonContainer.cs" />
     <Compile Include="Controls\ToolButton.cs" />
     <Compile Include="Controls\Toolmenu.cs" />
     <Compile Include="Controls\ToolMenuButton.cs" />
@@ -137,7 +139,9 @@
     <Compile Include="DomainObjects\ReferenceItem.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ASR.xml" />
+    <Content Include="ASR.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Controls\Column.xml" />
     <Content Include="Controls\ColumnEditor.xml">
       <SubType>Designer</SubType>

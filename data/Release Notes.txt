@@ -1,8 +1,12 @@
 Advanced System Reporter
 ------------------------
-v.1.4.4
+v.1.5
 
 - added support for the columns field in all viewers. When using a custom viewer you can override the AllowableColumns property to populate the dropdown in the column editor.
+- Incorporated a Ribbon control
+- fixed an issue where a desktop link would not be created correctly if the report was not first run once.
+- fixed wrong cursor type over page change links
+- fixed incompatibility with Brightcove module
 
 v.1.4.3
 

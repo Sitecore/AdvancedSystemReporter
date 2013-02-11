@@ -8,242 +8,232 @@ using Sitecore.Collections;
 
 namespace ASR.DomainObjects
 {
-  using System.Collections.Specialized;
+    using System.Collections.Specialized;
 
-  using CorePoint.DomainObjects.SC;
+    using CorePoint.DomainObjects.SC;
 
-  using Sitecore;
-  using Sitecore.Diagnostics;
+    using Sitecore;
+    using Sitecore.Diagnostics;
 
-  [Serializable]
-  [Template("System/ASR/Report")]
-  public class ReportItem : CorePoint.DomainObjects.SC.StandardTemplate
-  {
-
-    [Field("__icon")]
-    public string Icon
+    [Serializable]
+    [Template("System/ASR/Report")]
+    public class ReportItem : CorePoint.DomainObjects.SC.StandardTemplate
     {
-      get;
-      set;
-    }
 
-    [Field("scanners")]
-    private List<Guid> _scanner
-    {
-      get;
-      set;
-    }
-
-    public ScannerItem[] _scanners;
-    public IEnumerable<ScannerItem> Scanners
-    {
-      get
-      {
-        if (_scanners == null)
+        [Field("__icon")]
+        public string Icon
         {
-          _scanners = _scanner.ConvertAll<ScannerItem>(id => this.Director.GetObjectByIdentifier<ScannerItem>(id)).ToArray();
+            get;
+            set;
         }
-        return _scanners;
-      }
-    }
 
-    [Field("viewers")]
-    private List<Guid> _viewer
-    {
-      get;
-      set;
-    }
-
-    private ViewerItem[] _viewers = null;
-    public IEnumerable<ViewerItem> Viewers
-    {
-      get
-      {
-        if (_viewers == null)
+        [Field("scanners")]
+        private List<Guid> ScannerGuids
         {
-          _viewers = _viewer.ConvertAll<ViewerItem>(g => this.Director.GetObjectByIdentifier<ViewerItem>(g)).ToArray();
+            get;
+            set;
         }
-        return _viewers;
-      }
-    }
 
-    [Field("commands")]
-    public List<Guid> _Commands
-    {
-      get;
-      set;
-    }
-    private CommandItem[] _commands;
-    public IEnumerable<CommandItem> Commands
-    {
-
-      get
-      {
-        if (_commands == null)
+        public ScannerItem[] scanners;
+        public IEnumerable<ScannerItem> Scanners
         {
-          _commands = _Commands.ConvertAll<CommandItem>(g => this.Director.GetObjectByIdentifier<CommandItem>(g)).ToArray();
+            get {
+                return scanners ??
+                       (scanners =
+                        ScannerGuids.ConvertAll<ScannerItem>(id => this.Director.GetObjectByIdentifier<ScannerItem>(id))
+                                .ToArray());
+            }
         }
-        return _commands;
-      }
-    }
 
-    [Field("filters")]
-    public List<Guid> _Filters
-    {
-      get;
-      set;
-    }
-    private FilterItem[] _filters;
-    public IEnumerable<FilterItem> Filters
-    {
-      get
-      {
-        if (_filters == null)
+        [Field("viewers")]
+        public  List<Guid> ViewerGuids
         {
-          _filters = _Filters.ConvertAll<FilterItem>(g => this.Director.GetObjectByIdentifier<FilterItem>(g)).ToArray();
-
+            get;
+            set;
         }
-        return _filters;
-      }
-    }
 
-    [Field("email text")]
-    public string EmailText
-    {
-      get;
-      set;
-    }
-      [Field("description")]
-      public string Description { get; set; }
-      
-
-      public void RunCommand(string commandname, StringList values)
-    {
-      foreach (var item in Commands)
-      {
-        if (item.Name == commandname)
+        private ViewerItem[] _viewers = null;
+        public IEnumerable<ViewerItem> Viewers
         {
-          item.Run(values);
-          break;
+            get {
+                return _viewers ??
+                       (_viewers =
+                        ViewerGuids.ConvertAll<ViewerItem>(g => this.Director.GetObjectByIdentifier<ViewerItem>(g))
+                               .ToArray());
+            }
         }
-      }
-    }
 
-    private HashSet<ReferenceItem> objects;
-
-    public ReferenceItem FindItem(string name)
-    {
-      if (objects == null)
-      {
-        loadObjects();
-      }
-      return objects.First(ri => ri.Name == name);
-    }
-
-    public ReferenceItem FindItem(Guid name)
-    {
-      if (objects == null)
-      {
-        loadObjects();
-      }
-      return objects.First(ri => ri.Id == name);
-    }
-
-    private void loadObjects()
-    {
-      objects = new HashSet<ReferenceItem>();
-      foreach (var item in Scanners) { objects.Add(item); }
-      foreach (var item in Viewers) { objects.Add(item); }
-      foreach (var item in Filters) { objects.Add(item); }
-    }
-
-    public string SerializeParameters()
-    {
-      return SerializeParameters("^", "&");
-    }
-
-    public string SerializeParameters(string valueSeparator, string parameterSeparator)
-    {
-      System.Collections.Specialized.NameValueCollection nvc =
-          new System.Collections.Specialized.NameValueCollection();
-      nvc.Add("id", new ID(Current.Context.ReportItem.Id).ToString());
-      foreach (var item in Current.Context.ReportItem.Scanners)
-      {
-        foreach (var p in item.Parameters)
+        [Field("commands")]
+        public List<Guid> CommandGuids
         {
-          nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+            get;
+            set;
         }
-      }
-      foreach (var item in Current.Context.ReportItem.Filters)
-      {
-        foreach (var p in item.Parameters)
+        private CommandItem[] _commands;
+        public IEnumerable<CommandItem> Commands
         {
-          nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+
+            get {
+                return _commands ??
+                       (_commands =
+                        CommandGuids.ConvertAll<CommandItem>(g => this.Director.GetObjectByIdentifier<CommandItem>(g))
+                                    .ToArray());
+            }
         }
-      }
-      foreach (var item in Current.Context.ReportItem.Viewers)
-      {
-        foreach (var p in item.Parameters)
+
+        [Field("filters")]
+        public List<Guid> FilterGuids
         {
-          nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+            get;
+            set;
         }
-      }
-      return Sitecore.StringUtil.NameValuesToString(nvc, parameterSeparator);
-    }
-
-    public static ReportItem CreateFromParameters(string parameters)
-    {
-      Assert.ArgumentNotNullOrEmpty(parameters, "parameters");
-      var nvc = StringUtil.ParseNameValueCollection(parameters, '&', '=');
-      return CreateFromParameters(nvc);
-    }
-
-    public static ReportItem CreateFromParameters(NameValueCollection nvc)
-    {
-      Assert.IsNotNull(nvc, "Incorrect Parameters Format");
-      var id = nvc["id"];
-      if (id == null) return null;
-      var director = new SCDirector("master", "en");
-      if (!director.ObjectExists(id)) throw new Exception("Report has been deleted");
-
-      var reportItem = director.GetObjectByIdentifier<ReportItem>(id);
-
-      foreach (string key in nvc.Keys)
-      {
-        if (key.Contains("^"))
+        private FilterItem[] _filters;
+        public IEnumerable<FilterItem> Filters
         {
-          var item_parameter = key.Split('^');
-          var guid = new Guid(item_parameter[0]);
-
-          var ri = reportItem.FindItem(guid);
-          if (ri != null)
-          {
-            ri.SetAttributeValue(item_parameter[1], nvc[key]);
-          }
+            get {
+                return _filters ??
+                       (_filters =
+                        FilterGuids.ConvertAll<FilterItem>(g => this.Director.GetObjectByIdentifier<FilterItem>(g))
+                                .ToArray());
+            }
         }
-      }
-      return reportItem;
-    }
 
-    public Report TransformToReport( Report report)
-    {
-      if (report == null)
-      {
-        report = new Report();
-      }
-      foreach (var sItem in this.Scanners)
-      {
-        report.AddScanner(sItem);
-      }
-      foreach (var vItem in this.Viewers)
-      {
-        report.AddViewer(vItem);
-      }
-      foreach (var fItem in this.Filters)
-      {
-        report.AddFilter(fItem);
-      }
-     return report;
+        [Field("email text")]
+        public string EmailText
+        {
+            get;
+            set;
+        }
+        [Field("description")]
+        public string Description { get; set; }
+
+
+        public void RunCommand(string commandname, StringList values)
+        {
+            foreach (var item in Commands)
+            {
+                if (item.Name == commandname)
+                {
+                    item.Run(values);
+                    break;
+                }
+            }
+        }
+
+        private HashSet<ReferenceItem> _objects;
+
+        public ReferenceItem FindItem(string name)
+        {
+            if (_objects == null)
+            {
+                LoadObjects();
+            }
+            return _objects.First(ri => ri.Name == name);
+        }
+
+        public ReferenceItem FindItem(Guid name)
+        {
+            if (_objects == null)
+            {
+                LoadObjects();
+            }
+            return _objects.First(ri => ri.Id == name);
+        }
+
+        private void LoadObjects()
+        {
+            _objects = new HashSet<ReferenceItem>();
+            foreach (var item in Scanners) { _objects.Add(item); }
+            foreach (var item in Viewers) { _objects.Add(item); }
+            foreach (var item in Filters) { _objects.Add(item); }
+        }
+
+        public string SerializeParameters()
+        {
+            return SerializeParameters("^", "&");
+        }
+
+        public string SerializeParameters(string valueSeparator, string parameterSeparator)
+        {
+            var nvc = new NameValueCollection { { "id", new ID(Current.Context.ReportItem.Id).ToString() } };
+
+            foreach (var item in Current.Context.ReportItem.Scanners)
+            {
+                foreach (var p in item.Parameters)
+                {
+                    nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+                }
+            }
+            foreach (var item in Current.Context.ReportItem.Filters)
+            {
+                foreach (var p in item.Parameters)
+                {
+                    nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+                }
+            }
+            foreach (var item in Current.Context.ReportItem.Viewers)
+            {
+                foreach (var p in item.Parameters)
+                {
+                    nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+                }
+            }
+            return Sitecore.StringUtil.NameValuesToString(nvc, parameterSeparator);
+        }
+
+        public static ReportItem CreateFromParameters(string parameters)
+        {
+            Assert.ArgumentNotNullOrEmpty(parameters, "parameters");
+            var nvc = StringUtil.ParseNameValueCollection(parameters, '&', '=');
+            return CreateFromParameters(nvc);
+        }
+
+        public static ReportItem CreateFromParameters(NameValueCollection nvc)
+        {
+            Assert.IsNotNull(nvc, "Incorrect Parameters Format");
+            var id = nvc["id"];
+            if (id == null) return null;
+            var director = new SCDirector("master", "en");
+            if (!director.ObjectExists(id)) throw new Exception("Report has been deleted");
+
+            var reportItem = director.GetObjectByIdentifier<ReportItem>(id);
+
+            foreach (string key in nvc.Keys)
+            {
+                if (key.Contains("^"))
+                {
+                    var item_parameter = key.Split('^');
+                    var guid = new Guid(item_parameter[0]);
+
+                    var ri = reportItem.FindItem(guid);
+                    if (ri != null)
+                    {
+                        ri.SetAttributeValue(item_parameter[1], nvc[key]);
+                    }
+                }
+            }
+            return reportItem;
+        }
+
+        public Report TransformToReport(Report report)
+        {
+            if (report == null)
+            {
+                report = new Report();
+            }
+            foreach (var sItem in this.Scanners)
+            {
+                report.AddScanner(sItem);
+            }
+            foreach (var vItem in this.Viewers)
+            {
+                report.AddViewer(vItem);
+            }
+            foreach (var fItem in this.Filters)
+            {
+                report.AddFilter(fItem);
+            }
+            return report;
+        }
     }
-  }
 }

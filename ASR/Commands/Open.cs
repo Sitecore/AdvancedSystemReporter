@@ -52,9 +52,7 @@ namespace ASR.Commands
                     {
                         Current.Context.ReportItem = rItem;
                         Current.Context.Report = null;
-                        Sitecore.Context.ClientPage.SendMessage(this, "ASR.MainForm:update");
-                  
-                        // Sitecore.Context.ClientPage.SendMessage(this, "ASR.MainForm:toolbarupdate");
+                        Sitecore.Context.ClientPage.SendMessage(this, "ASR.MainForm:update");                 
                     }
                         break;
                    

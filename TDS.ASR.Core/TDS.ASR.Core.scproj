@@ -72,83 +72,73 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Links\sitecore_admin.item">
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon.item">
       <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Links\sitecore_admin\Expired Media items.item">
-      <Icon>/temp/IconCache/Imaging/32x32/layer_delete.png</Icon>
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home.item">
+      <Icon>/temp/IconCache/Applications/32x32/Document.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Links\sitecore_admin\Logged errors.item">
-      <Icon>/temp/IconCache/Applications/32x32/document_error.png</Icon>
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Commands.item">
+      <Icon>/temp/IconCache/Applications/32x32/Document.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Links\sitecore_admin\Recently Modified.item">
-      <Icon>/temp/IconCache/Applications/32x32/document_refresh.png</Icon>
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Commands\CommandsPanel.item">
+      <Icon>/temp/IconCache/Applications/32x32/Document.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu.item">
-      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Export.item">
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Export.item">
       <Icon>/temp/IconCache/Applications/32x32/transform.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Export\CSV.item">
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Export\CSV.item">
       <Icon>/temp/IconCache/WordProcessing/32x32/columns.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Export\Excel.item">
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Export\Excel.item">
       <Icon>/temp/IconCache/WordProcessing/32x32/imp_exp_excel.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Export\XML.item">
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Export\XML.item">
       <Icon>/temp/IconCache/WordProcessing/32x32/imp_exp_xml_h.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Open.item">
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Report.item">
+      <Icon>/temp/IconCache/Applications/32x32/Document.png</Icon>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Report\Open.item">
       <Icon>/temp/IconCache/Applications/32x32/folder_out.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Refresh.item">
-      <Icon>/temp/IconCache/Applications/32x32/refresh.png</Icon>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Run.item">
-      <Icon>/temp/IconCache/Applications/32x32/gears_run.png</Icon>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Save to Desktop.item">
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Report\Save to Desktop.item">
       <Icon>/temp/IconCache/Applications/32x32/magic-wand.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Save.item">
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Home\Report\Save.item">
       <Icon>/temp/IconCache/Applications/32x32/disk_blue.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Toolbar divider 2.item">
-      <Icon>/temp/IconCache/Control/16x16/bar_hor_b.png</Icon>
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Refresh.item">
+      <Icon>/temp/IconCache/Applications/32x32/refresh.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Menu\Toolbar divider.item">
-      <Icon>/temp/IconCache/Control/16x16/bar_hor_b.png</Icon>
+    <SitecoreItem Include="sitecore\content\Applications\Advanced System Reporter\Ribbon\Run.item">
+      <Icon>/temp/IconCache/Applications/32x32/gears_run.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

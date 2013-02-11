@@ -1,25 +1,25 @@
 ----item----
 version: 1
-id: {EE1860D8-09CB-49FE-9AB5-2F01D2D2D796}
+id: {F1D16A01-2C56-4AE1-924B-D7F69B4B952F}
 database: core
-path: /sitecore/content/Applications/Advanced System Reporter/Menu
-parent: {605C3AD5-4D6E-4297-98C9-7638BE5A82EA}
-name: Menu
+path: /sitecore/content/Applications/Advanced System Reporter/Ribbon/Home/Commands/CommandsPanel
+parent: {E43C9E0A-E3A3-4E83-9148-40C41DAFEB41}
+name: CommandsPanel
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
+template: {3619F992-4177-4124-89DD-DABFC2BAF6BB}
+templatekey: Panel
 
 ----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 194
+field: {C78D9B41-FFEB-402D-93E8-E1270D8BB787}
+name: Type
+key: type
+content-length: 30
 
-{9288FCAD-5AB8-48D5-965D-3094F793241D}|{047A3759-1DB3-4105-B56D-1D6AB081CE5A}|{79E55CB1-FDB0-460A-AB97-B629069F15DA}|{B40EE369-172F-4A95-BCF5-2A740DEA8F06}|{721C20B6-6E85-4702-8C5E-678A8FC4FA94}
+Asr.Controls.CommandsPanel,Asr
 ----version----
 language: en
 version: 1
-revision: 8099f9f1-6587-4dc6-bf77-1390a393bd77
+revision: 679ba786-8456-4054-aae3-ef23596fbb42
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -34,7 +34,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20090424T152911
+20130208T173001
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8099f9f1-6587-4dc6-bf77-1390a393bd77
+679ba786-8456-4054-aae3-ef23596fbb42
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20090424T170434:633761894742910156
+20130208T173821:634959419015047648
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

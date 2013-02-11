@@ -1,18 +1,25 @@
 ----item----
 version: 1
-id: {3396EEBA-0450-4A93-B031-A8FCD104066B}
+id: {EE1860D8-09CB-49FE-9AB5-2F01D2D2D796}
 database: core
-path: /sitecore/content/Applications/Advanced System Reporter/Links/sitecore_admin
-parent: {EAEFFD74-055E-453F-9860-47CD385B6580}
-name: sitecore_admin
+path: /sitecore/content/Applications/Advanced System Reporter/Ribbon
+parent: {605C3AD5-4D6E-4297-98C9-7638BE5A82EA}
+name: Ribbon
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
+template: {3A1A3B48-3434-4E5A-8F05-AD6E1687D888}
+templatekey: Toolbar
 
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 194
+
+{9288FCAD-5AB8-48D5-965D-3094F793241D}|{047A3759-1DB3-4105-B56D-1D6AB081CE5A}|{79E55CB1-FDB0-460A-AB97-B629069F15DA}|{B40EE369-172F-4A95-BCF5-2A740DEA8F06}|{721C20B6-6E85-4702-8C5E-678A8FC4FA94}
 ----version----
 language: en
 version: 1
-revision: 4e5ce243-14fd-4494-ac66-1077c79895ab
+revision: 20f191ce-b3f4-44c4-94d0-4b2b1d9ceb1c
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -27,7 +34,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20100208T131002
+20090424T152911
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -41,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4e5ce243-14fd-4494-ac66-1077c79895ab
+20f191ce-b3f4-44c4-94d0-4b2b1d9ceb1c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100208T131002:634012314026893753
+20130208T162546:634959375461086504
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

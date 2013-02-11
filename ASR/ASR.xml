@@ -9,13 +9,16 @@
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
 	<ASR>
 		<FormPage Height="250px">
+            <!--<Stylesheet Src="Content Manager.css" DeviceDependant="true" runat="server" />-->
+            <Stylesheet Src="Ribbon.css" DeviceDependant="true" runat="server" />
 
-			<CodeBeside Type="ASR.App.MainForm,ASR"/>
+            <CodeBeside Type="ASR.App.MainForm,ASR"/>
 
 			<GridPanel class="scBackground" ID="MainPanel" vAlign="top" Height="100%" Width="100%" Cellpadding="0">
-
-				<Toolbar ID="MyToolbar">
-				</Toolbar>
+                <RibbonContainer ID="MyRibbon">
+                    <Ribbon ID="InnerRibbon"></Ribbon>
+                </RibbonContainer>
+				
                 <Section Width="100%" ID="InformationSection" Header="About this Report">
                     <div style="margin:10px">
                         <Literal ID="Description"/>

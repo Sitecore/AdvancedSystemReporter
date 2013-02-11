@@ -11,23 +11,7 @@ namespace ASR
             Sitecore.Context.ClientPage.SendMessage(this, "ASR.MainForm:updateparameters");
 
             Current.Context.Report = 
-              Current.Context.ReportItem.TransformToReport(Current.Context.Report);
-            //if (Current.Context.Report == null)
-            //{
-            //  Current.Context.Report = new Report();
-            //}
-            //foreach (var sItem in Current.Context.ReportItem.Scanners)
-            //{
-            //  Current.Context.Report.AddScanner(sItem);
-            //}
-            //foreach (var vItem in Current.Context.ReportItem.Viewers)
-            //{
-            //  Current.Context.Report.AddViewer(vItem);
-            //}
-            //foreach (var fItem in Current.Context.ReportItem.Filters)
-            //{
-            //  Current.Context.Report.AddFilter(fItem);
-            //}
+              Current.Context.ReportItem.TransformToReport(Current.Context.Report);         
 
             Sitecore.Shell.Applications.Dialogs.ProgressBoxes.ProgressBox.Execute(
                 "Scanning...",
