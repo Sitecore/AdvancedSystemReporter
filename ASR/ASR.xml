@@ -15,10 +15,11 @@
             <CodeBeside Type="ASR.App.MainForm,ASR"/>
 
 			<GridPanel class="scBackground" ID="MainPanel" vAlign="top" Height="100%" Width="100%" Cellpadding="0">
-                <RibbonContainer ID="MyRibbon">
-                    <Ribbon ID="InnerRibbon"></Ribbon>
-                </RibbonContainer>
-				
+                <Border ID="RibbonBorder">
+                    <RibbonContainer ID="MyRibbon">
+                        <Ribbon ID="InnerRibbon"></Ribbon>
+                    </RibbonContainer>
+                </Border>
                 <Section Width="100%" ID="InformationSection" Header="About this Report">
                     <div style="margin:10px">
                         <Literal ID="Description"/>

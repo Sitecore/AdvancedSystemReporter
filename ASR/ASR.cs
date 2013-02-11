@@ -43,6 +43,7 @@ namespace ASR.App
         protected RibbonContainer MyRibbon;
 
         protected Literal Status;
+        protected Border RibbonBorder;
 
         #endregion
 
@@ -289,7 +290,7 @@ namespace ASR.App
             {
                 var lvi = new ListviewItem
                     {
-                        ID = Sitecore.Web.UI.HtmlControls.Control.GetUniqueID("lvi"),
+                        ID = Control.GetUniqueID("lvi"),
                         Icon = result.Icon,
                         Value = result.Value
                     };
@@ -378,8 +379,8 @@ namespace ASR.App
         private void RunFinished(Message message)
         {
             PopulateItemList(1, Current.Context.Settings.PageSize);
-            //todo
-            //SheerResponse.Refresh(this.MyToolbar);
+            
+            SheerResponse.Refresh(RibbonBorder);
         }
 
         [HandleMessage("ASR.MainForm:update", false)]

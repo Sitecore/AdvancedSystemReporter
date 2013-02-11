@@ -58,11 +58,17 @@ namespace ASR.Export
                     while (enumerator.MoveNext())
                     {
                         writer.Write(Separator);
-                        writer.Write(row.GetColumnValue(enumerator.Current));
+                        writer.Write(GetColumnValue(row, enumerator));
                     }
                     writer.WriteLine();
                 }
             }
+        }
+
+        private static string GetColumnValue(DisplayElement row, IEnumerator<string> enumerator)
+        {
+            var value = row.GetColumnValue(enumerator.Current);
+            return value.Replace('\n', '|').Replace('\r', '|');
         }
     }
 }
