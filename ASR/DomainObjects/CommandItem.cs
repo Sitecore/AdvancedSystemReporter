@@ -15,27 +15,31 @@ using Sitecore.Reflection;
 namespace ASR.DomainObjects
 {
     [Template("system/asr/command")]
-    public class CommandItem : StandardTemplate
+    public class CommandItem : BaseItem
     {
-        [Field("title")]
+        public CommandItem(Item innerItem) : base(innerItem)
+        {
+        }
+
+
         public string Title
         {
-            get;
-            private set;
+            get { return InnerItem["title"]; }            
         }
-        [Field("icon")]
+        
         public string Icon
         {
-            get;
-            private set;
+            get { return InnerItem["Icon"]; }
         }
-        [Field("command")]
+        
         public string Command
-        { get; set; }
+        { get { return InnerItem["Command"]; } }
 
-        [Field("singleitemcontext")]
+        
         public bool SingleItemContext
-        { get; set;}
+        {        
+            get { return InnerItem["singleitemcontext"] == "1"; } 
+        }
 
         internal void Run(StringList values)
         {

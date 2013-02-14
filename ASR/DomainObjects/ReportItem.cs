@@ -5,6 +5,7 @@ using Sitecore.Data;
 using System.Linq;
 using ASR.Interface;
 using Sitecore.Collections;
+using Sitecore.Data.Items;
 
 namespace ASR.DomainObjects
 {
@@ -17,32 +18,15 @@ namespace ASR.DomainObjects
 
     [Serializable]
     [Template("System/ASR/Report")]
-    public class ReportItem : CorePoint.DomainObjects.SC.StandardTemplate
+    public class ReportItem : BaseItem
     {
-
-        [Field("__icon")]
-        public string Icon
+        public ReportItem(Item innerItem) : base(innerItem)
         {
-            get;
-            set;
         }
 
-        [Field("scanners")]
-        private List<Guid> ScannerGuids
-        {
-            get;
-            set;
-        }
-
-        public ScannerItem[] scanners;
         public IEnumerable<ScannerItem> Scanners
         {
-            get {
-                return scanners ??
-                       (scanners =
-                        ScannerGuids.ConvertAll<ScannerItem>(id => this.Director.GetObjectByIdentifier<ScannerItem>(id))
-                                .ToArray());
-            }
+            get { return GetMultilistField<ScannerItem>("scanners"); }
         }
 
         [Field("viewers")]

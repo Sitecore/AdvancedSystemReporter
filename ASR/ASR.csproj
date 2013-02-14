@@ -109,6 +109,7 @@
     <Compile Include="Controls\ToolMenuButton.cs" />
     <Compile Include="Controls\UserSelector.cs" />
     <Compile Include="Current.cs" />
+    <Compile Include="DomainObjects\BaseItem.cs" />
     <Compile Include="DomainObjects\Column.cs" />
     <Compile Include="DomainObjects\ParameterItem.cs" />
     <Compile Include="DomainObjects\ParameterTypeItem.cs" />
