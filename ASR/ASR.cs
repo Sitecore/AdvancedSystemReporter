@@ -191,7 +191,7 @@ namespace ASR.App
                 {
                     Text =
                         string.Format("<div style=\"margin-left:10px;margin-top:4px;font-weight:bold\">{0}</div><br/>",
-                                      referenceItem.Name)
+                                      referenceItem.PrettyName)
                 };
             panel.ID =
                 Control.GetUniqueID(
@@ -247,37 +247,7 @@ namespace ASR.App
             Current.Context.Report = null;
             UpdateInterface(null);
         }
-
-        //private void openReport(NameValueCollection nvc)
-        //{
-        //    var id = nvc["id"];
-        //    if (string.IsNullOrEmpty(id))
-        //    {
-        //        return;
-        //    }
-
-        //    var director = new SCDirector("master", "en");
-        //    if (!director.ObjectExists(id)) return;
-        //    var rItem = director.GetObjectByIdentifier<ReportItem>(id);
-        //    foreach (string key in nvc.Keys)
-        //    {
-        //        if (key.Contains("^"))
-        //        {
-        //            var item_parameter = key.Split('^');
-        //            var g = new Guid(item_parameter[0]);
-
-        //            var ri = rItem.FindItem(g);
-        //            if (ri != null)
-        //            {
-        //                ri.SetAttributeValue(item_parameter[1], nvc[key]);
-        //            }
-        //        }
-        //    }
-        //    Current.Context.ReportItem = rItem;
-        //    Current.Context.Report = null;
-        // //   this.updateInterface(null);
-        //}
-
+     
         private void PopulateItemList(int start, int count)
         {
             ItemList.Controls.Clear();
@@ -378,8 +348,7 @@ namespace ASR.App
         [HandleMessage("MainForm:runfinished", false)]
         private void RunFinished(Message message)
         {
-            PopulateItemList(1, Current.Context.Settings.PageSize);
-            
+            PopulateItemList(1, Current.Context.Settings.PageSize);            
             SheerResponse.Refresh(RibbonBorder);
         }
 
@@ -388,14 +357,30 @@ namespace ASR.App
         {
             ItemList.ColumnNames.Clear();
             ItemList.Controls.Clear();
+            if (Current.Context.ReportItem == null)
+            {
+                Status.Text = "Open a report first to get started";
+                ConfigSection.Visible = false;
+                InformationSection.Visible = false;
+                return;
+            }
+            else
+            {
+                InformationSection.Visible = true;
+                Status.Text = "";
+            }
+
+            
             Status.Text = "";
             CreateParameters();
             
             ConfigSection.Header = string.Concat("Configure report - ", Current.Context.ReportItem.Name);
 
 
-            Description.Text = StringUtil.GetString((object)Current.Context.ReportItem.Description, Translate.Text( "no description"));
+            Description.Text = StringUtil.GetString((object)Current.Context.ReportItem.Description, Translate.Text("no description"));
             InformationSection.Collapsed = true;
+
+         
             Sitecore.Context.ClientPage.ClientResponse.Refresh(MainPanel);
             Sitecore.Context.ClientPage.ClientResponse.Refresh(Status);
         }

@@ -8,8 +8,7 @@
 
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
 	<ASR>
-		<FormPage Height="250px">
-            <!--<Stylesheet Src="Content Manager.css" DeviceDependant="true" runat="server" />-->
+		<FormPage Height="250px">            
             <Stylesheet Src="Ribbon.css" DeviceDependant="true" runat="server" />
 
             <CodeBeside Type="ASR.App.MainForm,ASR"/>
@@ -20,14 +19,14 @@
                         <Ribbon ID="InnerRibbon"></Ribbon>
                     </RibbonContainer>
                 </Border>
-                <Section Width="100%" ID="InformationSection" Header="About this Report">
+                <Section Width="100%" ID="InformationSection" Header="About this Report" Visible="false">
                     <div style="margin:10px">
                         <Literal ID="Description"/>
                     </div>
                 </Section>
 
 
-                <Section Width="100%" ID="ConfigSection" Header="Configure Report">
+                <Section Width="100%" ID="ConfigSection" Header="Configure Report" Visible="false">
 				</Section>
 
 				<GridPanel Width="100%" Height="100%" Columns="3" GridPanel.Height="100%" Style="table-layout:fixed">
@@ -44,7 +43,7 @@
 				<Border Height="22" GridPanel.Height="22" Background="#e9e9e9">
 					<GridPanel Columns="2" Width="100%" Height="100%" CellPadding="2">
 						<Border Border="1px inset" Padding="2" Height="100%">
-							<Literal ID="Status"/>
+							<Literal ID="Status" Text="Open a report to get started."/>
 						</Border>
 
 					</GridPanel>

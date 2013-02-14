@@ -1,4 +1,5 @@
-﻿using Sitecore.Shell.Framework.Commands;
+﻿using System.Linq;
+using Sitecore.Shell.Framework.Commands;
 
 namespace ASR.Commands
 {
@@ -6,13 +7,13 @@ namespace ASR.Commands
     {       
         public override void Execute(CommandContext context)
         {
-			Current.Context.Report.FlushCache();
+			Current.Context.Report.FlushFilterCache();
             Sitecore.Context.ClientPage.Start(new ReportRunner(), "RunCommand");
         }
 
         public override CommandState QueryState(CommandContext context)
         {
-            if (Current.Context.Report == null)
+            if (Current.Context.Report == null || Current.Context.ReportItem.FilterGuids.Any())
             {
                 return CommandState.Disabled;
             }

@@ -38,8 +38,7 @@ namespace ASR.DomainObjects
 			set;
 		}
 
-
-		public string ReplacedAttributes
+        public string ReplacedAttributes
 		{
 			get
 			{
@@ -115,7 +114,12 @@ namespace ASR.DomainObjects
 			}
 		}
 
-		private void makeParameterSet()
+	    public string PrettyName
+	    {
+	        get { return string.Format("{0} ({1})", Name,Name); }	        
+	    }
+
+	    private void makeParameterSet()
 		{
 			_parameters = new HashSet<ParameterItem>();
 			foreach (var tag in extractParameters(Attributes))

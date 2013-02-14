@@ -193,7 +193,7 @@ namespace ASR.Interface
 		/// <summary>
 		/// Flush the cache for the filtered elements, next time the filters will be called again.
 		/// </summary>
-		private void FlushFilterCache()
+		public void FlushFilterCache()
 		{
 			results = null;
 		}
