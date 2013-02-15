@@ -1,6 +1,5 @@
 ﻿using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
-using CorePoint.DomainObjects.SC;
 using ASR.DomainObjects;
 using Sitecore.Data.Items;
 using Sitecore.Data;
@@ -45,9 +44,9 @@ namespace ASR.Commands
                 switch(item.Template.Key)
                 {
                     case "report":
-                    SCDirector director = new SCDirector(Current.Context.Settings.ConfigurationDatabase, "en");
+                    
 
-                    ReportItem rItem = director.LoadObjectFromItem<ReportItem>(item);
+                    ReportItem rItem = new ReportItem(item);
                     if (rItem != null)
                     {
                         Current.Context.ReportItem = rItem;

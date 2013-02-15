@@ -7,21 +7,20 @@ using Sitecore.Data.Items;
 
 namespace ASR.DomainObjects
 {
-    public class BaseItem: CustomItem
+    public abstract class BaseItem: CustomItem
     {
-        public BaseItem(Item innerItem) : base(innerItem)
+        protected BaseItem(Item innerItem) : base(innerItem)
         {
-
         }
 
         public string Path {
             get { return InnerItem.Paths.FullPath; }
         }
 
-        protected IEnumerable<T> GetMultilistField<T>(string name) where T : new ()
+        protected IEnumerable<Item> GetMultilistField(string name)
         {
             MultilistField field = InnerItem.Fields[name];
-            return field.GetItems().Select(i => new T());
+            return field.GetItems();
         } 
     }
 }

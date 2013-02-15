@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using CorePoint.DomainObjects;
 using Sitecore.Data;
 using System.Linq;
 using ASR.Interface;
@@ -10,86 +9,49 @@ using Sitecore.Data.Items;
 namespace ASR.DomainObjects
 {
     using System.Collections.Specialized;
-
-    using CorePoint.DomainObjects.SC;
-
     using Sitecore;
     using Sitecore.Diagnostics;
 
-    [Serializable]
-    [Template("System/ASR/Report")]
+    [Serializable]    
     public class ReportItem : BaseItem
     {
         public ReportItem(Item innerItem) : base(innerItem)
         {
         }
 
+        #region Item Fields
         public IEnumerable<ScannerItem> Scanners
         {
-            get { return GetMultilistField<ScannerItem>("scanners"); }
+            get { return GetMultilistField("scanners").Select(i => new ScannerItem(i)); }
         }
 
-        [Field("viewers")]
-        public  List<Guid> ViewerGuids
-        {
-            get;
-            set;
-        }
 
-        private ViewerItem[] _viewers = null;
         public IEnumerable<ViewerItem> Viewers
         {
-            get {
-                return _viewers ??
-                       (_viewers =
-                        ViewerGuids.ConvertAll<ViewerItem>(g => this.Director.GetObjectByIdentifier<ViewerItem>(g))
-                               .ToArray());
-            }
+            get { return GetMultilistField("viewers").Select(i => new ViewerItem(i)); }
         }
 
-        [Field("commands")]
-        public List<Guid> CommandGuids
-        {
-            get;
-            set;
-        }
-        private CommandItem[] _commands;
         public IEnumerable<CommandItem> Commands
         {
-
-            get {
-                return _commands ??
-                       (_commands =
-                        CommandGuids.ConvertAll<CommandItem>(g => this.Director.GetObjectByIdentifier<CommandItem>(g))
-                                    .ToArray());
-            }
+            get { return GetMultilistField("commands").Select(i => new CommandItem(i)); }
         }
 
-        [Field("filters")]
-        public List<Guid> FilterGuids
-        {
-            get;
-            set;
-        }
-        private FilterItem[] _filters;
+      
         public IEnumerable<FilterItem> Filters
         {
-            get {
-                return _filters ??
-                       (_filters =
-                        FilterGuids.ConvertAll<FilterItem>(g => this.Director.GetObjectByIdentifier<FilterItem>(g))
-                                .ToArray());
-            }
+            get { return GetMultilistField("filters").Select(i => new FilterItem(i)); }
         }
-
-        [Field("email text")]
+        
         public string EmailText
         {
-            get;
-            set;
+            get { return InnerItem["email text"]; }
         }
-        [Field("description")]
-        public string Description { get; set; }
+        
+        public string Description
+        {
+            get { return InnerItem["description"]; }
+        } 
+        #endregion
 
 
         public void RunCommand(string commandname, StringList values)
@@ -115,13 +77,13 @@ namespace ASR.DomainObjects
             return _objects.First(ri => ri.Name == name);
         }
 
-        public ReferenceItem FindItem(Guid name)
+        public ReferenceItem FindItem(ID name)
         {
             if (_objects == null)
             {
                 LoadObjects();
             }
-            return _objects.First(ri => ri.Id == name);
+            return _objects.First(ri => ri.ID == name);
         }
 
         private void LoadObjects()
@@ -139,27 +101,27 @@ namespace ASR.DomainObjects
 
         public string SerializeParameters(string valueSeparator, string parameterSeparator)
         {
-            var nvc = new NameValueCollection { { "id", new ID(Current.Context.ReportItem.Id).ToString() } };
+            var nvc = new NameValueCollection { { "id", Current.Context.ReportItem.ID.ToString() } };
 
             foreach (var item in Current.Context.ReportItem.Scanners)
             {
                 foreach (var p in item.Parameters)
                 {
-                    nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+                    nvc.Add(string.Concat(item.ID, valueSeparator, p.Name), p.Value);
                 }
             }
             foreach (var item in Current.Context.ReportItem.Filters)
             {
                 foreach (var p in item.Parameters)
                 {
-                    nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+                    nvc.Add(string.Concat(item.ID, valueSeparator, p.Name), p.Value);
                 }
             }
             foreach (var item in Current.Context.ReportItem.Viewers)
             {
                 foreach (var p in item.Parameters)
                 {
-                    nvc.Add(string.Concat(item.Id, valueSeparator, p.Name), p.Value);
+                    nvc.Add(string.Concat(item.ID, valueSeparator, p.Name), p.Value);
                 }
             }
             return Sitecore.StringUtil.NameValuesToString(nvc, parameterSeparator);
@@ -177,17 +139,17 @@ namespace ASR.DomainObjects
             Assert.IsNotNull(nvc, "Incorrect Parameters Format");
             var id = nvc["id"];
             if (id == null) return null;
-            var director = new SCDirector("master", "en");
-            if (!director.ObjectExists(id)) throw new Exception("Report has been deleted");
+            var database = Sitecore.Configuration.Factory.GetDatabase(Settings.Instance.ConfigurationDatabase);            
+            var reportItem = new ReportItem(database.GetItem(id));
 
-            var reportItem = director.GetObjectByIdentifier<ReportItem>(id);
+            if (reportItem == null) throw new Exception("Report has been deleted");
 
             foreach (string key in nvc.Keys)
             {
                 if (key.Contains("^"))
                 {
                     var item_parameter = key.Split('^');
-                    var guid = new Guid(item_parameter[0]);
+                    var guid = new ID(item_parameter[0]);
 
                     var ri = reportItem.FindItem(guid);
                     if (ri != null)

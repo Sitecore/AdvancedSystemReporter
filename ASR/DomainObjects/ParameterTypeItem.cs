@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CorePoint.DomainObjects;
-using CorePoint.DomainObjects.SC;
+﻿using Sitecore.Data.Items;
 
 namespace ASR.DomainObjects
 {
-    [Template("System/ASR/Value")]
-    public class ValueItem:StandardTemplate
+    
+    public class ValueItem:BaseItem
     {
-        [Field("value")]
+        public ValueItem(Item innerItem) : base(innerItem)
+        {
+        }
+        
         public string Value
         {
-            get;
-            set;
+            get { return InnerItem["value"]; }
         }
     }
 }

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using ASR.DomainObjects;
 using ASR.Interface;
-using CorePoint.DomainObjects.SC;
 using Sitecore.Data;
 using Sitecore.Web.UI.Pages;
 using Sitecore.Web.UI.HtmlControls;
@@ -62,11 +58,11 @@ namespace ASR.Controls
 
 	        var item = Sitecore.Data.Database.GetItem(itemUri);
 	        if (item == null) return;
-	        var director = new SCDirector();
+	        
             try
             {
 
-                var referenceItem = director.LoadObjectFromItem<ReferenceItem>(item);
+                var referenceItem = new ReferenceItem(item);
                 var viewer = BaseViewer.Create(referenceItem.FullType, string.Empty);
                 if (viewer == null) return;
 

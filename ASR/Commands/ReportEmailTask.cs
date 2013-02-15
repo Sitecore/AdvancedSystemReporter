@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Sitecore.Data.Items;
 using Sitecore.Tasks;
-using Sitecore.Diagnostics;
 using System.Net.Mail;
 using Sitecore.Data.Fields;
-using ASR.App;
-using CorePoint.DomainObjects.SC;
-using ASR;
 using ASR.DomainObjects;
-using System.Net.Mime;
 using Sitecore;
 using ASR.Interface;
 
@@ -42,7 +34,7 @@ namespace ASR.Commands
 					Report report = null;
 					try
 					{
-						reportItem = Director.LoadObjectFromItem<ReportItem>(item);
+						reportItem = new ReportItem(item);
 						report = new Report();
 						foreach (var sItem in reportItem.Scanners)
 						{
@@ -72,19 +64,6 @@ namespace ASR.Commands
 
 				MainUtil.SendMail(message);
 			}
-		}
-
-		SCDirector _director = null;
-		private SCDirector Director
-		{
-			get
-			{
-				if (_director == null)
-				{
-					_director = new SCDirector("master", "en");
-				}
-				return _director;
-			}
-		}
+		}				
 	}
 }

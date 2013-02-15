@@ -27,7 +27,7 @@ namespace ASR.Commands
                 Settings.Instance.ConfigurationDatabase);
                 Assert.IsNotNull(database, "configuration database is null");
 
-                Item report = database.GetItem(new Sitecore.Data.ID(Current.Context.ReportItem.Id));
+                Item report = database.GetItem(Current.Context.ReportItem.ID);
 
                 Assert.IsNotNull(report, "can't find report item");
 

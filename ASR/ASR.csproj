@@ -54,10 +54,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CorePoint.DomainObjects">
-      <HintPath>..\lib\CorePoint.DomainObjects.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>

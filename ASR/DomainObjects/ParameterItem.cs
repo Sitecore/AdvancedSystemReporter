@@ -1,57 +1,65 @@
-﻿using CorePoint.DomainObjects;
-using CorePoint.DomainObjects.SC;
+﻿using System.Linq;
 using System.Collections.Generic;
 using System;
 using System.Collections.Specialized;
+using Sitecore.Data.Items;
 using Sitecore.Web.UI.HtmlControls;
 
 namespace ASR.DomainObjects
-{
-	[Template("System/ASR/Parameter")]
-	public class ParameterItem : StandardTemplate
+{	
+	public class ParameterItem : BaseItem
 	{
-		[Field("title")]
-		public string Title
-		{
-			get;
-			set;
-		}
+	    public ParameterItem(Item innerItem) : base(innerItem)
+	    {
+	    }
 
-		[Field("type")]
-		public string Type
-		{
-			get;
-			set;
-		}
+        #region ItemFields
+        public string Title
+        {
+            get { return InnerItem["title"]; }
+        }
 
-		[Field("default value")]
-		private string DefaultValue { get; set; }
+        public string Type
+        {
+            get { return InnerItem["type"]; }
+        }
 
+
+        public string ParametersField
+        {
+            get { return InnerItem["parameters"]; }            
+        }
+
+	    private string DefaultValue { get { return InnerItem["default value"]; }  } 
+
+        #endregion
+
+	    private string _value;
 		public string Value
 		{
 			get
 			{
-				string _replacedValue = DefaultValue;
-				if (!string.IsNullOrEmpty(_replacedValue))
+				if(_value == null) _value = DefaultValue;
+
+                if (!string.IsNullOrEmpty(_value))
 				{
-					_replacedValue = _replacedValue.Replace("$sc_lastyear", DateTime.Today.AddYears(-1).ToString("yyyyMMddTHHmmss"));
-					_replacedValue = _replacedValue.Replace("$sc_lastweek", DateTime.Today.AddDays(-7).ToString("yyyyMMddTHHmmss"));
-					_replacedValue = _replacedValue.Replace("$sc_lastmonth", DateTime.Today.AddMonths(-1).ToString("yyyyMMddTHHmmss"));
-					_replacedValue = _replacedValue.Replace("$sc_yesterday", DateTime.Today.AddDays(-1).ToString("yyyyMMddTHHmmss"));
-					_replacedValue = _replacedValue.Replace("$sc_today", DateTime.Today.ToString("yyyyMMddTHHmmss"));
-					_replacedValue = _replacedValue.Replace("$sc_now", DateTime.Now.ToString("yyyyMMddTHHmmss"));
-					_replacedValue = _replacedValue.Replace("$sc_currentuser", Sitecore.Context.User == null ? string.Empty : Sitecore.Context.User.Name);
+                    _value = _value.Replace("$sc_lastyear", DateTime.Today.AddYears(-1).ToString("yyyyMMddTHHmmss"));
+                    _value = _value.Replace("$sc_lastweek", DateTime.Today.AddDays(-7).ToString("yyyyMMddTHHmmss"));
+                    _value = _value.Replace("$sc_lastmonth", DateTime.Today.AddMonths(-1).ToString("yyyyMMddTHHmmss"));
+                    _value = _value.Replace("$sc_yesterday", DateTime.Today.AddDays(-1).ToString("yyyyMMddTHHmmss"));
+                    _value = _value.Replace("$sc_today", DateTime.Today.ToString("yyyyMMddTHHmmss"));
+                    _value = _value.Replace("$sc_now", DateTime.Now.ToString("yyyyMMddTHHmmss"));
+                    _value = _value.Replace("$sc_currentuser", Sitecore.Context.User == null ? string.Empty : Sitecore.Context.User.Name);
 				}
-				return _replacedValue;
+                return _value;
 			}
 			set
 			{
-				DefaultValue = value;
+                _value = value;
 			}
 		}
 
-        [Field("parameters")]
-        public string _parameters { get; set; }
+        
 
         private NameValueCollection _params;
         public NameValueCollection Parameters
@@ -62,7 +70,7 @@ namespace ASR.DomainObjects
                 {
                     //_params = Sitecore.StringUtil.ParseNameValueCollection(_parameters, '|', '=');
                     _params = new NameValueCollection();
-                    string[] substrings = _parameters.Split('|');
+                    string[] substrings = ParametersField.Split('|');
                     foreach (var st in substrings)
                     {
                         int i = st.IndexOf('=');
@@ -78,7 +86,7 @@ namespace ASR.DomainObjects
 
 		public IEnumerable<ValueItem> PossibleValues()
 		{
-			return this.Director.GetChildObjects<ValueItem>(this.Id);
+		    return this.InnerItem.Children.Select(i => new ValueItem(i));
 		}
 
         public Control MakeControl()

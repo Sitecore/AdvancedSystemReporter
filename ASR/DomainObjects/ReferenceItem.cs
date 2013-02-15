@@ -1,42 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Web;
-using CorePoint.DomainObjects;
-using System.Reflection;
 using System.Text.RegularExpressions;
+using Sitecore.Data.Items;
 
 namespace ASR.DomainObjects
 {
-
-	[Template("System/ASR/Reference")]
-	public class ReferenceItem : CorePoint.DomainObjects.SC.StandardTemplate
+	
+	public class ReferenceItem : CustomItem
 	{
         private string _currentuser;
-	    public ReferenceItem()
+	    public ReferenceItem(Item i) : base(i)
 	    {
 	        _currentuser = Sitecore.Context.User.Name;
 	    }
 
-	    [Field("assembly")]
-		public string Assembly
-		{
-			get;
-			set;
-		}
-		[Field("class")]
-		public string Class
-		{
-			get;
-			set;
-		}
-		[Field("attributes")]
-		public string Attributes
-		{
-			get;
-			set;
-		}
+
+        #region ItemFields
+        public string Assembly
+        {
+            get { return InnerItem["assembly"]; }
+        }
+
+        public string Class
+        {
+            get { return InnerItem["class"]; }
+        }
+
+        public string Attributes
+        {
+            get { return InnerItem["attributes"]; }
+        } 
+        #endregion
 
         public string ReplacedAttributes
 		{
@@ -136,7 +131,7 @@ namespace ASR.DomainObjects
 		{
 			string path = string.Concat(Settings.Instance.ParametersFolder, "/", name);
             
-			return this.Director.GetObjectByIdentifier<ParameterItem>(path);
+			return new ParameterItem(this.Database.GetItem(path));
 		}
 
 		private IEnumerable<string> extractParameters(string st)

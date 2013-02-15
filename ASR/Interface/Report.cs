@@ -142,9 +142,9 @@ namespace ASR.Interface
 		/// <param name="parameters">Parameters as pipe separated: key=value|key2=value2</param>
 		public void AddFilter(FilterItem filter)
 		{
-			if (!filters.ContainsKey(filter.Id.ToString()))
+			if (!filters.ContainsKey(filter.ID.ToString()))
 			{
-				filters.Add(filter.Id.ToString(), filter);
+				filters.Add(filter.ID.ToString(), filter);
 				FlushFilterCache();
 			}
 		}
@@ -159,9 +159,9 @@ namespace ASR.Interface
 		{
 			Sitecore.Diagnostics.Assert.ArgumentNotNull(scanner, "scanner");
 
-			if (!scanners.ContainsKey(scanner.Id.ToString()))
+			if (!scanners.ContainsKey(scanner.ID.ToString()))
 			{
-				scanners.Add(scanner.Id.ToString(), scanner);
+				scanners.Add(scanner.ID.ToString(), scanner);
 				FlushCache();
 			}
 		}
@@ -176,9 +176,9 @@ namespace ASR.Interface
 		{
 			Sitecore.Diagnostics.Assert.ArgumentNotNull(viewer, "viewer");
 
-			if (!viewers.ContainsKey(viewer.Id.ToString()))
+			if (!viewers.ContainsKey(viewer.ID.ToString()))
 			{
-				viewers.Add(viewer.Id.ToString(), viewer);
+				viewers.Add(viewer.ID.ToString(), viewer);
 			}
 		}
 

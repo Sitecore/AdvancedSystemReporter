@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CorePoint.DomainObjects.SC;
-using CorePoint.DomainObjects;
-using ASR.App;
+﻿using System.Collections.Generic;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Data.Items;
 using Sitecore.Collections;
@@ -14,7 +8,7 @@ using Sitecore.Reflection;
 
 namespace ASR.DomainObjects
 {
-    [Template("system/asr/command")]
+    
     public class CommandItem : BaseItem
     {
         public CommandItem(Item innerItem) : base(innerItem)
