@@ -45,7 +45,7 @@ namespace ASR.Interface
 			{
 				if (_displayElements == null)
 				{
-					var tmp = results.OfType<object>().Select(IntializeDisplayElement);
+					var tmp = results.OfType<object>().DefaultIfEmpty().Select(IntializeDisplayElement);
 					tmp = Sort(tmp);
 					_displayElements = tmp.ToList();
 				}

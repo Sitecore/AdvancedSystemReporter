@@ -20,26 +20,29 @@ namespace ASR.DomainObjects
         }
 
         #region Item Fields
+
+        private IEnumerable<ScannerItem> _scanners; 
         public IEnumerable<ScannerItem> Scanners
         {
-            get { return GetMultilistField("scanners").Select(i => new ScannerItem(i)); }
+            get { return _scanners ?? (_scanners = GetMultilistField("scanners").Select(i => new ScannerItem(i)).ToArray()); }
         }
 
-
+        private IEnumerable<ViewerItem> _viewers; 
         public IEnumerable<ViewerItem> Viewers
         {
-            get { return GetMultilistField("viewers").Select(i => new ViewerItem(i)); }
+            get { return _viewers ?? (_viewers = GetMultilistField("viewers").Select(i => new ViewerItem(i)).ToArray()); }
         }
 
+        private IEnumerable<CommandItem> _commands;
         public IEnumerable<CommandItem> Commands
         {
-            get { return GetMultilistField("commands").Select(i => new CommandItem(i)); }
+            get { return _commands ?? (_commands = GetMultilistField("commands").Select(i => new CommandItem(i)).ToArray()); }
         }
 
-      
+        private IEnumerable<FilterItem> _filters; 
         public IEnumerable<FilterItem> Filters
         {
-            get { return GetMultilistField("filters").Select(i => new FilterItem(i)); }
+            get { return _filters ?? (_filters = GetMultilistField("filters").Select(i => new FilterItem(i)).ToArray()); }
         }
         
         public string EmailText

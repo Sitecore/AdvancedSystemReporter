@@ -20,7 +20,7 @@ namespace ASR.DomainObjects
         protected IEnumerable<Item> GetMultilistField(string name)
         {
             MultilistField field = InnerItem.Fields[name];
-            return field.GetItems();
+            return field.GetItems() ?? new Item[] {};
         } 
     }
 }
