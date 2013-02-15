@@ -18,6 +18,8 @@ v.1.5
 
 - added ability to use parameteres with a different syntax
 
+- added option LanguageFallback to the LinkItemsScanner so it displays extra item properties
+
 v.1.4.3
 
 - fixed various issues with casing of properties in scanners and filters which threw exceptions
