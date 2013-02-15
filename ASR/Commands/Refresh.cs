@@ -13,7 +13,7 @@ namespace ASR.Commands
 
         public override CommandState QueryState(CommandContext context)
         {
-            if (Current.Context.Report == null || Current.Context.ReportItem.Filters.Any())
+            if (Current.Context.Report == null || !Current.Context.ReportItem.Filters.Any())
             {
                 return CommandState.Disabled;
             }
