@@ -73,6 +73,11 @@
       }
     }
 
+      public string ParameterRegex
+      {
+          get { return Sitecore.Configuration.Settings.GetSetting("ASR.ParameterRegex", @"\{(\w*)\}"); }
+      }
+
 	  /// <summary>
 	  /// Gets the size of the page.
 	  /// </summary>

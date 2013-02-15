@@ -9,7 +9,7 @@ namespace ASR.DomainObjects
 	
 	public class ReferenceItem : CustomItem
 	{
-        private string _currentuser;
+        private readonly string _currentuser;
 	    public ReferenceItem(Item i) : base(i)
 	    {
 	        _currentuser = Sitecore.Context.User.Name;
@@ -37,19 +37,14 @@ namespace ASR.DomainObjects
 		{
 			get
 			{
-				string _replacedAttributes = Attributes;
-				foreach (var pi in Parameters)
-				{
-					string tag = string.Concat('{', pi.Name, '}');
-					_replacedAttributes = _replacedAttributes.Replace(tag, pi.Value);
-				}
+				string replacedAttributes = Parameters.Aggregate(Attributes, (current, pi) => current.Replace(pi.Token, pi.Value));
 
-                if (_replacedAttributes.Contains("$"))
+			    if (replacedAttributes.Contains("$"))
                 {
-                    _replacedAttributes = Util.MakeDateReplacements(_replacedAttributes);
-                    _replacedAttributes = _replacedAttributes.Replace("$sc_currentuser", _currentuser); 
+                    replacedAttributes = Util.MakeDateReplacements(replacedAttributes);
+                    replacedAttributes = replacedAttributes.Replace("$sc_currentuser", _currentuser); 
                 }
-			    return _replacedAttributes;
+			    return replacedAttributes;
 			}
 		}
 		public string FullType
@@ -89,7 +84,7 @@ namespace ASR.DomainObjects
 			{
 				if (_parameters == null)
 				{
-					makeParameterSet();
+					MakeParameterSet();
 				}
 
 				return _parameters.Count > 0;
@@ -103,7 +98,7 @@ namespace ASR.DomainObjects
 			{
 				if (_parameters == null || _parameters.Count == 0)
 				{
-					makeParameterSet();
+					MakeParameterSet();
 				}
 				return _parameters;
 			}
@@ -111,44 +106,32 @@ namespace ASR.DomainObjects
 
 	    public string PrettyName
 	    {
-	        get { return string.Format("{0} ({1})", Name,Name); }	        
+	        get { return string.Format("{0} ({1})", Name,InnerItem.TemplateName); }	        
 	    }
 
-	    private void makeParameterSet()
+	    private void MakeParameterSet()
 		{
 			_parameters = new HashSet<ParameterItem>();
-			foreach (var tag in extractParameters(Attributes))
+            var r = new Regex(Settings.Instance.ParameterRegex);
+            var matches = r.Matches(Attributes);
+			foreach (Match match in matches)
 			{
-				ParameterItem pi = findItem(tag);
-				if (pi != null)
-				{
-					_parameters.Add(pi);
-				}
+			    var tag = match.Groups[1].Value;
+				var pi = GetParameter(tag);
+
+			    if (pi == null) continue;
+			    
+                pi.Token = match.Groups[0].Value;
+			    _parameters.Add(pi);
 			}
 		}
 
-		private ParameterItem findItem(string name)
+		private ParameterItem GetParameter(string name)
 		{
 			string path = string.Concat(Settings.Instance.ParametersFolder, "/", name);
             
 			return new ParameterItem(this.Database.GetItem(path));
 		}
-
-		private IEnumerable<string> extractParameters(string st)
-		{
-			List<string> tags = new List<string>();
-			Regex r = new Regex(@"\{(\w*)\}");
-			Match m = r.Match(st);
-
-			while (m.Success)
-			{
-				if (m.Groups.Count == 2)
-				{
-					tags.Add(m.Groups[1].Value);
-				}
-				m = m.NextMatch();
-			}
-			return tags;
-		}
+	
 	}
 }

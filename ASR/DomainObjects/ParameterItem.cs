@@ -34,6 +34,8 @@ namespace ASR.DomainObjects
 
         #endregion
 
+        public string Token { get; set; }
+
 	    private string _value;
 		public string Value
 		{
