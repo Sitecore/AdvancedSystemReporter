@@ -1,32 +1,18 @@
 ----item----
 version: 1
-id: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+id: {CBD787F8-6313-4224-B9E3-F52772806DF2}
 database: master
-path: /sitecore/system/Modules/ASR/Reports
-parent: {F8F58789-D28B-441C-9D46-AD57E01E7549}
-name: Reports
+path: /sitecore/templates/System/ASR
+parent: {4BF98EF5-1D09-4DD1-9AFE-795F9829FD44}
+name: ASR
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
+template: {0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}
+templatekey: Template Folder
 
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 2
-
-50
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 77
-
-{55ECC766-BF85-4E85-92CB-53AE306F0414}|{E45BF7C3-B94B-43D6-A95B-29383E80F53A}
 ----version----
 language: en
 version: 1
-revision: 3b4d58fa-6cd6-47fb-a5a3-39d9e1302460
+revision: f6676261-07bd-4de1-9227-adf062f004fc
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,7 +27,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20080709T123727
+20080708T172140
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3b4d58fa-6cd6-47fb-a5a3-39d9e1302460
+f6676261-07bd-4de1-9227-adf062f004fc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20130215T160903:634965413430041506
+20090423T154555:633760983556123047
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

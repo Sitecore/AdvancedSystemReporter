@@ -1,32 +1,32 @@
 ----item----
 version: 1
-id: {30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}
+id: {1383EBC6-BCC4-451D-8E33-7F74921F6664}
 database: master
-path: /sitecore/system/Modules/ASR/Reports
-parent: {F8F58789-D28B-441C-9D46-AD57E01E7549}
-name: Reports
+path: /sitecore/templates/System/ASR/Filter
+parent: {CBD787F8-6313-4224-B9E3-F52772806DF2}
+name: Filter
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
 
 ----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 2
-
-50
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
 content-length: 77
 
-{55ECC766-BF85-4E85-92CB-53AE306F0414}|{E45BF7C3-B94B-43D6-A95B-29383E80F53A}
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{CB65CD27-96FB-4E9A-8610-73A9B0138B7A}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 32
+
+Applications/32x32/gear_view.png
 ----version----
 language: en
 version: 1
-revision: 3b4d58fa-6cd6-47fb-a5a3-39d9e1302460
+revision: a71222a4-0ead-41ed-a3d2-c5fef9327c24
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20080709T123727
+20080708T172403
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3b4d58fa-6cd6-47fb-a5a3-39d9e1302460
+a71222a4-0ead-41ed-a3d2-c5fef9327c24
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20130215T160903:634965413430041506
+20080708T174747:633511360679789248
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -70,10 +70,3 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />
