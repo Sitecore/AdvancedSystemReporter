@@ -19,8 +19,15 @@ Applications/32x32/document_delete.png
 ----version----
 language: en
 version: 1
-revision: 28a33344-8379-4cdf-a427-f69f8455fbc3
+revision: 1fb8667b-856e-4f25-bc54-59b0a5b11109
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 199
+
+<p>This shows any items that don't comply with the current settings for item naming. This is particularly useful if the regex for name validation is changed after lots of items have been created.</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -69,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-28a33344-8379-4cdf-a427-f69f8455fbc3
+1fb8667b-856e-4f25-bc54-59b0a5b11109
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100208T171625:634012461852599836
+20130218T154019:634967988195343941
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

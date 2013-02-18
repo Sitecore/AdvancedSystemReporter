@@ -19,8 +19,15 @@ Applications/32x32/folder_document.png
 ----version----
 language: en
 version: 1
-revision: 62c74d05-3838-488d-bb98-353eda6f692d
+revision: 4078aa5e-6abb-498e-8704-53bc56019dff
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 103
+
+<p>Get a list of all the items you own. This inspects the owner property as set in the Security tab</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -55,18 +62,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-62c74d05-3838-488d-bb98-353eda6f692d
+4078aa5e-6abb-498e-8704-53bc56019dff
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100514T133521:634094409216758719
+20130218T154656:634967992166511079
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 18
+content-length: 14
 
-sitecore\Anonymous
+sitecore\admin

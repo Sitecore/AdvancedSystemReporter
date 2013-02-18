@@ -19,8 +19,15 @@ Network/32x32/link_delete.png
 ----version----
 language: en
 version: 1
-revision: 3f9871a0-93bb-4408-b7be-cf6da055c8ef
+revision: 1c6e22a9-f05b-4515-84c1-f182cda432ef
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 214
+
+<p>It displays broken links on all items descendants of the selected root node. It differs from the standard Sitecore broken links viewer in that it only checks the most current version in the current language.</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3f9871a0-93bb-4408-b7be-cf6da055c8ef
+1c6e22a9-f05b-4515-84c1-f182cda432ef
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100427T111008:634079634088166408
+20130218T145430:634967960708471782
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

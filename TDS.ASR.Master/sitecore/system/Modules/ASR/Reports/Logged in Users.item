@@ -26,8 +26,15 @@ ar|sitecore\WCMS Supervisor|pe|+item:read|
 ----version----
 language: en
 version: 1
-revision: c5333c95-e4e1-4723-a2f2-3002a235dea2
+revision: 97e2138c-1129-43df-919b-2abb52497e08
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 156
+
+<p>See a list of currently logged in users. You can also kick them out. They will be required to log in again when they try to access any functionality.</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -62,18 +69,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c5333c95-e4e1-4723-a2f2-3002a235dea2
+97e2138c-1129-43df-919b-2abb52497e08
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20090904T140734:633876700545937500
+20130218T154519:634967991191995340
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 16
+content-length: 14
 
-sitecore\azcaser
+sitecore\admin

@@ -19,8 +19,15 @@ Applications/32x32/document_forbidden.png
 ----version----
 language: en
 version: 1
-revision: d72ff585-cd45-4a61-a0bb-660d46692912
+revision: 5a425c49-813e-489a-8c59-bb3855a6bd42
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 108
+
+<p>This report shows any items that have security settings (for users or accounts) directly set on them.</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d72ff585-cd45-4a61-a0bb-660d46692912
+5a425c49-813e-489a-8c59-bb3855a6bd42
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100208T171607:634012461675622140
+20130218T154141:634967989019331070
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

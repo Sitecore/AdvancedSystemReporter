@@ -531,11 +531,6 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Modules\ASR\Configuration\Scanners\Expired Media items.item">
-      <Icon>/~/icon/Applications/32x32/Document.png.aspx</Icon>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Configuration\Scanners\Info.item">
       <Icon>/~/icon/Applications/32x32/Document.png.aspx</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
@@ -671,11 +666,6 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Modules\ASR\Configuration\Viewer\Mediaitem expiry.item">
-      <Icon>/~/icon/Applications/32x32/view.png.aspx</Icon>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Configuration\Viewer\Number Of Versions.item">
       <Icon>/~/icon/Applications/32x32/view.png.aspx</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
@@ -707,7 +697,7 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Aliases.item">
-      <Icon>/~/icon/People/32x32/dude5.png.aspx</Icon>
+      <Icon>/temp/IconCache/People/32x32/dude5.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
@@ -717,37 +707,32 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Audit.item">
-      <Icon>/~/icon/Applications/32x32/window_time.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/window_time.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Broken Links in publishable items.item">
-      <Icon>/~/icon/Network/32x32/link_new.png.aspx</Icon>
+      <Icon>/temp/IconCache/Network/32x32/link_new.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Broken Links.item">
-      <Icon>/~/icon/Network/32x32/link_delete.png.aspx</Icon>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Expired Media items.item">
-      <Icon>/~/icon/Imaging/32x32/layer_delete.png.aspx</Icon>
+      <Icon>/temp/IconCache/Network/32x32/link_delete.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Item History.item">
-      <Icon>/~/icon/Applications/32x32/document_chart.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/document_chart.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Items with Invalid Names.item">
-      <Icon>/~/icon/Applications/32x32/document_delete.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/document_delete.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Items with Security for an account.item">
-      <Icon>/~/icon/Applications/32x32/document_forbidden.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/document_forbidden.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
@@ -757,67 +742,67 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Locked Items.item">
-      <Icon>/~/icon/Applications/32x32/document_lock.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/document_lock.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Logged errors.item">
-      <Icon>/~/icon/Applications/32x32/error.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/error.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Logged in Users.item">
-      <Icon>/~/icon/People/32x32/users4.png.aspx</Icon>
+      <Icon>/temp/IconCache/People/32x32/users4.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Multiple versions.item">
-      <Icon>/~/icon/Applications/32x32/documents.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/documents.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\My Owned Items.item">
-      <Icon>/~/icon/Applications/32x32/folder_document.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/folder_document.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Not recently modified.item">
-      <Icon>/~/icon/Applications/32x32/document_time.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/document_time.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Orphaned media assets report.item">
-      <Icon>/~/icon/People/32x32/ghost.png.aspx</Icon>
+      <Icon>/temp/IconCache/People/32x32/ghost.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Owned items.item">
-      <Icon>/~/icon/Applications/32x32/document_certificate.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/document_certificate.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Recent Workflow History.item">
-      <Icon>/~/icon/Applications/32x32/scroll_information.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/scroll_information.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Recently Modified.item">
-      <Icon>/~/icon/Applications/32x32/document_refresh.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/document_refresh.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Regex Item Searcher.item">
-      <Icon>/~/icon/Applications/32x32/text_find.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/text_find.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Renderings.item">
-      <Icon>/~/icon/Applications/32x32/window_dialog.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/window_dialog.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\ASR\Reports\Stale Workflow Items.item">
-      <Icon>/~/icon/Applications/32x32/history.png.aspx</Icon>
+      <Icon>/temp/IconCache/Applications/32x32/history.png</Icon>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

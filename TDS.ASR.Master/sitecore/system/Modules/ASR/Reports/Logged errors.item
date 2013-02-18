@@ -19,8 +19,15 @@ Applications/32x32/error.png
 ----version----
 language: en
 version: 1
-revision: 571eb3e6-be9b-4f4a-abf6-e5e6e971fd5b
+revision: e408d456-26b3-40b1-8dca-36c7c35e8064
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 149
+
+<p>Get a list of the errors in the log files for the selected period. This is different from the Sitecore Log Viewer in that it only shows ERRORS</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-571eb3e6-be9b-4f4a-abf6-e5e6e971fd5b
+e408d456-26b3-40b1-8dca-36c7c35e8064
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100208T171403:634012460432867877
+20130218T154444:634967990849245735
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -19,8 +19,15 @@ Applications/32x32/documents.png
 ----version----
 language: en
 version: 1
-revision: 56e22fe7-c8fb-4270-a485-4108781e0d3c
+revision: efb65ae8-64a7-4588-ab66-4d6c876d8852
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 129
+
+<p>Get a list of items with lots of versions. Items with many versions might take unnecessary space and slow down performance</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -69,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-56e22fe7-c8fb-4270-a485-4108781e0d3c
+efb65ae8-64a7-4588-ab66-4d6c876d8852
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20110224T110307:634341421870124362
+20130218T154607:634967991678043140
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

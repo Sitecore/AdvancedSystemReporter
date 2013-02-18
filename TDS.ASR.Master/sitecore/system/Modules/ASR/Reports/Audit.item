@@ -19,8 +19,15 @@ Applications/32x32/window_time.png
 ----version----
 language: en
 version: 1
-revision: 9404dd76-e163-476f-a04e-f862df04c198
+revision: 05b6c713-622b-4ed3-a51f-502d86958218
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 148
+
+<p>This will show all the activity recorded in the log files for the selected period. It is possible to filter it by type of activity and user. </p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9404dd76-e163-476f-a04e-f862df04c198
+05b6c713-622b-4ed3-a51f-502d86958218
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100208T171747:634012462679442512
+20130218T145158:634967959180544389
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

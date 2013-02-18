@@ -19,8 +19,15 @@ People/32x32/dude5.png
 ----version----
 language: en
 version: 1
-revision: fc7bcb4c-7a54-4612-b5ba-a29f88d02932
+revision: 39eb7616-4eb7-4f11-b125-c2ddc8646c66
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 133
+
+<p>This shows all the items that are descendants of the selected item and displays whether they have any aliases attached to them</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-fc7bcb4c-7a54-4612-b5ba-a29f88d02932
+39eb7616-4eb7-4f11-b125-c2ddc8646c66
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20110223T163209:634340755290858209
+20130218T145042:634967958426831279
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

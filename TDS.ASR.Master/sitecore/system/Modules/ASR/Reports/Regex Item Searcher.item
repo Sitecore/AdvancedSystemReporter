@@ -19,8 +19,15 @@ Applications/32x32/text_find.png
 ----version----
 language: en
 version: 1
-revision: efe7795f-ea1f-47e1-8ce7-e2effec6afb6
+revision: d20614f5-bdc3-4b1b-ba2e-d7b58d524c21
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 105
+
+<p>Can perform a Regex search in a particular field of all the items descdendants of the selected one</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -62,21 +69,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-efe7795f-ea1f-47e1-8ce7-e2effec6afb6
+d20614f5-bdc3-4b1b-ba2e-d7b58d524c21
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100514T133521:634094409216878755
+20130218T160004:634968000046461786
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 18
+content-length: 14
 
-sitecore\Anonymous
+sitecore\admin
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock

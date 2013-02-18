@@ -19,8 +19,15 @@ Applications/32x32/document_lock.png
 ----version----
 language: en
 version: 1
-revision: 15970864-6a85-4194-92d6-3edb1086add9
+revision: 042b7e52-753b-41d4-beb2-6bc6e6466f31
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 200
+
+<p>This report allows non-admins to see all items locked in the system, even if they are not locked by them. It also allows anybody to unlock them. This behaviour can be modified through security.</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -75,14 +82,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-15970864-6a85-4194-92d6-3edb1086add9
+042b7e52-753b-41d4-beb2-6bc6e6466f31
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100714T210743:634147384633072768
+20130218T154400:634967990404930322
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

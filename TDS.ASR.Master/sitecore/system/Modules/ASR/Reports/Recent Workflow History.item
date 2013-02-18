@@ -19,8 +19,15 @@ Applications/32x32/scroll_information.png
 ----version----
 language: en
 version: 1
-revision: ecef9a70-267e-4ce5-a55e-710a46d46ed9
+revision: 6eb2e541-ca86-47a2-b2fe-32d6c0e62c7d
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 71
+
+<p>A list of all the items that have recently moved workflow states</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ecef9a70-267e-4ce5-a55e-710a46d46ed9
+6eb2e541-ca86-47a2-b2fe-32d6c0e62c7d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20130205T224959:634957013997156792
+20130218T155915:634967999552413528
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

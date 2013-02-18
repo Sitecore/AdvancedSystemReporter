@@ -19,15 +19,15 @@ Applications/32x32/document_chart.png
 ----version----
 language: en
 version: 1
-revision: 0a67d7f2-e90d-4329-981d-91267f4226c7
+revision: 53bc9c99-200f-4a47-9499-f21d9f996232
 
 ----field----
 field: {E9C5B093-0D53-4F39-9383-F5C839441562}
 name: Description
 key: description
-content-length: 77
+content-length: 84
 
-This report shows audit information from the log files for the items selected
+<p>This report shows audit information from the log files for the items selected</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0a67d7f2-e90d-4329-981d-91267f4226c7
+53bc9c99-200f-4a47-9499-f21d9f996232
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20130206T125342:634957520225823950
+20130218T153808:634967986885599028
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

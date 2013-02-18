@@ -19,8 +19,15 @@ Applications/32x32/document_time.png
 ----version----
 language: en
 version: 1
-revision: a12a99f6-0c88-4e6e-9852-c1e4d1d74e4a
+revision: 259a3c82-4fbc-4f7d-98fb-efc868b24560
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 139
+
+<p>With this report you can get a list of all items descendants of the selected one that have not been modified since a particular date</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a12a99f6-0c88-4e6e-9852-c1e4d1d74e4a
+259a3c82-4fbc-4f7d-98fb-efc868b24560
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100208T171201:634012459213035906
+20130218T153846:634967987264200683
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

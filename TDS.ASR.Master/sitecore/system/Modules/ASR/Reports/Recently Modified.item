@@ -19,8 +19,15 @@ Applications/32x32/document_refresh.png
 ----version----
 language: en
 version: 1
-revision: cc3fde09-3702-4172-9e04-32596ee5cb32
+revision: 8789f38a-e28b-4760-81b5-0035123fc566
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 77
+
+<p>Find out which items have been modified in the selected period of time</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cc3fde09-3702-4172-9e04-32596ee5cb32
+8789f38a-e28b-4760-81b5-0035123fc566
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20120121T040221:634627153413364957
+20130218T155932:634967999721163180
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -19,8 +19,15 @@ Network/32x32/link_new.png
 ----version----
 language: en
 version: 1
-revision: 5b2801a8-7504-41f0-848d-df5076422857
+revision: b17d06c3-8dcd-4142-ae7e-44d4a851545c
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 86
+
+<p>This report is thh same as Broken Links but only in currently publishable items</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5b2801a8-7504-41f0-848d-df5076422857
+b17d06c3-8dcd-4142-ae7e-44d4a851545c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100512T172804:634092820844977654
+20130218T145548:634967961485926250
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

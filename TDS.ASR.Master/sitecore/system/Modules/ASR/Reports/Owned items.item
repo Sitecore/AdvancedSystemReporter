@@ -19,8 +19,15 @@ Applications/32x32/document_certificate.png
 ----version----
 language: en
 version: 1
-revision: 29a732ea-a111-4e1e-848f-a02d4bd0eb97
+revision: 831f8078-0e57-4698-adfc-e746cc251e76
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 74
+
+<p>This is a list of all items that have the selected account as owner</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-29a732ea-a111-4e1e-848f-a02d4bd0eb97
+831f8078-0e57-4698-adfc-e746cc251e76
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20100208T171759:634012462793423909
+20130218T155812:634967998928567846
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
