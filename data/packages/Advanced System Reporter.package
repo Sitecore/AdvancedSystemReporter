@@ -196,7 +196,6 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Audit/{DBF19A29-D85B-4FE2-8EA9-97533AB5EB2A}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/AuditPerItem/{9F07D197-CF56-4814-9345-C030DECE0FED}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Errors/{ABFEC922-86C4-4E6E-96E4-27FCCA6431BB}/invariant/0</x-item>
-        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Expired Media items/{5F99E450-4192-4B48-B7BA-D2F6BD1A64BE}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Info/{52834ADC-FF4D-4FDE-94F8-E2A6049B6078}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Items with security/{BB8F9120-3DF0-45D3-82E0-68B7CA2785F8}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Locked Items/{A9D22899-C137-4B62-86FA-3400E0AD3861}/invariant/0</x-item>
@@ -223,7 +222,6 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LogViewer/{AF561ED2-A768-40D4-8517-1A8368368F0F}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LogViewer no sorting/{D6530D08-599A-4D5D-B2AD-4437A8345EC9}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Media Viewer/{2B820570-CB3F-4644-9C04-2709BF0686BE}/invariant/0</x-item>
-        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Mediaitem expiry/{E65C8650-7305-4473-8369-61FAEE20D226}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Number Of Versions/{6D6D4AC1-31D6-407E-9039-7A7709ACAFC1}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/SessionsViewer/{D1E7820D-8097-4561-B355-0B4498A02B80}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/User Viewer/{9B7B7673-0F9B-418A-BB05-535E5D6E959C}/invariant/0</x-item>
@@ -233,7 +231,6 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Audit/{C463282D-332D-4E65-AA05-5F85E3EA6B7C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Broken Links/{339D3839-4805-4AF9-ACF9-DB6AE011B83F}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Broken Links in publishable items/{ED67F1E0-54F7-4080-B23E-5F38599DB18A}/invariant/0</x-item>
-        <x-item>/master/sitecore/system/Modules/ASR/Reports/Expired Media items/{9F0E2BCF-147F-4A1A-8FE0-9AD2A648C113}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Item History/{A4F223AA-E706-4AAE-AD0C-83E894E20A74}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Items with Invalid Names/{435277B2-CFC0-4D2F-8B73-ADECFF1C076D}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Items with Security for an account/{E09317B2-5AEE-438B-B451-FCCFFFCB98F8}/invariant/0</x-item>
